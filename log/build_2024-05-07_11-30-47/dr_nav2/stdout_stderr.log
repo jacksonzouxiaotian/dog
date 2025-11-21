@@ -1,0 +1,26 @@
+-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ysc/lite_cog_ros2/nav/build/dr_nav2
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/config/lite_nav2.yaml
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/launch/dr_nav2.launch.py
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/rviz/dr_nav2.rviz
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/package_run_dependencies/dr_nav2
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/parent_prefix_path/dr_nav2
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/path.sh
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/path.dsv
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.bash
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.sh
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.zsh
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.dsv
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.dsv
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/packages/dr_nav2
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/cmake/dr_nav2Config.cmake
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/cmake/dr_nav2Config-version.cmake
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.xml

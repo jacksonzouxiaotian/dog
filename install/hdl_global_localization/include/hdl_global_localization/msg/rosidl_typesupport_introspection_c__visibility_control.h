@@ -1,0 +1,1 @@
+/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization/rosidl_typesupport_introspection_c/hdl_global_localization/msg/rosidl_typesupport_introspection_c__visibility_control.h

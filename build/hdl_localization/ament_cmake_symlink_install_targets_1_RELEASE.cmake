@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ysc/lite_cog_ros2/nav/build/hdl_localization/libhdl_localization__rosidl_typesupport_fastrtps_cpp.so" "TARGETS" "hdl_localization__rosidl_typesupport_fastrtps_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

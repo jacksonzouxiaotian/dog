@@ -1,0 +1,212 @@
+[0.103s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysc/lite_cog_ros2/nav/src/hdl_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysc/lite_cog_ros2/nav/install/hdl_localization
+[0.482s] -- The C compiler identification is GNU 9.4.0
+[0.856s] -- The CXX compiler identification is GNU 9.4.0
+[0.882s] -- Check for working C compiler: /usr/bin/cc
+[1.372s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.377s] -- Detecting C compiler ABI info
+[1.945s] -- Detecting C compiler ABI info - done
+[2.020s] -- Detecting C compile features
+[2.022s] -- Detecting C compile features - done
+[2.037s] -- Check for working CXX compiler: /usr/bin/c++
+[2.582s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.587s] -- Detecting CXX compiler ABI info
+[3.227s] -- Detecting CXX compiler ABI info - done
+[3.300s] -- Detecting CXX compile features
+[3.305s] -- Detecting CXX compile features - done
+[3.324s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[3.514s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.515s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.702s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.193s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.235s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[6.066s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[6.240s] -- Found FastRTPS: /opt/ros/foxy/include  
+[6.736s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.280s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[7.287s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.292s] -- Looking for pthread.h
+[7.881s] -- Looking for pthread.h - found
+[7.883s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[8.606s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[8.608s] -- Looking for pthread_create in pthreads
+[9.250s] -- Looking for pthread_create in pthreads - not found
+[9.252s] -- Looking for pthread_create in pthread
+[9.949s] -- Looking for pthread_create in pthread - found
+[9.955s] -- Found Threads: TRUE  
+[12.825s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[12.842s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[14.445s] -- Checking for module 'eigen3'
+[14.589s] --   Found eigen3, version 3.3.7
+[15.023s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[15.024s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+[15.421s] -- Checking for module 'flann'
+[15.559s] --   Found flann, version 1.9.1
+[16.012s] -- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+[16.439s] -- The imported target "vtkParseOGLExt" references the file
+[16.440s]    "/usr/bin/vtkParseOGLExt-7.1"
+[16.440s] but this file does not exist.  Possible reasons include:
+[16.441s] * The file was deleted, renamed, or moved to another location.
+[16.441s] * An install or uninstall procedure did not complete successfully.
+[16.442s] * The installation package was faulty and contained
+[16.442s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[16.443s] but not all the files it references.
+[16.443s] 
+[16.447s] -- The imported target "vtkRenderingPythonTkWidgets" references the file
+[16.447s]    "/usr/lib/aarch64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+[16.448s] but this file does not exist.  Possible reasons include:
+[16.449s] * The file was deleted, renamed, or moved to another location.
+[16.449s] * An install or uninstall procedure did not complete successfully.
+[16.450s] * The installation package was faulty and contained
+[16.450s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[16.450s] but not all the files it references.
+[16.452s] 
+[16.454s] -- The imported target "vtk" references the file
+[16.454s]    "/usr/bin/vtk"
+[16.455s] but this file does not exist.  Possible reasons include:
+[16.455s] * The file was deleted, renamed, or moved to another location.
+[16.456s] * An install or uninstall procedure did not complete successfully.
+[16.457s] * The installation package was faulty and contained
+[16.459s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[16.460s] but not all the files it references.
+[16.460s] 
+[16.461s] -- The imported target "pvtk" references the file
+[16.461s]    "/usr/bin/pvtk"
+[16.462s] but this file does not exist.  Possible reasons include:
+[16.462s] * The file was deleted, renamed, or moved to another location.
+[16.463s] * An install or uninstall procedure did not complete successfully.
+[16.463s] * The installation package was faulty and contained
+[16.464s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[16.464s] but not all the files it references.
+[16.464s] 
+[16.599s] -- Checking for module 'libusb-1.0'
+[16.742s] --   Found libusb-1.0, version 1.0.23
+[17.154s] -- Found USB_10: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  
+[17.722s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[18.319s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[18.401s] -- Found libusb-1.0: /usr/include  
+[18.435s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[18.477s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[18.667s] -- Found Qhull: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so  
+[18.669s] -- QHULL found (include: /usr/include, lib: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so)
+[18.709s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[18.786s] -- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  
+[18.798s] -- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+[18.803s] -- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+[18.809s] -- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so  
+[18.816s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+[18.823s] -- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+[18.826s] -- Found PCL_2D: /usr/include/pcl-1.10  
+[18.828s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.10  
+[18.834s] -- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  
+[18.841s] -- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so  
+[18.848s] -- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so  
+[18.854s] -- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  
+[18.861s] -- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so  
+[18.868s] -- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so  
+[18.876s] -- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so  
+[18.884s] -- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so  
+[18.894s] -- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so  
+[18.901s] -- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so  
+[18.910s] -- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so  
+[18.917s] -- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so  
+[18.922s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.10  
+[18.925s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.10  
+[18.932s] -- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so  
+[18.939s] -- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so  
+[23.194s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[23.855s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[23.858s] -- Found OpenMP: TRUE (found version "4.5")  
+[24.009s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[24.783s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[26.291s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[26.926s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[27.092s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[27.101s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[27.266s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[27.266s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[27.267s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[27.267s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[27.406s] -- Found PythonExtra: .so  
+[28.296s] -- Configuring done
+[29.347s] -- Generating done
+[29.372s] -- Build files have been written to: /home/ysc/lite_cog_ros2/nav/build/hdl_localization
+[29.471s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization' returned '0': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysc/lite_cog_ros2/nav/src/hdl_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysc/lite_cog_ros2/nav/install/hdl_localization
+[29.493s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_localization -- -j6 -l6
+[29.921s] [35m[1mScanning dependencies of target hdl_localization__cpp[0m
+[29.925s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[30.007s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[31.160s] [35m[1mScanning dependencies of target hdl_localization__rosidl_generator_c[0m
+[31.245s] [  5%] Built target hdl_localization__cpp
+[31.256s] [  8%] [32mBuilding C object CMakeFiles/hdl_localization__rosidl_generator_c.dir/rosidl_generator_c/hdl_localization/msg/detail/scan_matching_status__functions.c.o[0m
+[31.322s] [ 11%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[31.325s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[31.341s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[31.345s] [ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[32.070s] [ 20%] [32m[1mLinking C shared library libhdl_localization__rosidl_generator_c.so[0m
+[32.384s] [ 20%] Built target hdl_localization__rosidl_generator_c
+[32.513s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[32.561s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_cpp[0m
+[32.562s] [ 26%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[32.758s] [ 29%] [32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hdl_localization/msg/scan_matching_status__type_support.cpp.o[0m
+[32.822s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_fastrtps_cpp[0m
+[32.842s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_introspection_cpp[0m
+[32.967s] [ 32%] [32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hdl_localization/msg/detail/scan_matching_status__type_support.cpp.o[0m
+[32.972s] [ 35%] [32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hdl_localization/msg/detail/dds_fastrtps/scan_matching_status__type_support.cpp.o[0m
+[33.911s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_c[0m
+[34.016s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_introspection_c[0m
+[34.118s] [ 38%] [32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/hdl_localization/msg/scan_matching_status__type_support.cpp.o[0m
+[34.147s] [ 41%] [32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hdl_localization/msg/detail/scan_matching_status__type_support.c.o[0m
+[34.200s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[34.540s] [ 44%] [32m[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_c.so[0m
+[34.851s] [ 47%] [32m[1mLinking C shared library libhdl_localization__rosidl_typesupport_introspection_c.so[0m
+[34.999s] [ 50%] [32m[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_cpp.so[0m
+[35.090s] [ 50%] Built target hdl_localization__rosidl_typesupport_c
+[35.120s] [ 50%] Built target hdl_localization__rosidl_typesupport_introspection_c
+[35.314s] [ 50%] Built target hdl_localization__rosidl_typesupport_cpp
+[36.226s] [ 52%] [32m[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_introspection_cpp.so[0m
+[36.631s] [ 52%] Built target hdl_localization__rosidl_typesupport_introspection_cpp
+[37.067s] [ 55%] [32m[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_fastrtps_cpp.so[0m
+[37.497s] [ 55%] Built target hdl_localization__rosidl_typesupport_fastrtps_cpp
+[37.583s] [ 58%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[38.908s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_fastrtps_c[0m
+[39.061s] [ 61%] [32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_localization/msg/detail/scan_matching_status__type_support_c.cpp.o[0m
+[41.382s] [ 64%] [32m[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_fastrtps_c.so[0m
+[41.911s] [ 64%] Built target hdl_localization__rosidl_typesupport_fastrtps_c
+[41.981s] [35m[1mScanning dependencies of target hdl_localization[0m
+[42.064s] [ 64%] Built target hdl_localization
+[42.131s] [35m[1mScanning dependencies of target hdl_localization__py[0m
+[42.136s] [35m[1mScanning dependencies of target hdl_localization_composition[0m
+[42.204s] [ 67%] [34m[1mGenerating Python code for ROS interfaces[0m
+[42.935s] [ 70%] [32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/src/hdl_localization/pose_estimator.cpp.o[0m
+[42.963s] [ 73%] [32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o[0m
+[44.323s] [ 73%] Built target hdl_localization__py
+[44.416s] [35m[1mScanning dependencies of target hdl_localization__python[0m
+[44.580s] [ 76%] [32mBuilding C object CMakeFiles/hdl_localization__python.dir/rosidl_generator_py/hdl_localization/msg/_scan_matching_status_s.c.o[0m
+[44.620s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[45.776s] [ 79%] [32m[1mLinking C shared library rosidl_generator_py/hdl_localization/libhdl_localization__python.so[0m
+[46.073s] [ 79%] Built target hdl_localization__python
+[46.176s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_introspection_c__pyext[0m
+[46.177s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_c__pyext[0m
+[46.190s] [35m[1mScanning dependencies of target hdl_localization__rosidl_typesupport_fastrtps_c__pyext[0m
+[46.420s] [ 82%] [32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hdl_localization/_hdl_localization_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[46.470s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[46.513s] [ 85%] [32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hdl_localization/_hdl_localization_s.ep.rosidl_typesupport_c.c.o[0m
+[46.517s] [ 88%] [32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hdl_localization/_hdl_localization_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[46.559s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[46.564s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand line option ‘[01m[K-std=c++14[m[K’ is valid for C++/ObjC++ but not for C
+[47.276s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/hdl_localization/hdl_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[47.480s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/hdl_localization/hdl_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[47.591s] [ 97%] [32m[1mLinking CXX shared library rosidl_generator_py/hdl_localization/hdl_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[47.677s] [ 97%] Built target hdl_localization__rosidl_typesupport_introspection_c__pyext
+[47.826s] [ 97%] Built target hdl_localization__rosidl_typesupport_c__pyext
+[48.147s] [ 97%] Built target hdl_localization__rosidl_typesupport_fastrtps_c__pyext
+[52.316s] In file included from [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/hdl_localization_composition.cpp:2[m[K:
+[52.317s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:26:10:[m[K [01;31m[Kfatal error: [m[Kfast_gicp/ndt/ndt_cuda.hpp: No such file or directory
+[52.317s]    26 | #include [01;31m[K<fast_gicp/ndt/ndt_cuda.hpp>[m[K
+[52.318s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[52.320s] compilation terminated.
+[52.551s] make[2]: *** [CMakeFiles/hdl_localization_composition.dir/build.make:76: CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o] Error 1
+[52.552s] make[2]: *** Waiting for unfinished jobs....
+[140.123s] make[1]: *** [CMakeFiles/Makefile2:326: CMakeFiles/hdl_localization_composition.dir/all] Error 2
+[140.126s] make: *** [Makefile:141: all] Error 2
+[140.153s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization' returned '2': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_localization -- -j6 -l6

@@ -1,0 +1,362 @@
+[1.231s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--symlink-install'][0m
+[1.232s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb5aa9ca0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb5aa9ca0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffb5ab5250>)[0m
+[2.217s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[2.218s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[2.218s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[2.218s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[2.218s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[2.218s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[2.219s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/ysc/lite_cog_ros2/nav'
+[2.219s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[2.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[2.220s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[2.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[2.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[2.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[2.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[2.221s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[2.278s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[2.278s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[2.278s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[2.279s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[2.279s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[2.280s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.280s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[2.280s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[2.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[2.282s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[2.282s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.283s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[2.283s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[2.283s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.284s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[2.284s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[2.284s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[2.284s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[2.285s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[2.285s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[2.285s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[2.285s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[2.286s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[2.286s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[2.286s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[2.286s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[2.287s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[2.287s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extensions ['ignore', 'ignore_ament_install']
+[2.288s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extension 'ignore'
+[2.288s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extension 'ignore_ament_install'
+[2.288s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extensions ['colcon_pkg']
+[2.289s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extension 'colcon_pkg'
+[2.289s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extensions ['colcon_meta']
+[2.289s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extension 'colcon_meta'
+[2.289s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extensions ['ros']
+[2.289s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/dr_nav2) by extension 'ros'
+[2.301s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/dr_nav2' with type 'ros.ament_cmake' and name 'dr_nav2'[0m
+[2.302s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extensions ['ignore', 'ignore_ament_install']
+[2.302s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extension 'ignore'
+[2.303s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extension 'ignore_ament_install'
+[2.303s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extensions ['colcon_pkg']
+[2.303s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extension 'colcon_pkg'
+[2.303s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extensions ['colcon_meta']
+[2.304s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extension 'colcon_meta'
+[2.304s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extensions ['ros']
+[2.304s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_global_localization) by extension 'ros'
+[2.374s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/hdl_global_localization' with type 'ros.ament_cmake' and name 'hdl_global_localization'[0m
+[2.375s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extensions ['ignore', 'ignore_ament_install']
+[2.376s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extension 'ignore'
+[2.376s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extension 'ignore_ament_install'
+[2.376s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extensions ['colcon_pkg']
+[2.376s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extension 'colcon_pkg'
+[2.377s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extensions ['colcon_meta']
+[2.377s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extension 'colcon_meta'
+[2.377s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extensions ['ros']
+[2.377s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/hdl_localization) by extension 'ros'
+[2.388s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/hdl_localization' with type 'ros.ament_cmake' and name 'hdl_localization'[0m
+[2.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extensions ['ignore', 'ignore_ament_install']
+[2.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extension 'ignore'
+[2.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extension 'ignore_ament_install'
+[2.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extensions ['colcon_pkg']
+[2.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extension 'colcon_pkg'
+[2.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extensions ['colcon_meta']
+[2.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extension 'colcon_meta'
+[2.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extensions ['ros']
+[2.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_test) by extension 'ros'
+[2.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/sensor_test' with type 'ros.ament_cmake' and name 'sensor_test'[0m
+[2.401s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[2.401s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[2.401s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[2.401s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[2.401s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[2.474s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[2.475s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[2.490s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 314 installed packages in /opt/ros/foxy[0m
+[2.503s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[2.878s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'cmake_args' from command line to 'None'
+[2.878s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'cmake_target' from command line to 'None'
+[2.878s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.879s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'cmake_clean_cache' from command line to 'False'
+[2.879s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'cmake_clean_first' from command line to 'False'
+[2.879s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'cmake_force_configure' from command line to 'False'
+[2.879s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'ament_cmake_args' from command line to 'None'
+[2.879s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'catkin_cmake_args' from command line to 'None'
+[2.880s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'dr_nav2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.880s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'dr_nav2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysc/lite_cog_ros2/nav/build/dr_nav2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysc/lite_cog_ros2/nav/install/dr_nav2', 'merge_install': False, 'path': '/home/ysc/lite_cog_ros2/nav/src/dr_nav2', 'symlink_install': True, 'test_result_base': None}[0m
+[2.882s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'cmake_args' from command line to 'None'
+[2.882s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'cmake_target' from command line to 'None'
+[2.883s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.883s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[2.883s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'cmake_clean_first' from command line to 'False'
+[2.883s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'cmake_force_configure' from command line to 'False'
+[2.883s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'ament_cmake_args' from command line to 'None'
+[2.884s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[2.884s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_global_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.884s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'hdl_global_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization', 'merge_install': False, 'path': '/home/ysc/lite_cog_ros2/nav/src/hdl_global_localization', 'symlink_install': True, 'test_result_base': None}[0m
+[2.886s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'cmake_args' from command line to 'None'
+[2.886s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'cmake_target' from command line to 'None'
+[2.887s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.887s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'cmake_clean_cache' from command line to 'False'
+[2.887s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'cmake_clean_first' from command line to 'False'
+[2.887s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'cmake_force_configure' from command line to 'False'
+[2.887s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'ament_cmake_args' from command line to 'None'
+[2.887s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'catkin_cmake_args' from command line to 'None'
+[2.888s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.888s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'sensor_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysc/lite_cog_ros2/nav/build/sensor_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysc/lite_cog_ros2/nav/install/sensor_test', 'merge_install': False, 'path': '/home/ysc/lite_cog_ros2/nav/src/sensor_test', 'symlink_install': True, 'test_result_base': None}[0m
+[2.890s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'cmake_args' from command line to 'None'
+[2.890s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'cmake_target' from command line to 'None'
+[2.890s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.891s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[2.891s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'cmake_clean_first' from command line to 'False'
+[2.891s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'cmake_force_configure' from command line to 'False'
+[2.891s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'ament_cmake_args' from command line to 'None'
+[2.891s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[2.892s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'hdl_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.892s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'hdl_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysc/lite_cog_ros2/nav/build/hdl_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysc/lite_cog_ros2/nav/install/hdl_localization', 'merge_install': False, 'path': '/home/ysc/lite_cog_ros2/nav/src/hdl_localization', 'symlink_install': True, 'test_result_base': None}[0m
+[2.892s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[2.897s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[2.899s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ysc/lite_cog_ros2/nav/src/hdl_global_localization' with build type 'ament_cmake'
+[2.900s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ysc/lite_cog_ros2/nav/src/hdl_global_localization'
+[2.910s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.911s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.912s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.946s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ysc/lite_cog_ros2/nav/src/dr_nav2' with build type 'ament_cmake'
+[2.950s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ysc/lite_cog_ros2/nav/src/dr_nav2'
+[2.956s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.957s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.995s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ysc/lite_cog_ros2/nav/src/sensor_test' with build type 'ament_cmake'
+[2.998s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ysc/lite_cog_ros2/nav/src/sensor_test'
+[3.016s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.017s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[3.115s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_global_localization -- -j6 -l6[0m
+[3.190s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/dr_nav2 -- -j6 -l6[0m
+[3.229s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/sensor_test -- -j6 -l6[0m
+[3.887s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/sensor_test -- -j6 -l6[0m
+[4.228s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/sensor_test[0m
+[4.442s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(sensor_test)
+[4.449s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/sensor_test[0m
+[4.474s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test' for CMake module files
+[4.480s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test' for CMake config files
+[4.484s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('sensor_test', 'cmake_prefix_path')
+[4.486s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/hook/cmake_prefix_path.ps1'
+[4.508s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/hook/cmake_prefix_path.dsv'
+[4.516s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/hook/cmake_prefix_path.sh'
+[4.528s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/lib'
+[4.529s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/bin'
+[4.529s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/pkgconfig/sensor_test.pc'
+[4.533s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/python3.8/site-packages'
+[4.534s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/bin'
+[4.538s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.ps1'
+[4.548s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.dsv'
+[4.554s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.sh'
+[4.558s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.bash'
+[4.563s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.zsh'
+[4.571s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/colcon-core/packages/sensor_test)
+[4.810s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(sensor_test)
+[4.816s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test' for CMake module files
+[4.822s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test' for CMake config files
+[4.826s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('sensor_test', 'cmake_prefix_path')
+[4.828s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/hook/cmake_prefix_path.ps1'
+[4.834s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/hook/cmake_prefix_path.dsv'
+[4.841s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/hook/cmake_prefix_path.sh'
+[4.844s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/lib'
+[4.845s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/bin'
+[4.845s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/pkgconfig/sensor_test.pc'
+[4.847s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/python3.8/site-packages'
+[4.848s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/sensor_test/bin'
+[4.850s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.ps1'
+[4.852s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.dsv'
+[4.855s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.sh'
+[4.858s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.bash'
+[4.860s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.zsh'
+[4.867s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/sensor_test/share/colcon-core/packages/sensor_test)
+[5.318s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_global_localization -- -j6 -l6[0m
+[6.029s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/dr_nav2 -- -j6 -l6[0m
+[6.128s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/hdl_global_localization[0m
+[6.211s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/dr_nav2[0m
+[6.404s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(dr_nav2)
+[6.409s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2' for CMake module files
+[6.414s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/dr_nav2[0m
+[6.417s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2' for CMake config files
+[6.424s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('dr_nav2', 'cmake_prefix_path')
+[6.426s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/hook/cmake_prefix_path.ps1'
+[6.433s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/hook/cmake_prefix_path.dsv'
+[6.437s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/hook/cmake_prefix_path.sh'
+[6.447s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/bin'
+[6.448s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/lib/pkgconfig/dr_nav2.pc'
+[6.449s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/lib/python3.8/site-packages'
+[6.450s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/bin'
+[6.452s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.ps1'
+[6.455s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.dsv'
+[6.457s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.sh'
+[6.459s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.bash'
+[6.462s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.zsh'
+[6.464s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/colcon-core/packages/dr_nav2)
+[6.630s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(dr_nav2)
+[6.633s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2' for CMake module files
+[6.639s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2' for CMake config files
+[6.642s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('dr_nav2', 'cmake_prefix_path')
+[6.644s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/hook/cmake_prefix_path.ps1'
+[6.648s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/hook/cmake_prefix_path.dsv'
+[6.652s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/hook/cmake_prefix_path.sh'
+[6.656s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/bin'
+[6.656s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/lib/pkgconfig/dr_nav2.pc'
+[6.658s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/lib/python3.8/site-packages'
+[6.659s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/bin'
+[6.660s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.ps1'
+[6.663s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.dsv'
+[6.668s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.sh'
+[6.670s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.bash'
+[6.673s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.zsh'
+[6.676s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/colcon-core/packages/dr_nav2)
+[6.831s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(hdl_global_localization)
+[6.833s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization' for CMake module files
+[6.841s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/hdl_global_localization[0m
+[6.847s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization' for CMake config files
+[6.851s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_global_localization', 'cmake_prefix_path')
+[6.853s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/cmake_prefix_path.ps1'
+[6.855s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/cmake_prefix_path.dsv'
+[6.857s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/cmake_prefix_path.sh'
+[6.860s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib'
+[6.860s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_global_localization', 'ld_library_path_lib')
+[6.861s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/ld_library_path_lib.ps1'
+[6.863s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/ld_library_path_lib.dsv'
+[6.865s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/ld_library_path_lib.sh'
+[6.866s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/bin'
+[6.867s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/pkgconfig/hdl_global_localization.pc'
+[6.868s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages'
+[6.868s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_global_localization', 'pythonpath')
+[6.869s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/pythonpath.ps1'
+[6.872s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/pythonpath.dsv'
+[6.873s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/pythonpath.sh'
+[6.876s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/bin'
+[6.878s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.ps1'
+[6.881s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.dsv'
+[6.884s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.sh'
+[6.886s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.bash'
+[6.888s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.zsh'
+[6.892s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/colcon-core/packages/hdl_global_localization)
+[7.723s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(hdl_global_localization)
+[7.725s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization' for CMake module files
+[7.730s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization' for CMake config files
+[7.735s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_global_localization', 'cmake_prefix_path')
+[7.736s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/cmake_prefix_path.ps1'
+[7.740s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/cmake_prefix_path.dsv'
+[7.744s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/cmake_prefix_path.sh'
+[7.749s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib'
+[7.749s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_global_localization', 'ld_library_path_lib')
+[7.752s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/ld_library_path_lib.ps1'
+[7.754s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/ld_library_path_lib.dsv'
+[7.757s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/ld_library_path_lib.sh'
+[7.761s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/bin'
+[7.762s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/pkgconfig/hdl_global_localization.pc'
+[7.763s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages'
+[7.764s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_global_localization', 'pythonpath')
+[7.765s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/pythonpath.ps1'
+[7.767s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/pythonpath.dsv'
+[7.768s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/hook/pythonpath.sh'
+[7.771s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/bin'
+[7.773s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.ps1'
+[7.776s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.dsv'
+[7.779s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.sh'
+[7.781s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.bash'
+[7.783s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.zsh'
+[7.785s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/colcon-core/packages/hdl_global_localization)
+[7.788s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ysc/lite_cog_ros2/nav/src/hdl_localization' with build type 'ament_cmake'
+[7.789s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ysc/lite_cog_ros2/nav/src/hdl_localization'
+[7.791s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.791s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[7.910s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_localization -- -j6 -l6[0m
+[187.218s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization' returned '0': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_localization -- -j6 -l6[0m
+[187.667s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/hdl_localization[0m
+[188.272s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(hdl_localization)
+[188.275s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization' for CMake module files
+[188.281s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization' returned '0': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/hdl_localization[0m
+[188.284s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization' for CMake config files
+[188.290s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_localization', 'cmake_prefix_path')
+[188.291s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/cmake_prefix_path.ps1'
+[188.295s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/cmake_prefix_path.dsv'
+[188.297s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/cmake_prefix_path.sh'
+[188.300s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib'
+[188.301s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_localization', 'ld_library_path_lib')
+[188.302s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/ld_library_path_lib.ps1'
+[188.305s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/ld_library_path_lib.dsv'
+[188.306s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/ld_library_path_lib.sh'
+[188.309s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/bin'
+[188.309s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/pkgconfig/hdl_localization.pc'
+[188.311s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages'
+[188.311s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_localization', 'pythonpath')
+[188.312s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/pythonpath.ps1'
+[188.314s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/pythonpath.dsv'
+[188.316s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/pythonpath.sh'
+[188.320s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/bin'
+[188.323s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.ps1'
+[188.327s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.dsv'
+[188.332s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.sh'
+[188.336s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.bash'
+[188.339s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.zsh'
+[188.341s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/colcon-core/packages/hdl_localization)
+[188.775s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(hdl_localization)
+[188.778s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization' for CMake module files
+[188.784s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization' for CMake config files
+[188.790s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_localization', 'cmake_prefix_path')
+[188.792s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/cmake_prefix_path.ps1'
+[188.797s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/cmake_prefix_path.dsv'
+[188.801s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/cmake_prefix_path.sh'
+[188.806s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib'
+[188.807s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_localization', 'ld_library_path_lib')
+[188.809s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/ld_library_path_lib.ps1'
+[188.812s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/ld_library_path_lib.dsv'
+[188.814s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/ld_library_path_lib.sh'
+[188.817s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/bin'
+[188.817s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/pkgconfig/hdl_localization.pc'
+[188.819s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages'
+[188.820s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('hdl_localization', 'pythonpath')
+[188.822s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/pythonpath.ps1'
+[188.826s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/pythonpath.dsv'
+[188.828s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/hook/pythonpath.sh'
+[188.831s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/bin'
+[188.836s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.ps1'
+[188.844s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.dsv'
+[188.849s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.sh'
+[188.857s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.bash'
+[188.860s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.zsh'
+[188.864s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/colcon-core/packages/hdl_localization)
+[188.866s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[188.869s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[188.870s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[188.870s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[188.907s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[188.908s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[188.908s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[189.036s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[189.038s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/install/local_setup.ps1'
+[189.043s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ysc/lite_cog_ros2/nav/install/_local_setup_util_ps1.py'
+[189.052s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/install/setup.ps1'
+[189.058s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/install/local_setup.sh'
+[189.061s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ysc/lite_cog_ros2/nav/install/_local_setup_util_sh.py'
+[189.065s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/install/setup.sh'
+[189.072s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/install/local_setup.bash'
+[189.076s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/install/setup.bash'
+[189.082s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/install/local_setup.zsh'
+[189.084s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/install/setup.zsh'

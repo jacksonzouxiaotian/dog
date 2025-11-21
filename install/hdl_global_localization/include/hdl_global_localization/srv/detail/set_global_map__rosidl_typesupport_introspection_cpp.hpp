@@ -1,0 +1,1 @@
+/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization/rosidl_typesupport_introspection_cpp/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_introspection_cpp.hpp

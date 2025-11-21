@@ -1,0 +1,1 @@
+/home/ysc/lite_cog_ros2/nav/build/hdl_localization/rosidl_generator_cpp/hdl_localization/msg/rosidl_generator_cpp__visibility_control.hpp

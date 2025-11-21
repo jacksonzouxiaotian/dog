@@ -1,0 +1,124 @@
+[0.128s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_localization -- -j6 -l6
+[0.508s] [  2%] Built target hdl_localization__cpp
+[0.523s] [ 11%] Built target hdl_localization__rosidl_generator_c
+[0.679s] [ 20%] Built target hdl_localization__rosidl_typesupport_cpp
+[0.689s] [ 29%] Built target hdl_localization__rosidl_typesupport_introspection_cpp
+[0.697s] [ 38%] Built target hdl_localization__rosidl_typesupport_c
+[0.704s] [ 47%] Built target hdl_localization__rosidl_typesupport_fastrtps_cpp
+[0.733s] [ 55%] Built target hdl_localization__rosidl_typesupport_introspection_c
+[0.880s] [ 64%] Built target hdl_localization__rosidl_typesupport_fastrtps_c
+[1.023s] [ 64%] Built target hdl_localization
+[1.137s] [35m[1mScanning dependencies of target hdl_localization_composition[0m
+[1.186s] [ 67%] Built target hdl_localization__py
+[1.357s] [ 73%] Built target hdl_localization__python
+[1.540s] [ 85%] Built target hdl_localization__rosidl_typesupport_fastrtps_c__pyext
+[1.541s] [ 85%] Built target hdl_localization__rosidl_typesupport_c__pyext
+[1.558s] [ 91%] Built target hdl_localization__rosidl_typesupport_introspection_c__pyext
+[1.722s] [ 94%] [32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o[0m
+[36.707s] In file included from [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/hdl_localization_composition.cpp:2[m[K:
+[36.708s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:[m[K In member function ‘[01m[Kbool hdl_localization::HdlLocalizationApp::GetClosestImuData(const rclcpp::Time&, sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr&)[m[K’:
+[36.709s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:367:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::deque<std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[36.709s]   367 |         for(int i = 0; [01;35m[Ki < imu_data_buffer_.size()[m[K; i++){
+[36.710s]       |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[37.052s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:[m[K In member function ‘[01m[Kbool hdl_localization::HdlLocalizationApp::Relocalize(std::shared_ptr<rmw_request_id_t>, std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[37.053s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:563:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[37.054s]   563 |         [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Request> req[m[K,
+[37.055s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[37.055s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:564:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[37.056s]   564 |         [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> res[m[K)
+[37.056s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[37.199s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:[m[K In member function ‘[01m[Kvoid hdl_localization::HdlLocalizationApp::TimerCallback()[m[K’:
+[37.200s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:803:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[37.200s]   803 |             for(int i=0; [01;35m[Ki<ms_deque_.size()[m[K; i++){
+[37.201s]       |                          [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[120.487s] [01m[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:806:24:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktotal_ms[m[K’ may be used uninitialized in this function [[01;35m[K-Wmaybe-uninitialized[m[K]
+[120.488s]   806 |             [01;35m[Kaverage_ms = total_ms / ms_deque_.size()[m[K;
+[120.489s]       |             [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[172.913s] [ 97%] [32m[1mLinking CXX executable hdl_localization_composition[0m
+[177.450s] [100%] Built target hdl_localization_composition
+[177.611s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization' returned '0': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/hdl_localization -- -j6 -l6
+[178.070s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/hdl_localization
+[178.140s] -- Install configuration: "RELEASE"
+[178.142s] -- Execute custom install script
+[178.145s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/ament_index/resource_index/rosidl_interfaces/hdl_localization
+[178.150s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__functions.h
+[178.151s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__struct.h
+[178.153s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__type_support.h
+[178.154s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/rosidl_generator_c__visibility_control.h
+[178.155s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/scan_matching_status.h
+[178.158s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/library_path.sh
+[178.159s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/library_path.dsv
+[178.164s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__rosidl_typesupport_fastrtps_c.h
+[178.165s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[178.168s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_typesupport_fastrtps_c.so
+[178.173s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__rosidl_typesupport_fastrtps_cpp.hpp
+[178.174s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[178.177s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_typesupport_fastrtps_cpp.so
+[178.180s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__rosidl_typesupport_introspection_c.h
+[178.182s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[178.186s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__builder.hpp
+[178.187s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__struct.hpp
+[178.189s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__traits.hpp
+[178.190s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__type_support.hpp
+[178.191s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/rosidl_generator_cpp__visibility_control.hpp
+[178.193s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/scan_matching_status.hpp
+[178.197s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/msg/detail/scan_matching_status__rosidl_typesupport_introspection_cpp.hpp
+[178.198s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/pythonpath.sh
+[178.200s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/pythonpath.dsv
+[178.202s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages/hdl_localization/__init__.py
+[178.206s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages/hdl_localization/msg/__init__.py
+[178.207s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages/hdl_localization/msg/_scan_matching_status.py
+[178.210s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages/hdl_localization/hdl_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[178.212s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages/hdl_localization/hdl_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[178.215s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/python3.8/site-packages/hdl_localization/hdl_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[178.218s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__python.so
+[178.220s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/msg/ScanMatchingStatus.idl
+[178.222s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/msg/ScanMatchingStatus.msg
+[178.224s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/hdl_localization/hdl_localization_composition
+[178.227s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/launch/__pycache__/lite_localization.launch.cpython-38.pyc
+[178.280s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/launch/lite_localization.launch.py
+[178.284s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/delta_estimater.hpp
+[178.285s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/odom_system.hpp
+[178.286s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/pose_estimator.hpp
+[178.288s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/hdl_localization/pose_system.hpp
+[178.289s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/include/kkl/alg/unscented_kalman_filter.hpp
+[178.293s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/hdl_localization/hdl_localization_composition
+[178.295s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/ament_index/resource_index/package_run_dependencies/hdl_localization
+[178.297s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/ament_index/resource_index/parent_prefix_path/hdl_localization
+[178.299s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/ament_prefix_path.sh
+[178.301s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/ament_prefix_path.dsv
+[178.303s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/path.sh
+[178.307s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/environment/path.dsv
+[178.309s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/local_setup.bash
+[178.311s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/local_setup.sh
+[178.313s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/local_setup.zsh
+[178.315s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/local_setup.dsv
+[178.316s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.dsv
+[178.369s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/ament_index/resource_index/packages/hdl_localization
+[178.371s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/rosidl_cmake-extras.cmake
+[178.374s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/ament_cmake_export_dependencies-extras.cmake
+[178.375s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/ament_cmake_export_libraries-extras.cmake
+[178.377s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/ament_cmake_export_targets-extras.cmake
+[178.379s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/ament_cmake_export_include_directories-extras.cmake
+[178.381s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[178.383s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[178.385s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localizationConfig.cmake
+[178.386s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localizationConfig-version.cmake
+[178.388s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/package.xml
+[178.390s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_generator_c.so
+[178.394s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_typesupport_introspection_c.so
+[178.396s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_typesupport_c.so
+[178.399s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_typesupport_introspection_cpp.so
+[178.402s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/lib/libhdl_localization__rosidl_typesupport_cpp.so
+[178.619s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_generator_cExport.cmake
+[178.620s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_generator_cExport-release.cmake
+[178.620s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_introspection_cExport.cmake
+[178.621s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_introspection_cExport-release.cmake
+[178.621s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_cExport.cmake
+[178.622s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_cExport-release.cmake
+[178.623s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_generator_cppExport.cmake
+[178.624s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_introspection_cppExport.cmake
+[178.625s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_introspection_cppExport-release.cmake
+[178.626s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_cppExport.cmake
+[178.626s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_localization/share/hdl_localization/cmake/hdl_localization__rosidl_typesupport_cppExport-release.cmake
+[178.647s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/hdl_localization' returned '0': AMENT_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy LD_LIBRARY_PATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/hdl_localization

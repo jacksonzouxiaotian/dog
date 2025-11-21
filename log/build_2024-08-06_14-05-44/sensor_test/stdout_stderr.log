@@ -1,0 +1,29 @@
+make: Warning: File 'Makefile' has modification time 340 s in the future
+make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 340 s in the future
+make[2]: Warning: File 'CMakeFiles/sensor_test.dir/flags.make' has modification time 340 s in the future
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+make[2]: Warning: File 'CMakeFiles/sensor_test.dir/flags.make' has modification time 340 s in the future
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target sensor_test
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+make: warning:  Clock skew detected.  Your build may be incomplete.
+-- Install configuration: "RELEASE"
+-- Execute custom install script
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/sensor_test/sensor_test
+-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/sensor_test/sensor_test
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/package_run_dependencies/sensor_test
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/parent_prefix_path/sensor_test
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/ament_prefix_path.sh
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/path.sh
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/path.dsv
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.bash
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.sh
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.zsh
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.dsv
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.dsv
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/packages/sensor_test
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/sensor_testConfig.cmake
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/sensor_testConfig-version.cmake
+-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.xml

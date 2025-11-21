@@ -1,0 +1,136 @@
+[0.000000] (-) TimerEvent: {}
+[0.002182] (-) JobUnselected: {'identifier': 'dr_nav2'}
+[0.002894] (-) JobUnselected: {'identifier': 'hdl_global_localization'}
+[0.003582] (-) JobUnselected: {'identifier': 'sensor_test'}
+[0.003831] (hdl_localization) JobQueued: {'identifier': 'hdl_localization', 'dependencies': OrderedDict([('hdl_global_localization', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization')])}
+[0.004416] (hdl_localization) JobStarted: {'identifier': 'hdl_localization'}
+[0.090846] (hdl_localization) JobProgress: {'identifier': 'hdl_localization', 'progress': 'cmake'}
+[0.097346] (hdl_localization) JobProgress: {'identifier': 'hdl_localization', 'progress': 'build'}
+[0.097555] (-) TimerEvent: {}
+[0.104017] (hdl_localization) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysc/lite_cog_ros2/nav/build/hdl_localization', '--', '-j6', '-l6'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/hdl_localization', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1926'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/home/ysc/lite_cog_ros2/fast_gicp/install/fast_gicp/lib:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1492'), ('ROS_LOG_DIR', '/home/ysc/lite_cog_ros2/system/log'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ysc/lite_cog_ros2/fast_gicp/install:/home/ysc/lite_cog_ros2/ndt_omp/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47102'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2060,unix/lite:/tmp/.ICE-unix/2060'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/ysc/lite_cog_ros2/system/fastdds_profile.xml'), ('INVOCATION_ID', '8d6da62e12994252b6db9736c29b1810'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f4a3c2df_5207_4b31_8eef_10921654c8a3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.82'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/home/ysc/lite_cog_ros2/fast_gicp/install/fast_gicp:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/hdl_localization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/home/ysc/lite_cog_ros2/fast_gicp/install/fast_gicp:/home/ysc/lite_cog_ros2/ndt_omp/install/ndt_omp:/opt/ros/foxy')]), 'shell': False}
+[0.198333] (-) TimerEvent: {}
+[0.300634] (-) TimerEvent: {}
+[0.401705] (-) TimerEvent: {}
+[0.503424] (-) TimerEvent: {}
+[0.510612] (hdl_localization) StdoutLine: {'line': b'[  2%] Built target hdl_localization__cpp\n'}
+[0.534708] (hdl_localization) StdoutLine: {'line': b'[ 11%] Built target hdl_localization__rosidl_generator_c\n'}
+[0.603822] (-) TimerEvent: {}
+[0.705034] (-) TimerEvent: {}
+[0.707688] (hdl_localization) StdoutLine: {'line': b'[ 20%] Built target hdl_localization__rosidl_typesupport_cpp\n'}
+[0.713471] (hdl_localization) StdoutLine: {'line': b'[ 29%] Built target hdl_localization__rosidl_typesupport_c\n'}
+[0.727850] (hdl_localization) StdoutLine: {'line': b'[ 38%] Built target hdl_localization__rosidl_typesupport_introspection_cpp\n'}
+[0.744761] (hdl_localization) StdoutLine: {'line': b'[ 47%] Built target hdl_localization__rosidl_typesupport_fastrtps_cpp\n'}
+[0.751197] (hdl_localization) StdoutLine: {'line': b'[ 55%] Built target hdl_localization__rosidl_typesupport_introspection_c\n'}
+[0.805259] (-) TimerEvent: {}
+[0.906355] (-) TimerEvent: {}
+[0.933667] (hdl_localization) StdoutLine: {'line': b'[ 64%] Built target hdl_localization__rosidl_typesupport_fastrtps_c\n'}
+[1.006586] (-) TimerEvent: {}
+[1.079042] (hdl_localization) StdoutLine: {'line': b'[ 64%] Built target hdl_localization\n'}
+[1.106860] (-) TimerEvent: {}
+[1.209964] (-) TimerEvent: {}
+[1.229931] (hdl_localization) StdoutLine: {'line': b'[ 67%] Built target hdl_localization__py\n'}
+[1.310191] (-) TimerEvent: {}
+[1.390517] (hdl_localization) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o\x1b[0m\n'}
+[1.410457] (-) TimerEvent: {}
+[1.412217] (hdl_localization) StdoutLine: {'line': b'[ 76%] Built target hdl_localization__python\n'}
+[1.510728] (-) TimerEvent: {}
+[1.599977] (hdl_localization) StdoutLine: {'line': b'[ 82%] Built target hdl_localization__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.601983] (hdl_localization) StdoutLine: {'line': b'[ 88%] Built target hdl_localization__rosidl_typesupport_c__pyext\n'}
+[1.611123] (-) TimerEvent: {}
+[1.625068] (hdl_localization) StdoutLine: {'line': b'[ 94%] Built target hdl_localization__rosidl_typesupport_introspection_c__pyext\n'}
+[1.711444] (-) TimerEvent: {}
+[1.813038] (-) TimerEvent: {}
+[1.914031] (-) TimerEvent: {}
+[2.015198] (-) TimerEvent: {}
+[2.116513] (-) TimerEvent: {}
+[2.217667] (-) TimerEvent: {}
+[2.319304] (-) TimerEvent: {}
+[2.420543] (-) TimerEvent: {}
+[2.522264] (-) TimerEvent: {}
+[2.623423] (-) TimerEvent: {}
+[2.724500] (-) TimerEvent: {}
+[2.825579] (-) TimerEvent: {}
+[2.926616] (-) TimerEvent: {}
+[3.027903] (-) TimerEvent: {}
+[3.174494] (-) TimerEvent: {}
+[3.275888] (-) TimerEvent: {}
+[3.376934] (-) TimerEvent: {}
+[3.478098] (-) TimerEvent: {}
+[3.579707] (-) TimerEvent: {}
+[3.680825] (-) TimerEvent: {}
+[3.782000] (-) TimerEvent: {}
+[3.883114] (-) TimerEvent: {}
+[3.984794] (-) TimerEvent: {}
+[4.085999] (-) TimerEvent: {}
+[4.187252] (-) TimerEvent: {}
+[4.289226] (-) TimerEvent: {}
+[4.390558] (-) TimerEvent: {}
+[4.491946] (-) TimerEvent: {}
+[4.593392] (-) TimerEvent: {}
+[4.694531] (-) TimerEvent: {}
+[4.795998] (-) TimerEvent: {}
+[4.897364] (-) TimerEvent: {}
+[4.998621] (-) TimerEvent: {}
+[5.100313] (-) TimerEvent: {}
+[5.201452] (-) TimerEvent: {}
+[5.302621] (-) TimerEvent: {}
+[5.404096] (-) TimerEvent: {}
+[5.505122] (-) TimerEvent: {}
+[5.606354] (-) TimerEvent: {}
+[5.707580] (-) TimerEvent: {}
+[5.808858] (-) TimerEvent: {}
+[5.909961] (-) TimerEvent: {}
+[6.011056] (-) TimerEvent: {}
+[6.112157] (-) TimerEvent: {}
+[6.213217] (-) TimerEvent: {}
+[6.314148] (-) TimerEvent: {}
+[6.415045] (-) TimerEvent: {}
+[6.516247] (-) TimerEvent: {}
+[6.617287] (-) TimerEvent: {}
+[6.718277] (-) TimerEvent: {}
+[6.819477] (-) TimerEvent: {}
+[6.920574] (-) TimerEvent: {}
+[7.021801] (-) TimerEvent: {}
+[7.122944] (-) TimerEvent: {}
+[7.224047] (-) TimerEvent: {}
+[7.325104] (-) TimerEvent: {}
+[7.426057] (-) TimerEvent: {}
+[7.527113] (-) TimerEvent: {}
+[7.628259] (-) TimerEvent: {}
+[7.729929] (-) TimerEvent: {}
+[7.830955] (-) TimerEvent: {}
+[7.932192] (-) TimerEvent: {}
+[8.033433] (-) TimerEvent: {}
+[8.134573] (-) TimerEvent: {}
+[8.279869] (-) TimerEvent: {}
+[8.380955] (-) TimerEvent: {}
+[8.481944] (-) TimerEvent: {}
+[8.583005] (-) TimerEvent: {}
+[8.684154] (-) TimerEvent: {}
+[8.785214] (-) TimerEvent: {}
+[8.886263] (-) TimerEvent: {}
+[8.987453] (-) TimerEvent: {}
+[9.089024] (-) TimerEvent: {}
+[9.191338] (-) TimerEvent: {}
+[9.293379] (-) TimerEvent: {}
+[9.394511] (-) TimerEvent: {}
+[9.495981] (-) TimerEvent: {}
+[9.497328] (hdl_localization) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/hdl_localization_composition.cpp:2\x1b[m\x1b[K:\n'}
+[9.498802] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:25:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kpclomp/ndt_omp.h: No such file or directory\n'}
+[9.500217] (hdl_localization) StderrLine: {'line': b'   25 | #include \x1b[01;31m\x1b[K<pclomp/ndt_omp.h>\x1b[m\x1b[K\n'}
+[9.500752] (hdl_localization) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.501351] (hdl_localization) StderrLine: {'line': b'compilation terminated.\n'}
+[9.596241] (-) TimerEvent: {}
+[9.697597] (-) TimerEvent: {}
+[9.737222] (hdl_localization) StderrLine: {'line': b'make[2]: *** [CMakeFiles/hdl_localization_composition.dir/build.make:76: CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o] Error 1\n'}
+[9.739811] (hdl_localization) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:326: CMakeFiles/hdl_localization_composition.dir/all] Error 2\n'}
+[9.742316] (hdl_localization) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[9.756719] (hdl_localization) CommandEnded: {'returncode': 2}
+[9.798807] (-) TimerEvent: {}
+[9.901657] (-) TimerEvent: {}
+[10.002833] (-) TimerEvent: {}
+[10.104233] (-) TimerEvent: {}
+[10.206385] (-) TimerEvent: {}
+[10.305231] (hdl_localization) JobEnded: {'identifier': 'hdl_localization', 'rc': 2}
+[10.309293] (-) TimerEvent: {}
+[10.317867] (-) EventReactorShutdown: {}

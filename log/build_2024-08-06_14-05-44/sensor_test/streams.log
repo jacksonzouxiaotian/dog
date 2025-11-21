@@ -1,0 +1,33 @@
+[0.236s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/sensor_test -- -j6 -l6
+[0.321s] make: Warning: File 'Makefile' has modification time 340 s in the future
+[0.508s] make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 340 s in the future
+[0.528s] make[2]: Warning: File 'CMakeFiles/sensor_test.dir/flags.make' has modification time 340 s in the future
+[0.655s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.682s] make[2]: Warning: File 'CMakeFiles/sensor_test.dir/flags.make' has modification time 340 s in the future
+[0.752s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.904s] [100%] Built target sensor_test
+[0.907s] make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+[1.003s] make: warning:  Clock skew detected.  Your build may be incomplete.
+[1.020s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/sensor_test -- -j6 -l6
+[1.445s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/sensor_test
+[1.520s] -- Install configuration: "RELEASE"
+[1.525s] -- Execute custom install script
+[1.532s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/sensor_test/sensor_test
+[1.615s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/sensor_test/sensor_test
+[1.618s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/package_run_dependencies/sensor_test
+[1.698s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/parent_prefix_path/sensor_test
+[1.781s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/ament_prefix_path.sh
+[1.863s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/ament_prefix_path.dsv
+[2.009s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/path.sh
+[2.095s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/path.dsv
+[2.171s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.bash
+[2.243s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.sh
+[2.306s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.zsh
+[2.555s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.dsv
+[2.623s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.dsv
+[2.692s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/packages/sensor_test
+[2.759s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.828s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/sensor_testConfig.cmake
+[2.892s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/sensor_testConfig-version.cmake
+[2.968s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.xml
+[3.068s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/sensor_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/sensor_test

@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from hdl_global_localization/srv/SetGlobalMap.srv
+// generated code does not contain a copyright notice
+
+#include "sensor_msgs/msg/PointCloud2.idl"
+
+module hdl_global_localization {
+  module srv {
+    struct SetGlobalMap_Request {
+      sensor_msgs::msg::PointCloud2 global_map;
+    };
+    struct SetGlobalMap_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

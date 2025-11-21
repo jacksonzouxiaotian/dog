@@ -1,0 +1,24 @@
+[0.284s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/dr_nav2 -- -j6 -l6
+[0.577s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/build/dr_nav2 -- -j6 -l6
+[0.900s] Invoking command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/dr_nav2
+[1.037s] -- Install configuration: ""
+[1.042s] -- Execute custom install script
+[1.051s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/config/lite_nav2.yaml
+[1.056s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/launch/dr_nav2.launch.py
+[1.069s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/rviz/dr_nav2.rviz
+[1.272s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/package_run_dependencies/dr_nav2
+[1.288s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/parent_prefix_path/dr_nav2
+[1.288s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/ament_prefix_path.sh
+[1.289s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/ament_prefix_path.dsv
+[1.293s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/path.sh
+[1.296s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/path.dsv
+[1.297s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.bash
+[1.298s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.sh
+[1.299s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.zsh
+[1.300s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.dsv
+[1.301s] -- Symlinking: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.dsv
+[1.364s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/packages/dr_nav2
+[1.367s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/cmake/dr_nav2Config.cmake
+[1.368s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/cmake/dr_nav2Config-version.cmake
+[1.371s] -- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.xml
+[1.390s] Invoked command in '/home/ysc/lite_cog_ros2/nav/build/dr_nav2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/build/dr_nav2

@@ -1,0 +1,3 @@
+make[2]: *** [CMakeFiles/hdl_localization_composition.dir/build.make:76: CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:326: CMakeFiles/hdl_localization_composition.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

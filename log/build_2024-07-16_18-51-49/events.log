@@ -1,0 +1,2067 @@
+[0.000000] (-) TimerEvent: {}
+[0.002315] (dr_nav2) JobQueued: {'identifier': 'dr_nav2', 'dependencies': OrderedDict()}
+[0.002507] (hdl_global_localization) JobQueued: {'identifier': 'hdl_global_localization', 'dependencies': OrderedDict()}
+[0.003232] (sensor_test) JobQueued: {'identifier': 'sensor_test', 'dependencies': OrderedDict()}
+[0.003384] (hdl_localization) JobQueued: {'identifier': 'hdl_localization', 'dependencies': OrderedDict([('hdl_global_localization', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization')])}
+[0.003531] (hdl_global_localization) JobStarted: {'identifier': 'hdl_global_localization'}
+[0.055437] (dr_nav2) JobStarted: {'identifier': 'dr_nav2'}
+[0.102100] (-) TimerEvent: {}
+[0.112131] (sensor_test) JobStarted: {'identifier': 'sensor_test'}
+[0.193332] (hdl_global_localization) JobProgress: {'identifier': 'hdl_global_localization', 'progress': 'cmake'}
+[0.197489] (hdl_global_localization) JobProgress: {'identifier': 'hdl_global_localization', 'progress': 'build'}
+[0.204334] (hdl_global_localization) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization', '--', '-j6', '-l6'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.212803] (-) TimerEvent: {}
+[0.250422] (dr_nav2) JobProgress: {'identifier': 'dr_nav2', 'progress': 'cmake'}
+[0.256097] (dr_nav2) JobProgress: {'identifier': 'dr_nav2', 'progress': 'build'}
+[0.258427] (dr_nav2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysc/lite_cog_ros2/nav/build/dr_nav2', '--', '-j6', '-l6'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/dr_nav2', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/dr_nav2'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.301387] (sensor_test) JobProgress: {'identifier': 'sensor_test', 'progress': 'cmake'}
+[0.308698] (sensor_test) JobProgress: {'identifier': 'sensor_test', 'progress': 'build'}
+[0.310618] (sensor_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysc/lite_cog_ros2/nav/build/sensor_test', '--', '-j6', '-l6'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/sensor_test', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/sensor_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.332899] (-) TimerEvent: {}
+[0.442320] (-) TimerEvent: {}
+[0.543705] (-) TimerEvent: {}
+[0.618735] (dr_nav2) CommandEnded: {'returncode': 0}
+[0.648289] (-) TimerEvent: {}
+[0.702024] (hdl_global_localization) StdoutLine: {'line': b'[  1%] Built target hdl_global_localization__cpp\n'}
+[0.726832] (hdl_global_localization) StdoutLine: {'line': b'[ 10%] Built target hdl_global_localization__rosidl_generator_c\n'}
+[0.747444] (-) TimerEvent: {}
+[0.812371] (dr_nav2) JobProgress: {'identifier': 'dr_nav2', 'progress': 'install'}
+[0.842065] (sensor_test) StdoutLine: {'line': b'[100%] Built target sensor_test\n'}
+[0.848122] (-) TimerEvent: {}
+[0.915778] (dr_nav2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ysc/lite_cog_ros2/nav/build/dr_nav2'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/dr_nav2', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/dr_nav2'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.948570] (-) TimerEvent: {}
+[0.990473] (sensor_test) CommandEnded: {'returncode': 0}
+[1.011077] (hdl_global_localization) StdoutLine: {'line': b'[ 18%] Built target hdl_global_localization__rosidl_typesupport_fastrtps_cpp\n'}
+[1.015733] (dr_nav2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.026742] (dr_nav2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.028913] (hdl_global_localization) StdoutLine: {'line': b'[ 27%] Built target hdl_global_localization__rosidl_typesupport_cpp\n'}
+[1.029997] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/config/lite_nav2.yaml\n'}
+[1.039952] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/launch/dr_nav2.launch.py\n'}
+[1.040746] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/rviz/dr_nav2.rviz\n'}
+[1.041482] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/package_run_dependencies/dr_nav2\n'}
+[1.043469] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/parent_prefix_path/dr_nav2\n'}
+[1.045419] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/ament_prefix_path.sh\n'}
+[1.047580] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/ament_prefix_path.dsv\n'}
+[1.048757] (-) TimerEvent: {}
+[1.051481] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/path.sh\n'}
+[1.052571] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/environment/path.dsv\n'}
+[1.053055] (hdl_global_localization) StdoutLine: {'line': b'[ 36%] Built target hdl_global_localization__rosidl_typesupport_introspection_cpp\n'}
+[1.054125] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.bash\n'}
+[1.057911] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.sh\n'}
+[1.060051] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.zsh\n'}
+[1.065228] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/local_setup.dsv\n'}
+[1.065946] (dr_nav2) StdoutLine: {'line': b'-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.dsv\n'}
+[1.092010] (hdl_global_localization) StdoutLine: {'line': b'[ 44%] Built target hdl_global_localization__rosidl_typesupport_introspection_c\n'}
+[1.101293] (hdl_global_localization) StdoutLine: {'line': b'[ 53%] Built target hdl_global_localization__rosidl_typesupport_c\n'}
+[1.138059] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/ament_index/resource_index/packages/dr_nav2\n'}
+[1.139921] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/cmake/dr_nav2Config.cmake\n'}
+[1.141812] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/cmake/dr_nav2Config-version.cmake\n'}
+[1.143683] (dr_nav2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/dr_nav2/share/dr_nav2/package.xml\n'}
+[1.148998] (-) TimerEvent: {}
+[1.159976] (dr_nav2) CommandEnded: {'returncode': 0}
+[1.167852] (hdl_global_localization) StdoutLine: {'line': b'[ 65%] Built target hdl_global_localization_engines\n'}
+[1.249247] (-) TimerEvent: {}
+[1.275393] (sensor_test) JobProgress: {'identifier': 'sensor_test', 'progress': 'install'}
+[1.293017] (sensor_test) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ysc/lite_cog_ros2/nav/build/sensor_test'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/sensor_test', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/sensor_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.304796] (hdl_global_localization) StdoutLine: {'line': b'[ 74%] Built target hdl_global_localization__rosidl_typesupport_fastrtps_c\n'}
+[1.349630] (-) TimerEvent: {}
+[1.361239] (sensor_test) StdoutLine: {'line': b'-- Install configuration: "RELEASE"\n'}
+[1.365082] (sensor_test) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.369228] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/sensor_test/sensor_test\n'}
+[1.373776] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/lib/sensor_test/sensor_test\n'}
+[1.376428] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/package_run_dependencies/sensor_test\n'}
+[1.379393] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/parent_prefix_path/sensor_test\n'}
+[1.381740] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/ament_prefix_path.sh\n'}
+[1.383295] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/ament_prefix_path.dsv\n'}
+[1.386172] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/path.sh\n'}
+[1.388662] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/environment/path.dsv\n'}
+[1.391070] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.bash\n'}
+[1.393076] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.sh\n'}
+[1.401767] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.zsh\n'}
+[1.402517] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/local_setup.dsv\n'}
+[1.403291] (sensor_test) StdoutLine: {'line': b'-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.dsv\n'}
+[1.451201] (-) TimerEvent: {}
+[1.458165] (hdl_global_localization) StdoutLine: {'line': b'[ 74%] Built target hdl_global_localization\n'}
+[1.467513] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/ament_index/resource_index/packages/sensor_test\n'}
+[1.469337] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.471953] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/sensor_testConfig.cmake\n'}
+[1.473325] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/cmake/sensor_testConfig-version.cmake\n'}
+[1.475587] (sensor_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/sensor_test/share/sensor_test/package.xml\n'}
+[1.507380] (dr_nav2) JobEnded: {'identifier': 'dr_nav2', 'rc': 0}
+[1.529856] (sensor_test) CommandEnded: {'returncode': 0}
+[1.551587] (-) TimerEvent: {}
+[1.653384] (-) TimerEvent: {}
+[1.685273] (hdl_global_localization) StdoutLine: {'line': b'[ 75%] Built target hdl_global_localization__py\n'}
+[1.754792] (-) TimerEvent: {}
+[1.787705] (hdl_global_localization) StdoutLine: {'line': b'[ 79%] Built target hdl_global_localization_test\n'}
+[1.832772] (hdl_global_localization) StdoutLine: {'line': b'[ 82%] Built target hdl_global_localization_node\n'}
+[1.855181] (-) TimerEvent: {}
+[1.866165] (sensor_test) JobEnded: {'identifier': 'sensor_test', 'rc': 0}
+[1.877661] (hdl_global_localization) StdoutLine: {'line': b'[ 89%] Built target hdl_global_localization__python\n'}
+[1.957520] (-) TimerEvent: {}
+[2.060320] (-) TimerEvent: {}
+[2.091170] (hdl_global_localization) StdoutLine: {'line': b'[ 93%] Built target hdl_global_localization__rosidl_typesupport_c__pyext\n'}
+[2.104014] (hdl_global_localization) StdoutLine: {'line': b'[ 96%] Built target hdl_global_localization__rosidl_typesupport_introspection_c__pyext\n'}
+[2.115998] (hdl_global_localization) StdoutLine: {'line': b'[100%] Built target hdl_global_localization__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.160663] (-) TimerEvent: {}
+[2.192914] (hdl_global_localization) CommandEnded: {'returncode': 0}
+[2.261602] (-) TimerEvent: {}
+[2.364229] (-) TimerEvent: {}
+[2.465459] (-) TimerEvent: {}
+[2.566400] (-) TimerEvent: {}
+[2.667326] (-) TimerEvent: {}
+[2.768787] (-) TimerEvent: {}
+[2.869984] (-) TimerEvent: {}
+[2.941035] (hdl_global_localization) JobProgress: {'identifier': 'hdl_global_localization', 'progress': 'install'}
+[2.944998] (hdl_global_localization) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[2.972145] (-) TimerEvent: {}
+[3.012115] (hdl_global_localization) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.016833] (hdl_global_localization) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.020228] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/ament_index/resource_index/rosidl_interfaces/hdl_global_localization\n'}
+[3.027274] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.030218] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__functions.h\n'}
+[3.032677] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__struct.h\n'}
+[3.033464] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__type_support.h\n'}
+[3.034313] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__functions.h\n'}
+[3.035253] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__struct.h\n'}
+[3.036401] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.h\n'}
+[3.037916] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__functions.h\n'}
+[3.039331] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__struct.h\n'}
+[3.040683] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__type_support.h\n'}
+[3.042018] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/query_global_localization.h\n'}
+[3.043416] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_localization_engine.h\n'}
+[3.044851] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_map.h\n'}
+[3.047726] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/library_path.sh\n'}
+[3.049118] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/library_path.dsv\n'}
+[3.054275] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.055779] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_fastrtps_c.h\n'}
+[3.057516] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_fastrtps_c.h\n'}
+[3.058618] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_fastrtps_c.h\n'}
+[3.061410] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_fastrtps_c.so\n'}
+[3.066681] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.068301] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.069662] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.071120] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.072171] (-) TimerEvent: {}
+[3.073862] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.077946] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.079502] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_introspection_c.h\n'}
+[3.081793] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_introspection_c.h\n'}
+[3.082592] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_introspection_c.h\n'}
+[3.087571] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.088997] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__builder.hpp\n'}
+[3.090386] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__struct.hpp\n'}
+[3.091876] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__traits.hpp\n'}
+[3.093262] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__type_support.hpp\n'}
+[3.094583] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__builder.hpp\n'}
+[3.096084] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__struct.hpp\n'}
+[3.097481] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__traits.hpp\n'}
+[3.098862] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.hpp\n'}
+[3.100318] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__builder.hpp\n'}
+[3.101757] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__struct.hpp\n'}
+[3.103218] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__traits.hpp\n'}
+[3.104583] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__type_support.hpp\n'}
+[3.105939] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/query_global_localization.hpp\n'}
+[3.107467] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_localization_engine.hpp\n'}
+[3.108790] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_map.hpp\n'}
+[3.112899] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.114420] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.115918] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.118418] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/pythonpath.sh\n'}
+[3.120449] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/pythonpath.dsv\n'}
+[3.124070] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/__init__.py\n'}
+[3.127814] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/__init__.py\n'}
+[3.129248] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_query_global_localization.py\n'}
+[3.131457] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_set_global_localization_engine.py\n'}
+[3.134855] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_set_global_map.py\n'}
+[3.136484] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[3.139824] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[3.142399] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[3.145265] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__python.so\n'}
+[3.147403] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization.idl\n'}
+[3.149407] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine.idl\n'}
+[3.151424] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap.idl\n'}
+[3.153285] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization.srv\n'}
+[3.155337] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization_Request.msg\n'}
+[3.157427] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization_Response.msg\n'}
+[3.159341] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine.srv\n'}
+[3.161289] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine_Request.msg\n'}
+[3.163489] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine_Response.msg\n'}
+[3.165326] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap.srv\n'}
+[3.167460] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap_Request.msg\n'}
+[3.169870] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap_Response.msg\n'}
+[3.172330] (-) TimerEvent: {}
+[3.175022] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/config.json\n'}
+[3.176395] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/config_base.json\n'}
+[3.177789] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/config_bbs.json\n'}
+[3.179378] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/ros1/bbs_config.yaml\n'}
+[3.180749] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/ros1/fpfh_config.yaml\n'}
+[3.182089] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/ros1/general_config.yaml\n'}
+[3.183682] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/ros1/ransac_config.yaml\n'}
+[3.185062] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/ros1/teaser_config.yaml\n'}
+[3.186429] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/config/test.rviz\n'}
+[3.191777] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/bbs/bbs_localization.hpp\n'}
+[3.192953] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/bbs/occupancy_gridmap.hpp\n'}
+[3.194328] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_bbs.hpp\n'}
+[3.195729] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_engine.hpp\n'}
+[3.197253] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_fpfh_ransac.hpp\n'}
+[3.199257] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_fpfh_teaser.hpp\n'}
+[3.200719] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/global_localization_results.hpp\n'}
+[3.202076] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater.hpp\n'}
+[3.203453] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater_flann.hpp\n'}
+[3.204798] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater_voxels.hpp\n'}
+[3.206572] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/ransac/ransac_pose_estimation.hpp\n'}
+[3.207989] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/ransac/voxelset.hpp\n'}
+[3.209131] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/util/config.hpp\n'}
+[3.210431] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/include/hdl_global_localization/util/convert_to_string.hpp\n'}
+[3.213239] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization_engines.so\n'}
+[3.216128] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/hdl_global_localization/hdl_global_localization_node\n'}
+[3.218401] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/hdl_global_localization/hdl_global_localization_test\n'}
+[3.220927] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/ament_index/resource_index/package_run_dependencies/hdl_global_localization\n'}
+[3.223193] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/ament_index/resource_index/parent_prefix_path/hdl_global_localization\n'}
+[3.226576] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/ament_prefix_path.sh\n'}
+[3.228293] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/ament_prefix_path.dsv\n'}
+[3.230109] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/path.sh\n'}
+[3.232086] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/environment/path.dsv\n'}
+[3.234062] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/local_setup.bash\n'}
+[3.235973] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/local_setup.sh\n'}
+[3.237999] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/local_setup.zsh\n'}
+[3.240026] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/local_setup.dsv\n'}
+[3.241485] (hdl_global_localization) StdoutLine: {'line': b'-- Symlinking: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.dsv\n'}
+[3.272752] (-) TimerEvent: {}
+[3.301433] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/ament_index/resource_index/packages/hdl_global_localization\n'}
+[3.303709] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/rosidl_cmake-extras.cmake\n'}
+[3.305782] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.308095] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.310161] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.312261] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.314358] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.317132] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.318890] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localizationConfig.cmake\n'}
+[3.321262] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localizationConfig-version.cmake\n'}
+[3.324321] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/package.xml\n'}
+[3.327830] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_generator_c.so\n'}
+[3.330755] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_introspection_c.so\n'}
+[3.333837] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_c.so\n'}
+[3.337512] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_introspection_cpp.so\n'}
+[3.340208] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_cpp.so\n'}
+[3.372921] (-) TimerEvent: {}
+[3.473834] (-) TimerEvent: {}
+[3.552295] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_generator_cExport.cmake\n'}
+[3.553279] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.554404] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.554870] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.555854] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cExport.cmake\n'}
+[3.556373] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.557102] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_generator_cppExport.cmake\n'}
+[3.558590] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.559462] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.560519] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cppExport.cmake\n'}
+[3.561211] (hdl_global_localization) StdoutLine: {'line': b'-- Up-to-date: /home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.574313] (-) TimerEvent: {}
+[3.588071] (hdl_global_localization) CommandEnded: {'returncode': 0}
+[3.675176] (-) TimerEvent: {}
+[3.777377] (-) TimerEvent: {}
+[3.878372] (-) TimerEvent: {}
+[3.979519] (-) TimerEvent: {}
+[4.080926] (-) TimerEvent: {}
+[4.228196] (-) TimerEvent: {}
+[4.330901] (-) TimerEvent: {}
+[4.433428] (-) TimerEvent: {}
+[4.528355] (hdl_global_localization) JobEnded: {'identifier': 'hdl_global_localization', 'rc': 0}
+[4.536409] (-) TimerEvent: {}
+[4.536972] (hdl_localization) JobStarted: {'identifier': 'hdl_localization'}
+[4.615588] (hdl_localization) JobProgress: {'identifier': 'hdl_localization', 'progress': 'cmake'}
+[4.627815] (hdl_localization) Command: {'cmd': ['/usr/bin/cmake', '/home/ysc/lite_cog_ros2/nav/src/hdl_localization', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ysc/lite_cog_ros2/nav/install/hdl_localization'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/hdl_localization', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/hdl_localization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy')]), 'shell': False}
+[4.653646] (-) TimerEvent: {}
+[4.755046] (-) TimerEvent: {}
+[4.856141] (-) TimerEvent: {}
+[4.958650] (-) TimerEvent: {}
+[5.059982] (-) TimerEvent: {}
+[5.161516] (-) TimerEvent: {}
+[5.262748] (-) TimerEvent: {}
+[5.363992] (-) TimerEvent: {}
+[5.465570] (-) TimerEvent: {}
+[5.566731] (-) TimerEvent: {}
+[5.668060] (-) TimerEvent: {}
+[5.769377] (-) TimerEvent: {}
+[5.870676] (-) TimerEvent: {}
+[5.926904] (hdl_localization) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[5.971058] (-) TimerEvent: {}
+[6.072252] (-) TimerEvent: {}
+[6.173890] (-) TimerEvent: {}
+[6.275029] (-) TimerEvent: {}
+[6.376152] (-) TimerEvent: {}
+[6.477330] (-) TimerEvent: {}
+[6.526398] (hdl_localization) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[6.578179] (-) TimerEvent: {}
+[6.679562] (-) TimerEvent: {}
+[6.721383] (hdl_localization) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[6.779812] (-) TimerEvent: {}
+[6.880904] (-) TimerEvent: {}
+[6.981980] (-) TimerEvent: {}
+[7.083073] (-) TimerEvent: {}
+[7.184640] (-) TimerEvent: {}
+[7.285654] (-) TimerEvent: {}
+[7.394256] (-) TimerEvent: {}
+[7.422827] (hdl_localization) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[7.505440] (-) TimerEvent: {}
+[7.620202] (-) TimerEvent: {}
+[7.624999] (hdl_localization) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.742733] (-) TimerEvent: {}
+[7.888652] (-) TimerEvent: {}
+[7.993684] (-) TimerEvent: {}
+[8.094733] (-) TimerEvent: {}
+[8.195824] (-) TimerEvent: {}
+[8.297047] (-) TimerEvent: {}
+[8.398468] (-) TimerEvent: {}
+[8.499741] (-) TimerEvent: {}
+[8.541453] (hdl_localization) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[8.600199] (-) TimerEvent: {}
+[8.701446] (-) TimerEvent: {}
+[8.786762] (hdl_localization) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[8.790336] (hdl_localization) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[8.801664] (-) TimerEvent: {}
+[8.813930] (hdl_localization) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[8.903404] (-) TimerEvent: {}
+[9.005732] (-) TimerEvent: {}
+[9.107459] (-) TimerEvent: {}
+[9.331232] (-) TimerEvent: {}
+[9.432477] (-) TimerEvent: {}
+[9.533638] (-) TimerEvent: {}
+[9.566498] (hdl_localization) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[9.575847] (hdl_localization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[9.633896] (-) TimerEvent: {}
+[9.735542] (-) TimerEvent: {}
+[9.836678] (-) TimerEvent: {}
+[9.938342] (-) TimerEvent: {}
+[10.039473] (-) TimerEvent: {}
+[10.140488] (-) TimerEvent: {}
+[10.241536] (-) TimerEvent: {}
+[10.289784] (hdl_localization) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[10.341848] (-) TimerEvent: {}
+[10.377180] (hdl_localization) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[10.379447] (hdl_localization) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[10.442073] (-) TimerEvent: {}
+[10.537625] (hdl_localization) StdoutLine: {'line': b'-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)\n'}
+[10.542267] (-) TimerEvent: {}
+[10.643507] (-) TimerEvent: {}
+[10.744661] (-) TimerEvent: {}
+[10.845774] (-) TimerEvent: {}
+[10.930444] (hdl_localization) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[10.931947] (hdl_localization) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[10.945912] (-) TimerEvent: {}
+[11.048280] (-) TimerEvent: {}
+[11.149254] (-) TimerEvent: {}
+[11.250306] (-) TimerEvent: {}
+[11.351382] (-) TimerEvent: {}
+[11.452465] (-) TimerEvent: {}
+[11.553523] (-) TimerEvent: {}
+[11.654452] (-) TimerEvent: {}
+[11.755546] (-) TimerEvent: {}
+[11.856566] (-) TimerEvent: {}
+[11.957620] (-) TimerEvent: {}
+[12.058626] (-) TimerEvent: {}
+[12.159665] (-) TimerEvent: {}
+[12.260577] (-) TimerEvent: {}
+[12.361578] (-) TimerEvent: {}
+[12.462468] (-) TimerEvent: {}
+[12.563536] (-) TimerEvent: {}
+[12.664560] (-) TimerEvent: {}
+[12.765631] (-) TimerEvent: {}
+[12.828173] (hdl_localization) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[12.865901] (-) TimerEvent: {}
+[12.966861] (-) TimerEvent: {}
+[13.067926] (-) TimerEvent: {}
+[13.168848] (-) TimerEvent: {}
+[13.269806] (-) TimerEvent: {}
+[13.371679] (-) TimerEvent: {}
+[13.475276] (-) TimerEvent: {}
+[13.553243] (hdl_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[13.575486] (-) TimerEvent: {}
+[13.676495] (-) TimerEvent: {}
+[13.778012] (-) TimerEvent: {}
+[13.879080] (-) TimerEvent: {}
+[13.890238] (hdl_localization) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[13.979301] (-) TimerEvent: {}
+[14.080431] (-) TimerEvent: {}
+[14.181435] (-) TimerEvent: {}
+[14.398725] (-) TimerEvent: {}
+[14.500126] (-) TimerEvent: {}
+[14.601224] (-) TimerEvent: {}
+[14.702584] (-) TimerEvent: {}
+[14.804044] (-) TimerEvent: {}
+[14.907192] (-) TimerEvent: {}
+[15.013305] (-) TimerEvent: {}
+[15.114487] (-) TimerEvent: {}
+[15.215747] (-) TimerEvent: {}
+[15.317516] (-) TimerEvent: {}
+[15.418646] (-) TimerEvent: {}
+[15.519810] (-) TimerEvent: {}
+[15.545923] (hdl_localization) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[15.620062] (-) TimerEvent: {}
+[15.721200] (-) TimerEvent: {}
+[15.822269] (-) TimerEvent: {}
+[15.860477] (hdl_localization) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[15.922773] (-) TimerEvent: {}
+[16.023917] (-) TimerEvent: {}
+[16.124940] (-) TimerEvent: {}
+[16.225971] (-) TimerEvent: {}
+[16.327156] (-) TimerEvent: {}
+[16.428284] (-) TimerEvent: {}
+[16.529327] (-) TimerEvent: {}
+[16.630513] (-) TimerEvent: {}
+[16.731658] (-) TimerEvent: {}
+[16.832775] (-) TimerEvent: {}
+[16.933919] (-) TimerEvent: {}
+[17.035113] (-) TimerEvent: {}
+[17.136281] (-) TimerEvent: {}
+[17.237828] (-) TimerEvent: {}
+[17.338934] (-) TimerEvent: {}
+[17.410243] (hdl_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[17.439201] (-) TimerEvent: {}
+[17.540351] (-) TimerEvent: {}
+[17.641590] (-) TimerEvent: {}
+[17.742730] (-) TimerEvent: {}
+[17.843857] (-) TimerEvent: {}
+[17.944952] (-) TimerEvent: {}
+[18.045977] (-) TimerEvent: {}
+[18.147669] (-) TimerEvent: {}
+[18.248675] (-) TimerEvent: {}
+[18.349794] (-) TimerEvent: {}
+[18.450861] (-) TimerEvent: {}
+[18.551972] (-) TimerEvent: {}
+[18.653101] (-) TimerEvent: {}
+[18.754239] (-) TimerEvent: {}
+[18.855577] (-) TimerEvent: {}
+[18.956654] (-) TimerEvent: {}
+[19.058348] (-) TimerEvent: {}
+[19.159573] (-) TimerEvent: {}
+[19.260589] (-) TimerEvent: {}
+[19.361596] (-) TimerEvent: {}
+[19.462652] (-) TimerEvent: {}
+[19.509092] (hdl_localization) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[19.523314] (hdl_localization) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[19.531873] (hdl_localization) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[19.562894] (-) TimerEvent: {}
+[19.664133] (-) TimerEvent: {}
+[19.765347] (-) TimerEvent: {}
+[19.866646] (-) TimerEvent: {}
+[19.967985] (-) TimerEvent: {}
+[20.069431] (-) TimerEvent: {}
+[20.138095] (hdl_localization) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[20.140181] (hdl_localization) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[20.169707] (-) TimerEvent: {}
+[20.270699] (-) TimerEvent: {}
+[20.371908] (-) TimerEvent: {}
+[20.472938] (-) TimerEvent: {}
+[20.574080] (-) TimerEvent: {}
+[20.675224] (-) TimerEvent: {}
+[20.776308] (-) TimerEvent: {}
+[20.858838] (hdl_localization) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[20.860339] (hdl_localization) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[20.876515] (-) TimerEvent: {}
+[20.977893] (-) TimerEvent: {}
+[21.079049] (-) TimerEvent: {}
+[21.180107] (-) TimerEvent: {}
+[21.281105] (-) TimerEvent: {}
+[21.382132] (-) TimerEvent: {}
+[21.483182] (-) TimerEvent: {}
+[21.544731] (hdl_localization) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[21.546275] (hdl_localization) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[21.583408] (-) TimerEvent: {}
+[21.684523] (-) TimerEvent: {}
+[21.785684] (-) TimerEvent: {}
+[21.887375] (-) TimerEvent: {}
+[21.988492] (-) TimerEvent: {}
+[22.018858] (hdl_localization) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[22.035333] (hdl_localization) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[22.088762] (-) TimerEvent: {}
+[22.189945] (-) TimerEvent: {}
+[22.291152] (-) TimerEvent: {}
+[22.392447] (-) TimerEvent: {}
+[22.493641] (-) TimerEvent: {}
+[22.594869] (-) TimerEvent: {}
+[22.695970] (-) TimerEvent: {}
+[22.797343] (-) TimerEvent: {}
+[22.898570] (-) TimerEvent: {}
+[22.999753] (-) TimerEvent: {}
+[23.101002] (-) TimerEvent: {}
+[23.202311] (-) TimerEvent: {}
+[23.303503] (-) TimerEvent: {}
+[23.404785] (-) TimerEvent: {}
+[23.506015] (-) TimerEvent: {}
+[23.608522] (-) TimerEvent: {}
+[23.709739] (-) TimerEvent: {}
+[23.810848] (-) TimerEvent: {}
+[23.912116] (-) TimerEvent: {}
+[24.013288] (-) TimerEvent: {}
+[24.114450] (-) TimerEvent: {}
+[24.215799] (-) TimerEvent: {}
+[24.317074] (-) TimerEvent: {}
+[24.418195] (-) TimerEvent: {}
+[24.520480] (-) TimerEvent: {}
+[24.621442] (-) TimerEvent: {}
+[24.722518] (-) TimerEvent: {}
+[24.823624] (-) TimerEvent: {}
+[24.924687] (-) TimerEvent: {}
+[25.025693] (-) TimerEvent: {}
+[25.127559] (-) TimerEvent: {}
+[25.228952] (-) TimerEvent: {}
+[25.329995] (-) TimerEvent: {}
+[25.431062] (-) TimerEvent: {}
+[25.532129] (-) TimerEvent: {}
+[25.633243] (-) TimerEvent: {}
+[25.734424] (-) TimerEvent: {}
+[25.835599] (-) TimerEvent: {}
+[25.936768] (-) TimerEvent: {}
+[26.038146] (-) TimerEvent: {}
+[26.139312] (-) TimerEvent: {}
+[26.240403] (-) TimerEvent: {}
+[26.341455] (-) TimerEvent: {}
+[26.442477] (-) TimerEvent: {}
+[26.543586] (-) TimerEvent: {}
+[26.644664] (-) TimerEvent: {}
+[26.745782] (-) TimerEvent: {}
+[26.846870] (-) TimerEvent: {}
+[26.948057] (-) TimerEvent: {}
+[27.049172] (-) TimerEvent: {}
+[27.150287] (-) TimerEvent: {}
+[27.251483] (-) TimerEvent: {}
+[27.352566] (-) TimerEvent: {}
+[27.453631] (-) TimerEvent: {}
+[27.554722] (-) TimerEvent: {}
+[27.655890] (-) TimerEvent: {}
+[27.757602] (-) TimerEvent: {}
+[27.858681] (-) TimerEvent: {}
+[27.959750] (-) TimerEvent: {}
+[28.060773] (-) TimerEvent: {}
+[28.161773] (-) TimerEvent: {}
+[28.262779] (-) TimerEvent: {}
+[28.363878] (-) TimerEvent: {}
+[28.398663] (hdl_localization) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)\n'}
+[28.464128] (-) TimerEvent: {}
+[28.559393] (hdl_localization) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.3.7") \n'}
+[28.564257] (-) TimerEvent: {}
+[28.664994] (-) TimerEvent: {}
+[28.766074] (-) TimerEvent: {}
+[28.867068] (-) TimerEvent: {}
+[28.969169] (-) TimerEvent: {}
+[29.070290] (-) TimerEvent: {}
+[29.171417] (-) TimerEvent: {}
+[29.272466] (-) TimerEvent: {}
+[29.373584] (-) TimerEvent: {}
+[29.474741] (-) TimerEvent: {}
+[29.576372] (-) TimerEvent: {}
+[29.677761] (-) TimerEvent: {}
+[29.778840] (-) TimerEvent: {}
+[29.880021] (-) TimerEvent: {}
+[29.981049] (-) TimerEvent: {}
+[30.082067] (-) TimerEvent: {}
+[30.183285] (-) TimerEvent: {}
+[30.284370] (-) TimerEvent: {}
+[30.385435] (-) TimerEvent: {}
+[30.486479] (-) TimerEvent: {}
+[30.587673] (-) TimerEvent: {}
+[30.688722] (-) TimerEvent: {}
+[30.789786] (-) TimerEvent: {}
+[30.890876] (-) TimerEvent: {}
+[30.991977] (-) TimerEvent: {}
+[31.093006] (-) TimerEvent: {}
+[31.194129] (-) TimerEvent: {}
+[31.295392] (-) TimerEvent: {}
+[31.396437] (-) TimerEvent: {}
+[31.497919] (-) TimerEvent: {}
+[31.599034] (-) TimerEvent: {}
+[31.700068] (-) TimerEvent: {}
+[31.734762] (hdl_localization) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[31.800376] (-) TimerEvent: {}
+[31.901407] (-) TimerEvent: {}
+[32.002540] (-) TimerEvent: {}
+[32.018876] (hdl_localization) StdoutLine: {'line': b'--   Found eigen3, version 3.3.7\n'}
+[32.102868] (-) TimerEvent: {}
+[32.204076] (-) TimerEvent: {}
+[32.306018] (-) TimerEvent: {}
+[32.409796] (-) TimerEvent: {}
+[32.440743] (hdl_localization) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[32.442115] (hdl_localization) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.3.7)\n'}
+[32.510031] (-) TimerEvent: {}
+[32.611763] (-) TimerEvent: {}
+[32.712939] (-) TimerEvent: {}
+[32.814135] (-) TimerEvent: {}
+[32.916099] (-) TimerEvent: {}
+[33.017530] (-) TimerEvent: {}
+[33.099928] (hdl_localization) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[33.117291] (-) TimerEvent: {}
+[33.219077] (-) TimerEvent: {}
+[33.320028] (-) TimerEvent: {}
+[33.390217] (hdl_localization) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[33.421030] (-) TimerEvent: {}
+[33.525183] (-) TimerEvent: {}
+[33.626240] (-) TimerEvent: {}
+[33.727348] (-) TimerEvent: {}
+[33.828294] (-) TimerEvent: {}
+[33.837940] (hdl_localization) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so  \n'}
+[33.928500] (-) TimerEvent: {}
+[34.029474] (-) TimerEvent: {}
+[34.130463] (-) TimerEvent: {}
+[34.231569] (-) TimerEvent: {}
+[34.332667] (-) TimerEvent: {}
+[34.433684] (-) TimerEvent: {}
+[34.534675] (-) TimerEvent: {}
+[34.635810] (-) TimerEvent: {}
+[34.736805] (-) TimerEvent: {}
+[34.837882] (-) TimerEvent: {}
+[34.846454] (hdl_localization) StdoutLine: {'line': b'-- The imported target "vtkParseOGLExt" references the file\n'}
+[34.847347] (hdl_localization) StdoutLine: {'line': b'   "/usr/bin/vtkParseOGLExt-7.1"\n'}
+[34.847882] (hdl_localization) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[34.848346] (hdl_localization) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[34.848834] (hdl_localization) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[34.849223] (hdl_localization) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[34.849709] (hdl_localization) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[34.850085] (hdl_localization) StdoutLine: {'line': b'but not all the files it references.\n'}
+[34.850542] (hdl_localization) StdoutLine: {'line': b'\n'}
+[34.855974] (hdl_localization) StdoutLine: {'line': b'-- The imported target "vtkRenderingPythonTkWidgets" references the file\n'}
+[34.858524] (hdl_localization) StdoutLine: {'line': b'   "/usr/lib/aarch64-linux-gnu/libvtkRenderingPythonTkWidgets.so"\n'}
+[34.859759] (hdl_localization) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[34.860704] (hdl_localization) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[34.861264] (hdl_localization) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[34.862123] (hdl_localization) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[34.862628] (hdl_localization) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[34.863281] (hdl_localization) StdoutLine: {'line': b'but not all the files it references.\n'}
+[34.864268] (hdl_localization) StdoutLine: {'line': b'\n'}
+[34.865142] (hdl_localization) StdoutLine: {'line': b'-- The imported target "vtk" references the file\n'}
+[34.866378] (hdl_localization) StdoutLine: {'line': b'   "/usr/bin/vtk"\n'}
+[34.867200] (hdl_localization) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[34.868990] (hdl_localization) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[34.869451] (hdl_localization) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[34.870032] (hdl_localization) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[34.870480] (hdl_localization) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[34.871059] (hdl_localization) StdoutLine: {'line': b'but not all the files it references.\n'}
+[34.871658] (hdl_localization) StdoutLine: {'line': b'\n'}
+[34.872270] (hdl_localization) StdoutLine: {'line': b'-- The imported target "pvtk" references the file\n'}
+[34.872704] (hdl_localization) StdoutLine: {'line': b'   "/usr/bin/pvtk"\n'}
+[34.873217] (hdl_localization) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[34.873683] (hdl_localization) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[34.874213] (hdl_localization) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[34.874735] (hdl_localization) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[34.875266] (hdl_localization) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[34.875824] (hdl_localization) StdoutLine: {'line': b'but not all the files it references.\n'}
+[34.876211] (hdl_localization) StdoutLine: {'line': b'\n'}
+[34.938105] (-) TimerEvent: {}
+[35.039207] (-) TimerEvent: {}
+[35.140225] (-) TimerEvent: {}
+[35.182750] (hdl_localization) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[35.240467] (-) TimerEvent: {}
+[35.341457] (-) TimerEvent: {}
+[35.442434] (-) TimerEvent: {}
+[35.469144] (hdl_localization) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.23\n'}
+[35.542700] (-) TimerEvent: {}
+[35.643843] (-) TimerEvent: {}
+[35.744986] (-) TimerEvent: {}
+[35.846819] (-) TimerEvent: {}
+[35.953089] (-) TimerEvent: {}
+[36.032945] (hdl_localization) StdoutLine: {'line': b'-- Found USB_10: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  \n'}
+[36.053472] (-) TimerEvent: {}
+[36.154617] (-) TimerEvent: {}
+[36.255769] (-) TimerEvent: {}
+[36.356912] (-) TimerEvent: {}
+[36.458143] (-) TimerEvent: {}
+[36.560779] (-) TimerEvent: {}
+[36.663067] (-) TimerEvent: {}
+[36.761353] (hdl_localization) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[36.764072] (-) TimerEvent: {}
+[36.865475] (-) TimerEvent: {}
+[36.966774] (-) TimerEvent: {}
+[37.068349] (-) TimerEvent: {}
+[37.169352] (-) TimerEvent: {}
+[37.270510] (-) TimerEvent: {}
+[37.373206] (-) TimerEvent: {}
+[37.482399] (-) TimerEvent: {}
+[37.590583] (-) TimerEvent: {}
+[37.665162] (hdl_localization) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[37.690777] (-) TimerEvent: {}
+[37.760201] (hdl_localization) StdoutLine: {'line': b'-- Found libusb-1.0: /usr/include  \n'}
+[37.791362] (-) TimerEvent: {}
+[37.800781] (hdl_localization) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[37.839226] (hdl_localization) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[37.891615] (-) TimerEvent: {}
+[37.992666] (-) TimerEvent: {}
+[38.093684] (-) TimerEvent: {}
+[38.186137] (hdl_localization) StdoutLine: {'line': b'-- Found Qhull: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so  \n'}
+[38.189543] (hdl_localization) StdoutLine: {'line': b'-- QHULL found (include: /usr/include, lib: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so)\n'}
+[38.194597] (-) TimerEvent: {}
+[38.229664] (hdl_localization) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[38.294860] (-) TimerEvent: {}
+[38.315373] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  \n'}
+[38.322546] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  \n'}
+[38.329776] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  \n'}
+[38.338250] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so  \n'}
+[38.345582] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  \n'}
+[38.352937] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so  \n'}
+[38.356073] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.10  \n'}
+[38.358826] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.10  \n'}
+[38.365305] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  \n'}
+[38.372613] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so  \n'}
+[38.380209] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so  \n'}
+[38.386854] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  \n'}
+[38.394301] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so  \n'}
+[38.395028] (-) TimerEvent: {}
+[38.401893] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so  \n'}
+[38.409259] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so  \n'}
+[38.416891] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so  \n'}
+[38.424150] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so  \n'}
+[38.431263] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so  \n'}
+[38.441605] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so  \n'}
+[38.448741] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so  \n'}
+[38.455136] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.10  \n'}
+[38.495278] (-) TimerEvent: {}
+[38.596275] (-) TimerEvent: {}
+[38.599710] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.10  \n'}
+[38.607418] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so  \n'}
+[38.615811] (hdl_localization) StdoutLine: {'line': b'-- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so  \n'}
+[38.696518] (-) TimerEvent: {}
+[38.798237] (-) TimerEvent: {}
+[38.899367] (-) TimerEvent: {}
+[39.000357] (-) TimerEvent: {}
+[39.101369] (-) TimerEvent: {}
+[39.202290] (-) TimerEvent: {}
+[39.303417] (-) TimerEvent: {}
+[39.404559] (-) TimerEvent: {}
+[39.505719] (-) TimerEvent: {}
+[39.606683] (-) TimerEvent: {}
+[39.708071] (-) TimerEvent: {}
+[39.809658] (-) TimerEvent: {}
+[39.910677] (-) TimerEvent: {}
+[40.011822] (-) TimerEvent: {}
+[40.112855] (-) TimerEvent: {}
+[40.213943] (-) TimerEvent: {}
+[40.315069] (-) TimerEvent: {}
+[40.416019] (-) TimerEvent: {}
+[40.516917] (-) TimerEvent: {}
+[40.618550] (-) TimerEvent: {}
+[40.719686] (-) TimerEvent: {}
+[40.820730] (-) TimerEvent: {}
+[40.921780] (-) TimerEvent: {}
+[41.022720] (-) TimerEvent: {}
+[41.123960] (-) TimerEvent: {}
+[41.224936] (-) TimerEvent: {}
+[41.326031] (-) TimerEvent: {}
+[41.427192] (-) TimerEvent: {}
+[41.528252] (-) TimerEvent: {}
+[41.629417] (-) TimerEvent: {}
+[41.730394] (-) TimerEvent: {}
+[41.831465] (-) TimerEvent: {}
+[41.932502] (-) TimerEvent: {}
+[42.033508] (-) TimerEvent: {}
+[42.134540] (-) TimerEvent: {}
+[42.235721] (-) TimerEvent: {}
+[42.339630] (-) TimerEvent: {}
+[42.440714] (-) TimerEvent: {}
+[42.541914] (-) TimerEvent: {}
+[42.643700] (-) TimerEvent: {}
+[42.744824] (-) TimerEvent: {}
+[42.845878] (-) TimerEvent: {}
+[42.946911] (-) TimerEvent: {}
+[43.048577] (-) TimerEvent: {}
+[43.149669] (-) TimerEvent: {}
+[43.250668] (-) TimerEvent: {}
+[43.352604] (-) TimerEvent: {}
+[43.453740] (-) TimerEvent: {}
+[43.555408] (-) TimerEvent: {}
+[43.656524] (-) TimerEvent: {}
+[43.758488] (-) TimerEvent: {}
+[43.859667] (-) TimerEvent: {}
+[43.962061] (-) TimerEvent: {}
+[43.975947] (hdl_localization) StdoutLine: {'line': b'-- Found OpenMP_C: -fopenmp (found version "4.5") \n'}
+[44.062308] (-) TimerEvent: {}
+[44.163424] (-) TimerEvent: {}
+[44.264474] (-) TimerEvent: {}
+[44.365540] (-) TimerEvent: {}
+[44.466602] (-) TimerEvent: {}
+[44.567646] (-) TimerEvent: {}
+[44.668882] (-) TimerEvent: {}
+[44.689116] (hdl_localization) StdoutLine: {'line': b'-- Found OpenMP_CXX: -fopenmp (found version "4.5") \n'}
+[44.692445] (hdl_localization) StdoutLine: {'line': b'-- Found OpenMP: TRUE (found version "4.5")  \n'}
+[44.769126] (-) TimerEvent: {}
+[44.968964] (-) TimerEvent: {}
+[45.010377] (hdl_localization) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[45.069201] (-) TimerEvent: {}
+[45.170190] (-) TimerEvent: {}
+[45.271185] (-) TimerEvent: {}
+[45.372186] (-) TimerEvent: {}
+[45.473321] (-) TimerEvent: {}
+[45.574357] (-) TimerEvent: {}
+[45.675472] (-) TimerEvent: {}
+[45.776519] (-) TimerEvent: {}
+[45.877532] (-) TimerEvent: {}
+[45.978539] (-) TimerEvent: {}
+[46.079618] (-) TimerEvent: {}
+[46.180750] (-) TimerEvent: {}
+[46.282455] (-) TimerEvent: {}
+[46.383559] (-) TimerEvent: {}
+[46.484597] (-) TimerEvent: {}
+[46.585701] (-) TimerEvent: {}
+[46.686724] (-) TimerEvent: {}
+[46.788318] (-) TimerEvent: {}
+[46.889338] (-) TimerEvent: {}
+[46.990791] (-) TimerEvent: {}
+[46.992267] (hdl_localization) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[47.091112] (-) TimerEvent: {}
+[47.192144] (-) TimerEvent: {}
+[47.293215] (-) TimerEvent: {}
+[47.394185] (-) TimerEvent: {}
+[47.495308] (-) TimerEvent: {}
+[47.596684] (-) TimerEvent: {}
+[47.697858] (-) TimerEvent: {}
+[47.798913] (-) TimerEvent: {}
+[47.900085] (-) TimerEvent: {}
+[48.001104] (-) TimerEvent: {}
+[48.102075] (-) TimerEvent: {}
+[48.203154] (-) TimerEvent: {}
+[48.304299] (-) TimerEvent: {}
+[48.405405] (-) TimerEvent: {}
+[48.506448] (-) TimerEvent: {}
+[48.608202] (-) TimerEvent: {}
+[48.709206] (-) TimerEvent: {}
+[48.810227] (-) TimerEvent: {}
+[48.911320] (-) TimerEvent: {}
+[49.013199] (-) TimerEvent: {}
+[49.114314] (-) TimerEvent: {}
+[49.215432] (-) TimerEvent: {}
+[49.316434] (-) TimerEvent: {}
+[49.324544] (hdl_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[49.416606] (-) TimerEvent: {}
+[49.517890] (-) TimerEvent: {}
+[49.619235] (-) TimerEvent: {}
+[49.720493] (-) TimerEvent: {}
+[49.822058] (-) TimerEvent: {}
+[49.964447] (-) TimerEvent: {}
+[50.065516] (-) TimerEvent: {}
+[50.166561] (-) TimerEvent: {}
+[50.267865] (-) TimerEvent: {}
+[50.369235] (-) TimerEvent: {}
+[50.470661] (-) TimerEvent: {}
+[50.572089] (-) TimerEvent: {}
+[50.604103] (hdl_localization) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[50.672335] (-) TimerEvent: {}
+[50.773400] (-) TimerEvent: {}
+[50.874441] (-) TimerEvent: {}
+[50.903383] (hdl_localization) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[50.974693] (-) TimerEvent: {}
+[51.053862] (hdl_localization) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[51.074932] (-) TimerEvent: {}
+[51.175998] (-) TimerEvent: {}
+[51.277023] (-) TimerEvent: {}
+[51.378060] (-) TimerEvent: {}
+[51.479101] (-) TimerEvent: {}
+[51.546595] (hdl_localization) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[51.547924] (hdl_localization) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[51.548441] (hdl_localization) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[51.548955] (hdl_localization) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[51.579302] (-) TimerEvent: {}
+[51.681437] (-) TimerEvent: {}
+[51.694502] (hdl_localization) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[51.781389] (-) TimerEvent: {}
+[51.882425] (-) TimerEvent: {}
+[51.983588] (-) TimerEvent: {}
+[52.084837] (-) TimerEvent: {}
+[52.186162] (-) TimerEvent: {}
+[52.287378] (-) TimerEvent: {}
+[52.388562] (-) TimerEvent: {}
+[52.489742] (-) TimerEvent: {}
+[52.590706] (-) TimerEvent: {}
+[52.691796] (-) TimerEvent: {}
+[52.792771] (-) TimerEvent: {}
+[52.893842] (-) TimerEvent: {}
+[52.994789] (-) TimerEvent: {}
+[53.096070] (-) TimerEvent: {}
+[53.197067] (-) TimerEvent: {}
+[53.278250] (hdl_localization) StdoutLine: {'line': b'-- Configuring done\n'}
+[53.297303] (-) TimerEvent: {}
+[53.398460] (-) TimerEvent: {}
+[53.499596] (-) TimerEvent: {}
+[53.600596] (-) TimerEvent: {}
+[53.701726] (-) TimerEvent: {}
+[53.802862] (-) TimerEvent: {}
+[53.904106] (-) TimerEvent: {}
+[54.005246] (-) TimerEvent: {}
+[54.088379] (hdl_localization) StdoutLine: {'line': b'-- Generating done\n'}
+[54.105498] (-) TimerEvent: {}
+[54.110931] (hdl_localization) StdoutLine: {'line': b'-- Build files have been written to: /home/ysc/lite_cog_ros2/nav/build/hdl_localization\n'}
+[54.206651] (hdl_localization) CommandEnded: {'returncode': 0}
+[54.210244] (-) TimerEvent: {}
+[54.212440] (hdl_localization) JobProgress: {'identifier': 'hdl_localization', 'progress': 'build'}
+[54.217133] (hdl_localization) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysc/lite_cog_ros2/nav/build/hdl_localization', '--', '-j6', '-l6'], 'cwd': '/home/ysc/lite_cog_ros2/nav/build/hdl_localization', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ysc'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1935'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64'), ('HOME', '/home/ysc'), ('OLDPWD', '/home/ysc/lite_cog_ros2/nav/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1397'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ysc'), ('JOURNAL_STREAM', '8:47729'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ysc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lite:@/tmp/.ICE-unix/2068,unix/lite:/tmp/.ICE-unix/2068'), ('INVOCATION_ID', '0484f74e356a467b8aeeb47d6652837a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c2f18119_e330_41bb_82c1_17c0882c47ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.81'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ysc/lite_cog_ros2/nav/build/hdl_localization'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ysc/lite_cog_ros2/nav/install/hdl_global_localization:/opt/ros/foxy')]), 'shell': False}
+[54.310784] (-) TimerEvent: {}
+[54.412358] (-) TimerEvent: {}
+[54.509144] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__cpp\x1b[0m\n'}
+[54.510336] (hdl_localization) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[54.512494] (-) TimerEvent: {}
+[54.580987] (hdl_localization) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[54.612770] (-) TimerEvent: {}
+[54.713763] (-) TimerEvent: {}
+[54.814739] (-) TimerEvent: {}
+[54.916416] (-) TimerEvent: {}
+[55.044210] (-) TimerEvent: {}
+[55.145251] (-) TimerEvent: {}
+[55.246379] (-) TimerEvent: {}
+[55.347606] (-) TimerEvent: {}
+[55.449046] (-) TimerEvent: {}
+[55.550110] (-) TimerEvent: {}
+[55.651146] (-) TimerEvent: {}
+[55.752223] (-) TimerEvent: {}
+[55.853274] (-) TimerEvent: {}
+[55.954265] (-) TimerEvent: {}
+[56.055300] (-) TimerEvent: {}
+[56.156331] (-) TimerEvent: {}
+[56.257339] (-) TimerEvent: {}
+[56.359096] (-) TimerEvent: {}
+[56.460185] (-) TimerEvent: {}
+[56.561293] (-) TimerEvent: {}
+[56.631910] (hdl_localization) StdoutLine: {'line': b'[  5%] Built target hdl_localization__cpp\n'}
+[56.632788] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_generator_c\x1b[0m\n'}
+[56.661587] (-) TimerEvent: {}
+[56.707342] (hdl_localization) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[56.713537] (hdl_localization) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[56.723101] (hdl_localization) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[56.761820] (-) TimerEvent: {}
+[56.862905] (-) TimerEvent: {}
+[56.884641] (hdl_localization) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/hdl_localization__rosidl_generator_c.dir/rosidl_generator_c/hdl_localization/msg/detail/scan_matching_status__functions.c.o\x1b[0m\n'}
+[56.923159] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[56.963576] (-) TimerEvent: {}
+[57.064949] (-) TimerEvent: {}
+[57.166051] (-) TimerEvent: {}
+[57.267176] (-) TimerEvent: {}
+[57.369483] (-) TimerEvent: {}
+[57.472052] (-) TimerEvent: {}
+[57.573712] (-) TimerEvent: {}
+[57.674878] (-) TimerEvent: {}
+[57.776246] (-) TimerEvent: {}
+[57.779299] (hdl_localization) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libhdl_localization__rosidl_generator_c.so\x1b[0m\n'}
+[57.876417] (-) TimerEvent: {}
+[57.980417] (-) TimerEvent: {}
+[58.064332] (hdl_localization) StdoutLine: {'line': b'[ 20%] Built target hdl_localization__rosidl_generator_c\n'}
+[58.080632] (-) TimerEvent: {}
+[58.156615] (hdl_localization) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[58.180889] (-) TimerEvent: {}
+[58.186324] (hdl_localization) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[58.258643] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_cpp\x1b[0m\n'}
+[58.281129] (-) TimerEvent: {}
+[58.382388] (-) TimerEvent: {}
+[58.397761] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[58.405580] (hdl_localization) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hdl_localization/msg/scan_matching_status__type_support.cpp.o\x1b[0m\n'}
+[58.482666] (-) TimerEvent: {}
+[58.535720] (hdl_localization) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hdl_localization/msg/detail/scan_matching_status__type_support.cpp.o\x1b[0m\n'}
+[58.576269] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[58.582908] (-) TimerEvent: {}
+[58.684688] (-) TimerEvent: {}
+[58.786257] (-) TimerEvent: {}
+[58.888095] (-) TimerEvent: {}
+[58.928204] (hdl_localization) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hdl_localization/msg/detail/dds_fastrtps/scan_matching_status__type_support.cpp.o\x1b[0m\n'}
+[58.988424] (-) TimerEvent: {}
+[59.090243] (-) TimerEvent: {}
+[59.191759] (-) TimerEvent: {}
+[59.292952] (-) TimerEvent: {}
+[59.394906] (-) TimerEvent: {}
+[59.496903] (-) TimerEvent: {}
+[59.600832] (-) TimerEvent: {}
+[59.702626] (-) TimerEvent: {}
+[59.721695] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_c\x1b[0m\n'}
+[59.803162] (-) TimerEvent: {}
+[59.906318] (-) TimerEvent: {}
+[60.008352] (-) TimerEvent: {}
+[60.071726] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[60.110602] (-) TimerEvent: {}
+[60.162301] (hdl_localization) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/hdl_localization/msg/scan_matching_status__type_support.cpp.o\x1b[0m\n'}
+[60.210877] (-) TimerEvent: {}
+[60.224421] (hdl_localization) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hdl_localization/msg/detail/scan_matching_status__type_support.c.o\x1b[0m\n'}
+[60.286820] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[60.311268] (-) TimerEvent: {}
+[60.413184] (-) TimerEvent: {}
+[60.522001] (-) TimerEvent: {}
+[60.623352] (-) TimerEvent: {}
+[60.641771] (hdl_localization) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[60.645324] (hdl_localization) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_c.so\x1b[0m\n'}
+[60.723612] (-) TimerEvent: {}
+[60.800658] (hdl_localization) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking C shared library libhdl_localization__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[60.823916] (-) TimerEvent: {}
+[60.926668] (-) TimerEvent: {}
+[60.991876] (hdl_localization) StdoutLine: {'line': b'[ 50%] Built target hdl_localization__rosidl_typesupport_cpp\n'}
+[61.027065] (-) TimerEvent: {}
+[61.071721] (hdl_localization) StdoutLine: {'line': b'[ 50%] Built target hdl_localization__rosidl_typesupport_c\n'}
+[61.079151] (hdl_localization) StdoutLine: {'line': b'[ 50%] Built target hdl_localization__rosidl_typesupport_introspection_c\n'}
+[61.127783] (-) TimerEvent: {}
+[61.229135] (-) TimerEvent: {}
+[61.330672] (-) TimerEvent: {}
+[61.431920] (-) TimerEvent: {}
+[61.533096] (-) TimerEvent: {}
+[61.634214] (-) TimerEvent: {}
+[61.735478] (-) TimerEvent: {}
+[61.836734] (-) TimerEvent: {}
+[61.938160] (-) TimerEvent: {}
+[62.039617] (-) TimerEvent: {}
+[62.140881] (-) TimerEvent: {}
+[62.242104] (-) TimerEvent: {}
+[62.243404] (hdl_localization) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[62.342564] (-) TimerEvent: {}
+[62.444262] (-) TimerEvent: {}
+[62.545614] (-) TimerEvent: {}
+[62.647159] (-) TimerEvent: {}
+[62.649569] (hdl_localization) StdoutLine: {'line': b'[ 52%] Built target hdl_localization__rosidl_typesupport_introspection_cpp\n'}
+[62.747399] (-) TimerEvent: {}
+[62.809583] (hdl_localization) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[62.848165] (-) TimerEvent: {}
+[62.949732] (-) TimerEvent: {}
+[63.050903] (-) TimerEvent: {}
+[63.152384] (-) TimerEvent: {}
+[63.253505] (-) TimerEvent: {}
+[63.354783] (-) TimerEvent: {}
+[63.396785] (hdl_localization) StdoutLine: {'line': b'[ 55%] Built target hdl_localization__rosidl_typesupport_fastrtps_cpp\n'}
+[63.455367] (-) TimerEvent: {}
+[63.470073] (hdl_localization) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[63.555558] (-) TimerEvent: {}
+[63.656910] (-) TimerEvent: {}
+[63.759011] (-) TimerEvent: {}
+[63.860323] (-) TimerEvent: {}
+[63.961590] (-) TimerEvent: {}
+[64.062719] (-) TimerEvent: {}
+[64.164066] (-) TimerEvent: {}
+[64.265272] (-) TimerEvent: {}
+[64.366426] (-) TimerEvent: {}
+[64.468528] (-) TimerEvent: {}
+[64.569735] (-) TimerEvent: {}
+[64.670852] (-) TimerEvent: {}
+[64.772061] (-) TimerEvent: {}
+[64.873608] (-) TimerEvent: {}
+[64.975630] (-) TimerEvent: {}
+[65.077417] (-) TimerEvent: {}
+[65.172100] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[65.178231] (-) TimerEvent: {}
+[65.279394] (-) TimerEvent: {}
+[65.380486] (-) TimerEvent: {}
+[65.481827] (-) TimerEvent: {}
+[65.577348] (hdl_localization) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_localization/msg/detail/scan_matching_status__type_support_c.cpp.o\x1b[0m\n'}
+[65.582014] (-) TimerEvent: {}
+[65.682851] (-) TimerEvent: {}
+[65.783936] (-) TimerEvent: {}
+[65.884890] (-) TimerEvent: {}
+[65.985925] (-) TimerEvent: {}
+[66.087025] (-) TimerEvent: {}
+[66.188477] (-) TimerEvent: {}
+[66.289445] (-) TimerEvent: {}
+[66.390542] (-) TimerEvent: {}
+[66.491766] (-) TimerEvent: {}
+[66.592909] (-) TimerEvent: {}
+[66.694019] (-) TimerEvent: {}
+[66.795184] (-) TimerEvent: {}
+[66.896266] (-) TimerEvent: {}
+[66.997276] (-) TimerEvent: {}
+[67.098805] (-) TimerEvent: {}
+[67.199906] (-) TimerEvent: {}
+[67.300961] (-) TimerEvent: {}
+[67.402045] (-) TimerEvent: {}
+[67.503147] (-) TimerEvent: {}
+[67.604291] (-) TimerEvent: {}
+[67.705811] (-) TimerEvent: {}
+[67.806920] (-) TimerEvent: {}
+[67.909189] (-) TimerEvent: {}
+[67.983117] (hdl_localization) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libhdl_localization__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[68.009465] (-) TimerEvent: {}
+[68.111339] (-) TimerEvent: {}
+[68.212548] (-) TimerEvent: {}
+[68.313665] (-) TimerEvent: {}
+[68.414764] (-) TimerEvent: {}
+[68.442582] (hdl_localization) StdoutLine: {'line': b'[ 64%] Built target hdl_localization__rosidl_typesupport_fastrtps_c\n'}
+[68.505885] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization\x1b[0m\n'}
+[68.515065] (-) TimerEvent: {}
+[68.571436] (hdl_localization) StdoutLine: {'line': b'[ 64%] Built target hdl_localization\n'}
+[68.615343] (-) TimerEvent: {}
+[68.633773] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__py\x1b[0m\n'}
+[68.636557] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization_composition\x1b[0m\n'}
+[68.701361] (hdl_localization) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[68.715578] (-) TimerEvent: {}
+[68.816634] (-) TimerEvent: {}
+[68.919092] (-) TimerEvent: {}
+[69.020703] (-) TimerEvent: {}
+[69.121669] (-) TimerEvent: {}
+[69.222767] (-) TimerEvent: {}
+[69.323939] (-) TimerEvent: {}
+[69.425155] (-) TimerEvent: {}
+[69.526088] (-) TimerEvent: {}
+[69.627758] (-) TimerEvent: {}
+[69.728818] (-) TimerEvent: {}
+[69.829656] (-) TimerEvent: {}
+[69.930564] (-) TimerEvent: {}
+[70.031579] (-) TimerEvent: {}
+[70.132613] (-) TimerEvent: {}
+[70.277684] (-) TimerEvent: {}
+[70.379384] (-) TimerEvent: {}
+[70.481910] (-) TimerEvent: {}
+[70.583727] (-) TimerEvent: {}
+[70.585195] (hdl_localization) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/src/hdl_localization/pose_estimator.cpp.o\x1b[0m\n'}
+[70.620997] (hdl_localization) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o\x1b[0m\n'}
+[70.683993] (-) TimerEvent: {}
+[70.784998] (-) TimerEvent: {}
+[70.885988] (-) TimerEvent: {}
+[70.987248] (-) TimerEvent: {}
+[71.089308] (-) TimerEvent: {}
+[71.093688] (hdl_localization) StdoutLine: {'line': b'[ 73%] Built target hdl_localization__py\n'}
+[71.189508] (-) TimerEvent: {}
+[71.290603] (-) TimerEvent: {}
+[71.324928] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__python\x1b[0m\n'}
+[71.390857] (-) TimerEvent: {}
+[71.492011] (-) TimerEvent: {}
+[71.593728] (-) TimerEvent: {}
+[71.694795] (-) TimerEvent: {}
+[71.724220] (hdl_localization) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding C object CMakeFiles/hdl_localization__python.dir/rosidl_generator_py/hdl_localization/msg/_scan_matching_status_s.c.o\x1b[0m\n'}
+[71.780180] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[71.795107] (-) TimerEvent: {}
+[71.896200] (-) TimerEvent: {}
+[71.997360] (-) TimerEvent: {}
+[72.099652] (-) TimerEvent: {}
+[72.200866] (-) TimerEvent: {}
+[72.302785] (-) TimerEvent: {}
+[72.404666] (-) TimerEvent: {}
+[72.508609] (-) TimerEvent: {}
+[72.609747] (-) TimerEvent: {}
+[72.710835] (-) TimerEvent: {}
+[72.812675] (-) TimerEvent: {}
+[72.915118] (-) TimerEvent: {}
+[73.016851] (-) TimerEvent: {}
+[73.124152] (-) TimerEvent: {}
+[73.226879] (-) TimerEvent: {}
+[73.330118] (-) TimerEvent: {}
+[73.432583] (-) TimerEvent: {}
+[73.458224] (hdl_localization) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hdl_localization/libhdl_localization__python.so\x1b[0m\n'}
+[73.532839] (-) TimerEvent: {}
+[73.634545] (-) TimerEvent: {}
+[73.737215] (-) TimerEvent: {}
+[73.772829] (hdl_localization) StdoutLine: {'line': b'[ 79%] Built target hdl_localization__python\n'}
+[73.837948] (-) TimerEvent: {}
+[73.859310] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[73.885855] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[73.934515] (hdl_localization) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hdl_localization__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[73.939231] (-) TimerEvent: {}
+[74.052121] (-) TimerEvent: {}
+[74.153227] (-) TimerEvent: {}
+[74.162801] (hdl_localization) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hdl_localization/_hdl_localization_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[74.180871] (hdl_localization) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hdl_localization/_hdl_localization_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[74.182710] (hdl_localization) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/hdl_localization__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hdl_localization/_hdl_localization_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[74.199195] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[74.237643] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[74.253540] (-) TimerEvent: {}
+[74.256307] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[74.353760] (-) TimerEvent: {}
+[74.455714] (-) TimerEvent: {}
+[74.556766] (-) TimerEvent: {}
+[74.657819] (-) TimerEvent: {}
+[74.760068] (-) TimerEvent: {}
+[74.861738] (-) TimerEvent: {}
+[74.965689] (-) TimerEvent: {}
+[74.976266] (hdl_localization) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hdl_localization/hdl_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[75.065558] (-) TimerEvent: {}
+[75.253684] (hdl_localization) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hdl_localization/hdl_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[75.254476] (-) TimerEvent: {}
+[75.359386] (-) TimerEvent: {}
+[75.402559] (hdl_localization) StdoutLine: {'line': b'[ 94%] Built target hdl_localization__rosidl_typesupport_c__pyext\n'}
+[75.459674] (-) TimerEvent: {}
+[75.509859] (hdl_localization) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/hdl_localization/hdl_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[75.559893] (-) TimerEvent: {}
+[75.635668] (hdl_localization) StdoutLine: {'line': b'[ 97%] Built target hdl_localization__rosidl_typesupport_introspection_c__pyext\n'}
+[75.660143] (-) TimerEvent: {}
+[75.761544] (-) TimerEvent: {}
+[75.863129] (-) TimerEvent: {}
+[75.964832] (-) TimerEvent: {}
+[76.021421] (hdl_localization) StdoutLine: {'line': b'[ 97%] Built target hdl_localization__rosidl_typesupport_fastrtps_c__pyext\n'}
+[76.065796] (-) TimerEvent: {}
+[76.167166] (-) TimerEvent: {}
+[76.268334] (-) TimerEvent: {}
+[76.369509] (-) TimerEvent: {}
+[76.470542] (-) TimerEvent: {}
+[76.571799] (-) TimerEvent: {}
+[76.672917] (-) TimerEvent: {}
+[76.773892] (-) TimerEvent: {}
+[76.874884] (-) TimerEvent: {}
+[76.975982] (-) TimerEvent: {}
+[77.077191] (-) TimerEvent: {}
+[77.178470] (-) TimerEvent: {}
+[77.279767] (-) TimerEvent: {}
+[77.381215] (-) TimerEvent: {}
+[77.482659] (-) TimerEvent: {}
+[77.584295] (-) TimerEvent: {}
+[77.685904] (-) TimerEvent: {}
+[77.788210] (-) TimerEvent: {}
+[77.889935] (-) TimerEvent: {}
+[77.991556] (-) TimerEvent: {}
+[78.093000] (-) TimerEvent: {}
+[78.194195] (-) TimerEvent: {}
+[78.296609] (-) TimerEvent: {}
+[78.399010] (-) TimerEvent: {}
+[78.500069] (-) TimerEvent: {}
+[78.601208] (-) TimerEvent: {}
+[78.702276] (-) TimerEvent: {}
+[78.803449] (-) TimerEvent: {}
+[78.904489] (-) TimerEvent: {}
+[79.005459] (-) TimerEvent: {}
+[79.106578] (-) TimerEvent: {}
+[79.155403] (hdl_localization) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/hdl_localization_composition.cpp:2\x1b[m\x1b[K:\n'}
+[79.157380] (hdl_localization) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ysc/lite_cog_ros2/nav/src/hdl_localization/apps/./hdl_localization_app.hpp:25:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kpclomp/ndt_omp.h: No such file or directory\n'}
+[79.158053] (hdl_localization) StderrLine: {'line': b'   25 | #include \x1b[01;31m\x1b[K<pclomp/ndt_omp.h>\x1b[m\x1b[K\n'}
+[79.158628] (hdl_localization) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[79.159202] (hdl_localization) StderrLine: {'line': b'compilation terminated.\n'}
+[79.206896] (-) TimerEvent: {}
+[79.308165] (-) TimerEvent: {}
+[79.383038] (hdl_localization) StderrLine: {'line': b'make[2]: *** [CMakeFiles/hdl_localization_composition.dir/build.make:76: CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o] Error 1\n'}
+[79.383901] (hdl_localization) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[79.408384] (-) TimerEvent: {}
+[79.509421] (-) TimerEvent: {}
+[79.610844] (-) TimerEvent: {}
+[79.711963] (-) TimerEvent: {}
+[79.812997] (-) TimerEvent: {}
+[79.914337] (-) TimerEvent: {}
+[80.015326] (-) TimerEvent: {}
+[80.116371] (-) TimerEvent: {}
+[80.217439] (-) TimerEvent: {}
+[80.363777] (-) TimerEvent: {}
+[80.464827] (-) TimerEvent: {}
+[80.565902] (-) TimerEvent: {}
+[80.667017] (-) TimerEvent: {}
+[80.768528] (-) TimerEvent: {}
+[80.869612] (-) TimerEvent: {}
+[80.970698] (-) TimerEvent: {}
+[81.071836] (-) TimerEvent: {}
+[81.172928] (-) TimerEvent: {}
+[81.274005] (-) TimerEvent: {}
+[81.375123] (-) TimerEvent: {}
+[81.476154] (-) TimerEvent: {}
+[81.577549] (-) TimerEvent: {}
+[81.678721] (-) TimerEvent: {}
+[81.779838] (-) TimerEvent: {}
+[81.880927] (-) TimerEvent: {}
+[81.981994] (-) TimerEvent: {}
+[82.083129] (-) TimerEvent: {}
+[82.184264] (-) TimerEvent: {}
+[82.285239] (-) TimerEvent: {}
+[82.386253] (-) TimerEvent: {}
+[82.487507] (-) TimerEvent: {}
+[82.588741] (-) TimerEvent: {}
+[82.689896] (-) TimerEvent: {}
+[82.790990] (-) TimerEvent: {}
+[82.892062] (-) TimerEvent: {}
+[82.993119] (-) TimerEvent: {}
+[83.094214] (-) TimerEvent: {}
+[83.195348] (-) TimerEvent: {}
+[83.296447] (-) TimerEvent: {}
+[83.397523] (-) TimerEvent: {}
+[83.499128] (-) TimerEvent: {}
+[83.600179] (-) TimerEvent: {}
+[83.701248] (-) TimerEvent: {}
+[83.802609] (-) TimerEvent: {}
+[83.903788] (-) TimerEvent: {}
+[84.004787] (-) TimerEvent: {}
+[84.105864] (-) TimerEvent: {}
+[84.206932] (-) TimerEvent: {}
+[84.308677] (-) TimerEvent: {}
+[84.409835] (-) TimerEvent: {}
+[84.510929] (-) TimerEvent: {}
+[84.612137] (-) TimerEvent: {}
+[84.713176] (-) TimerEvent: {}
+[84.814253] (-) TimerEvent: {}
+[84.915376] (-) TimerEvent: {}
+[85.016665] (-) TimerEvent: {}
+[85.117763] (-) TimerEvent: {}
+[85.219422] (-) TimerEvent: {}
+[85.320520] (-) TimerEvent: {}
+[85.462468] (-) TimerEvent: {}
+[85.563609] (-) TimerEvent: {}
+[85.664728] (-) TimerEvent: {}
+[85.765884] (-) TimerEvent: {}
+[85.867117] (-) TimerEvent: {}
+[85.968225] (-) TimerEvent: {}
+[86.069291] (-) TimerEvent: {}
+[86.170419] (-) TimerEvent: {}
+[86.271624] (-) TimerEvent: {}
+[86.372657] (-) TimerEvent: {}
+[86.473807] (-) TimerEvent: {}
+[86.574875] (-) TimerEvent: {}
+[86.676037] (-) TimerEvent: {}
+[86.777121] (-) TimerEvent: {}
+[86.879102] (-) TimerEvent: {}
+[86.980458] (-) TimerEvent: {}
+[87.081543] (-) TimerEvent: {}
+[87.182596] (-) TimerEvent: {}
+[87.284047] (-) TimerEvent: {}
+[87.385056] (-) TimerEvent: {}
+[87.486100] (-) TimerEvent: {}
+[87.587156] (-) TimerEvent: {}
+[87.688889] (-) TimerEvent: {}
+[87.789943] (-) TimerEvent: {}
+[87.891067] (-) TimerEvent: {}
+[87.992107] (-) TimerEvent: {}
+[88.093198] (-) TimerEvent: {}
+[88.194298] (-) TimerEvent: {}
+[88.295434] (-) TimerEvent: {}
+[88.396506] (-) TimerEvent: {}
+[88.497581] (-) TimerEvent: {}
+[88.598806] (-) TimerEvent: {}
+[88.699917] (-) TimerEvent: {}
+[88.800968] (-) TimerEvent: {}
+[88.902001] (-) TimerEvent: {}
+[89.003112] (-) TimerEvent: {}
+[89.104162] (-) TimerEvent: {}
+[89.205254] (-) TimerEvent: {}
+[89.306299] (-) TimerEvent: {}
+[89.407493] (-) TimerEvent: {}
+[89.508689] (-) TimerEvent: {}
+[89.610100] (-) TimerEvent: {}
+[89.711169] (-) TimerEvent: {}
+[89.812254] (-) TimerEvent: {}
+[89.913378] (-) TimerEvent: {}
+[90.014434] (-) TimerEvent: {}
+[90.115636] (-) TimerEvent: {}
+[90.216676] (-) TimerEvent: {}
+[90.317762] (-) TimerEvent: {}
+[90.418902] (-) TimerEvent: {}
+[90.662460] (-) TimerEvent: {}
+[90.763694] (-) TimerEvent: {}
+[90.864789] (-) TimerEvent: {}
+[90.965879] (-) TimerEvent: {}
+[91.067048] (-) TimerEvent: {}
+[91.168155] (-) TimerEvent: {}
+[91.269292] (-) TimerEvent: {}
+[91.370396] (-) TimerEvent: {}
+[91.471594] (-) TimerEvent: {}
+[91.572661] (-) TimerEvent: {}
+[91.674005] (-) TimerEvent: {}
+[91.775101] (-) TimerEvent: {}
+[91.876330] (-) TimerEvent: {}
+[91.977710] (-) TimerEvent: {}
+[92.079887] (-) TimerEvent: {}
+[92.180968] (-) TimerEvent: {}
+[92.281957] (-) TimerEvent: {}
+[92.383096] (-) TimerEvent: {}
+[92.484152] (-) TimerEvent: {}
+[92.585157] (-) TimerEvent: {}
+[92.686228] (-) TimerEvent: {}
+[92.787353] (-) TimerEvent: {}
+[92.888816] (-) TimerEvent: {}
+[92.989830] (-) TimerEvent: {}
+[93.090822] (-) TimerEvent: {}
+[93.192291] (-) TimerEvent: {}
+[93.293358] (-) TimerEvent: {}
+[93.394449] (-) TimerEvent: {}
+[93.495553] (-) TimerEvent: {}
+[93.596584] (-) TimerEvent: {}
+[93.697616] (-) TimerEvent: {}
+[93.799175] (-) TimerEvent: {}
+[93.900137] (-) TimerEvent: {}
+[94.001162] (-) TimerEvent: {}
+[94.102216] (-) TimerEvent: {}
+[94.203432] (-) TimerEvent: {}
+[94.304541] (-) TimerEvent: {}
+[94.405636] (-) TimerEvent: {}
+[94.506768] (-) TimerEvent: {}
+[94.607900] (-) TimerEvent: {}
+[94.708905] (-) TimerEvent: {}
+[94.810010] (-) TimerEvent: {}
+[94.911089] (-) TimerEvent: {}
+[95.013179] (-) TimerEvent: {}
+[95.114301] (-) TimerEvent: {}
+[95.215508] (-) TimerEvent: {}
+[95.316616] (-) TimerEvent: {}
+[95.417731] (-) TimerEvent: {}
+[95.519369] (-) TimerEvent: {}
+[95.620478] (-) TimerEvent: {}
+[95.763501] (-) TimerEvent: {}
+[95.864634] (-) TimerEvent: {}
+[95.965794] (-) TimerEvent: {}
+[96.066915] (-) TimerEvent: {}
+[96.168137] (-) TimerEvent: {}
+[96.269324] (-) TimerEvent: {}
+[96.370384] (-) TimerEvent: {}
+[96.471571] (-) TimerEvent: {}
+[96.572684] (-) TimerEvent: {}
+[96.673750] (-) TimerEvent: {}
+[96.774771] (-) TimerEvent: {}
+[96.876007] (-) TimerEvent: {}
+[96.977109] (-) TimerEvent: {}
+[97.079564] (-) TimerEvent: {}
+[97.180642] (-) TimerEvent: {}
+[97.281733] (-) TimerEvent: {}
+[97.382847] (-) TimerEvent: {}
+[97.483938] (-) TimerEvent: {}
+[97.584969] (-) TimerEvent: {}
+[97.686042] (-) TimerEvent: {}
+[97.787143] (-) TimerEvent: {}
+[97.888283] (-) TimerEvent: {}
+[97.989718] (-) TimerEvent: {}
+[98.090825] (-) TimerEvent: {}
+[98.192039] (-) TimerEvent: {}
+[98.293465] (-) TimerEvent: {}
+[98.394834] (-) TimerEvent: {}
+[98.495970] (-) TimerEvent: {}
+[98.597048] (-) TimerEvent: {}
+[98.698534] (-) TimerEvent: {}
+[98.799756] (-) TimerEvent: {}
+[98.900854] (-) TimerEvent: {}
+[99.001942] (-) TimerEvent: {}
+[99.103363] (-) TimerEvent: {}
+[99.205171] (-) TimerEvent: {}
+[99.306305] (-) TimerEvent: {}
+[99.407434] (-) TimerEvent: {}
+[99.508559] (-) TimerEvent: {}
+[99.609646] (-) TimerEvent: {}
+[99.711031] (-) TimerEvent: {}
+[99.812505] (-) TimerEvent: {}
+[99.914132] (-) TimerEvent: {}
+[100.015128] (-) TimerEvent: {}
+[100.116264] (-) TimerEvent: {}
+[100.217442] (-) TimerEvent: {}
+[100.319462] (-) TimerEvent: {}
+[100.420754] (-) TimerEvent: {}
+[100.521835] (-) TimerEvent: {}
+[100.623026] (-) TimerEvent: {}
+[100.724309] (-) TimerEvent: {}
+[100.866564] (-) TimerEvent: {}
+[100.967892] (-) TimerEvent: {}
+[101.069144] (-) TimerEvent: {}
+[101.170295] (-) TimerEvent: {}
+[101.271621] (-) TimerEvent: {}
+[101.373094] (-) TimerEvent: {}
+[101.474372] (-) TimerEvent: {}
+[101.575785] (-) TimerEvent: {}
+[101.677114] (-) TimerEvent: {}
+[101.778566] (-) TimerEvent: {}
+[101.880184] (-) TimerEvent: {}
+[101.981411] (-) TimerEvent: {}
+[102.082614] (-) TimerEvent: {}
+[102.184070] (-) TimerEvent: {}
+[102.285208] (-) TimerEvent: {}
+[102.386555] (-) TimerEvent: {}
+[102.487899] (-) TimerEvent: {}
+[102.588978] (-) TimerEvent: {}
+[102.690249] (-) TimerEvent: {}
+[102.791652] (-) TimerEvent: {}
+[102.892965] (-) TimerEvent: {}
+[102.994469] (-) TimerEvent: {}
+[103.095832] (-) TimerEvent: {}
+[103.196999] (-) TimerEvent: {}
+[103.298373] (-) TimerEvent: {}
+[103.399943] (-) TimerEvent: {}
+[103.501174] (-) TimerEvent: {}
+[103.602361] (-) TimerEvent: {}
+[103.703644] (-) TimerEvent: {}
+[103.804927] (-) TimerEvent: {}
+[103.906299] (-) TimerEvent: {}
+[104.008503] (-) TimerEvent: {}
+[104.109946] (-) TimerEvent: {}
+[104.211015] (-) TimerEvent: {}
+[104.312000] (-) TimerEvent: {}
+[104.413109] (-) TimerEvent: {}
+[104.514168] (-) TimerEvent: {}
+[104.615440] (-) TimerEvent: {}
+[104.716471] (-) TimerEvent: {}
+[104.817530] (-) TimerEvent: {}
+[104.919100] (-) TimerEvent: {}
+[105.020140] (-) TimerEvent: {}
+[105.121364] (-) TimerEvent: {}
+[105.222588] (-) TimerEvent: {}
+[105.323822] (-) TimerEvent: {}
+[105.424980] (-) TimerEvent: {}
+[105.526204] (-) TimerEvent: {}
+[105.627425] (-) TimerEvent: {}
+[105.729227] (-) TimerEvent: {}
+[105.830498] (-) TimerEvent: {}
+[105.972129] (-) TimerEvent: {}
+[106.073297] (-) TimerEvent: {}
+[106.174814] (-) TimerEvent: {}
+[106.276338] (-) TimerEvent: {}
+[106.377391] (-) TimerEvent: {}
+[106.479133] (-) TimerEvent: {}
+[106.580396] (-) TimerEvent: {}
+[106.681680] (-) TimerEvent: {}
+[106.782900] (-) TimerEvent: {}
+[106.884144] (-) TimerEvent: {}
+[106.985444] (-) TimerEvent: {}
+[107.086634] (-) TimerEvent: {}
+[107.187939] (-) TimerEvent: {}
+[107.289974] (-) TimerEvent: {}
+[107.391102] (-) TimerEvent: {}
+[107.492228] (-) TimerEvent: {}
+[107.593354] (-) TimerEvent: {}
+[107.694438] (-) TimerEvent: {}
+[107.795604] (-) TimerEvent: {}
+[107.896645] (-) TimerEvent: {}
+[107.997713] (-) TimerEvent: {}
+[108.099426] (-) TimerEvent: {}
+[108.200503] (-) TimerEvent: {}
+[108.301659] (-) TimerEvent: {}
+[108.402716] (-) TimerEvent: {}
+[108.503911] (-) TimerEvent: {}
+[108.604922] (-) TimerEvent: {}
+[108.706039] (-) TimerEvent: {}
+[108.807113] (-) TimerEvent: {}
+[108.908566] (-) TimerEvent: {}
+[109.010072] (-) TimerEvent: {}
+[109.111152] (-) TimerEvent: {}
+[109.212305] (-) TimerEvent: {}
+[109.313397] (-) TimerEvent: {}
+[109.414320] (-) TimerEvent: {}
+[109.515319] (-) TimerEvent: {}
+[109.616412] (-) TimerEvent: {}
+[109.717503] (-) TimerEvent: {}
+[109.818634] (-) TimerEvent: {}
+[109.919976] (-) TimerEvent: {}
+[110.021194] (-) TimerEvent: {}
+[110.122344] (-) TimerEvent: {}
+[110.223703] (-) TimerEvent: {}
+[110.324902] (-) TimerEvent: {}
+[110.425944] (-) TimerEvent: {}
+[110.527216] (-) TimerEvent: {}
+[110.628841] (-) TimerEvent: {}
+[110.729939] (-) TimerEvent: {}
+[110.831070] (-) TimerEvent: {}
+[110.932344] (-) TimerEvent: {}
+[111.033329] (-) TimerEvent: {}
+[111.134784] (-) TimerEvent: {}
+[111.235900] (-) TimerEvent: {}
+[111.336941] (-) TimerEvent: {}
+[111.438069] (-) TimerEvent: {}
+[111.539697] (-) TimerEvent: {}
+[111.640743] (-) TimerEvent: {}
+[111.741838] (-) TimerEvent: {}
+[111.842927] (-) TimerEvent: {}
+[111.944047] (-) TimerEvent: {}
+[112.045130] (-) TimerEvent: {}
+[112.146219] (-) TimerEvent: {}
+[112.247486] (-) TimerEvent: {}
+[112.349078] (-) TimerEvent: {}
+[112.450235] (-) TimerEvent: {}
+[112.551447] (-) TimerEvent: {}
+[112.652560] (-) TimerEvent: {}
+[112.753681] (-) TimerEvent: {}
+[112.854770] (-) TimerEvent: {}
+[112.955952] (-) TimerEvent: {}
+[113.057104] (-) TimerEvent: {}
+[113.158493] (-) TimerEvent: {}
+[113.260190] (-) TimerEvent: {}
+[113.361334] (-) TimerEvent: {}
+[113.462443] (-) TimerEvent: {}
+[113.563652] (-) TimerEvent: {}
+[113.664783] (-) TimerEvent: {}
+[113.765854] (-) TimerEvent: {}
+[113.867004] (-) TimerEvent: {}
+[113.968143] (-) TimerEvent: {}
+[114.069407] (-) TimerEvent: {}
+[114.170523] (-) TimerEvent: {}
+[114.271711] (-) TimerEvent: {}
+[114.372761] (-) TimerEvent: {}
+[114.473949] (-) TimerEvent: {}
+[114.575208] (-) TimerEvent: {}
+[114.676369] (-) TimerEvent: {}
+[114.777842] (-) TimerEvent: {}
+[114.879269] (-) TimerEvent: {}
+[114.980323] (-) TimerEvent: {}
+[115.081369] (-) TimerEvent: {}
+[115.182773] (-) TimerEvent: {}
+[115.284005] (-) TimerEvent: {}
+[115.385122] (-) TimerEvent: {}
+[115.486184] (-) TimerEvent: {}
+[115.587247] (-) TimerEvent: {}
+[115.688597] (-) TimerEvent: {}
+[115.789772] (-) TimerEvent: {}
+[115.890813] (-) TimerEvent: {}
+[116.134113] (-) TimerEvent: {}
+[116.235275] (-) TimerEvent: {}
+[116.336765] (-) TimerEvent: {}
+[116.438632] (-) TimerEvent: {}
+[116.540063] (-) TimerEvent: {}
+[116.641152] (-) TimerEvent: {}
+[116.742377] (-) TimerEvent: {}
+[116.844386] (-) TimerEvent: {}
+[116.945602] (-) TimerEvent: {}
+[117.046872] (-) TimerEvent: {}
+[117.148809] (-) TimerEvent: {}
+[117.249958] (-) TimerEvent: {}
+[117.351233] (-) TimerEvent: {}
+[117.452391] (-) TimerEvent: {}
+[117.553606] (-) TimerEvent: {}
+[117.654878] (-) TimerEvent: {}
+[117.756229] (-) TimerEvent: {}
+[117.857487] (-) TimerEvent: {}
+[117.959202] (-) TimerEvent: {}
+[118.061063] (-) TimerEvent: {}
+[118.162195] (-) TimerEvent: {}
+[118.263455] (-) TimerEvent: {}
+[118.364731] (-) TimerEvent: {}
+[118.466048] (-) TimerEvent: {}
+[118.567224] (-) TimerEvent: {}
+[118.668965] (-) TimerEvent: {}
+[118.770077] (-) TimerEvent: {}
+[118.871215] (-) TimerEvent: {}
+[118.972339] (-) TimerEvent: {}
+[119.073656] (-) TimerEvent: {}
+[119.175433] (-) TimerEvent: {}
+[119.276738] (-) TimerEvent: {}
+[119.378148] (-) TimerEvent: {}
+[119.479629] (-) TimerEvent: {}
+[119.581096] (-) TimerEvent: {}
+[119.682311] (-) TimerEvent: {}
+[119.783609] (-) TimerEvent: {}
+[119.885311] (-) TimerEvent: {}
+[119.986547] (-) TimerEvent: {}
+[120.087911] (-) TimerEvent: {}
+[120.189632] (-) TimerEvent: {}
+[120.291044] (-) TimerEvent: {}
+[120.392280] (-) TimerEvent: {}
+[120.493379] (-) TimerEvent: {}
+[120.595252] (-) TimerEvent: {}
+[120.697129] (-) TimerEvent: {}
+[120.798826] (-) TimerEvent: {}
+[120.900172] (-) TimerEvent: {}
+[121.001600] (-) TimerEvent: {}
+[121.149239] (-) TimerEvent: {}
+[121.250305] (-) TimerEvent: {}
+[121.352985] (-) TimerEvent: {}
+[121.454078] (-) TimerEvent: {}
+[121.555234] (-) TimerEvent: {}
+[121.656615] (-) TimerEvent: {}
+[121.757795] (-) TimerEvent: {}
+[121.859711] (-) TimerEvent: {}
+[121.960749] (-) TimerEvent: {}
+[122.061821] (-) TimerEvent: {}
+[122.162894] (-) TimerEvent: {}
+[122.264032] (-) TimerEvent: {}
+[122.365045] (-) TimerEvent: {}
+[122.466106] (-) TimerEvent: {}
+[122.567195] (-) TimerEvent: {}
+[122.668273] (-) TimerEvent: {}
+[122.769485] (-) TimerEvent: {}
+[122.870621] (-) TimerEvent: {}
+[122.971868] (-) TimerEvent: {}
+[123.073038] (-) TimerEvent: {}
+[123.174275] (-) TimerEvent: {}
+[123.275593] (-) TimerEvent: {}
+[123.376843] (-) TimerEvent: {}
+[123.478203] (-) TimerEvent: {}
+[123.579411] (-) TimerEvent: {}
+[123.680640] (-) TimerEvent: {}
+[123.781848] (-) TimerEvent: {}
+[123.883073] (-) TimerEvent: {}
+[123.984346] (-) TimerEvent: {}
+[124.085493] (-) TimerEvent: {}
+[124.186660] (-) TimerEvent: {}
+[124.288029] (-) TimerEvent: {}
+[124.390197] (-) TimerEvent: {}
+[124.491378] (-) TimerEvent: {}
+[124.592495] (-) TimerEvent: {}
+[124.693589] (-) TimerEvent: {}
+[124.795068] (-) TimerEvent: {}
+[124.896223] (-) TimerEvent: {}
+[124.997242] (-) TimerEvent: {}
+[125.098520] (-) TimerEvent: {}
+[125.199678] (-) TimerEvent: {}
+[125.301205] (-) TimerEvent: {}
+[125.402287] (-) TimerEvent: {}
+[125.503647] (-) TimerEvent: {}
+[125.604867] (-) TimerEvent: {}
+[125.706198] (-) TimerEvent: {}
+[125.807524] (-) TimerEvent: {}
+[125.909277] (-) TimerEvent: {}
+[126.010573] (-) TimerEvent: {}
+[126.160400] (-) TimerEvent: {}
+[126.261599] (-) TimerEvent: {}
+[126.362648] (-) TimerEvent: {}
+[126.463731] (-) TimerEvent: {}
+[126.564754] (-) TimerEvent: {}
+[126.665795] (-) TimerEvent: {}
+[126.766841] (-) TimerEvent: {}
+[126.867953] (-) TimerEvent: {}
+[126.969651] (-) TimerEvent: {}
+[127.071501] (-) TimerEvent: {}
+[127.173208] (-) TimerEvent: {}
+[127.274291] (-) TimerEvent: {}
+[127.375595] (-) TimerEvent: {}
+[127.476892] (-) TimerEvent: {}
+[127.578121] (-) TimerEvent: {}
+[127.679870] (-) TimerEvent: {}
+[127.781183] (-) TimerEvent: {}
+[127.882301] (-) TimerEvent: {}
+[127.983468] (-) TimerEvent: {}
+[128.084808] (-) TimerEvent: {}
+[128.186135] (-) TimerEvent: {}
+[128.287260] (-) TimerEvent: {}
+[128.388609] (-) TimerEvent: {}
+[128.489819] (-) TimerEvent: {}
+[128.590798] (-) TimerEvent: {}
+[128.691928] (-) TimerEvent: {}
+[128.793068] (-) TimerEvent: {}
+[128.894745] (-) TimerEvent: {}
+[128.996732] (-) TimerEvent: {}
+[129.097805] (-) TimerEvent: {}
+[129.199028] (-) TimerEvent: {}
+[129.300085] (-) TimerEvent: {}
+[129.401119] (-) TimerEvent: {}
+[129.502156] (-) TimerEvent: {}
+[129.603390] (-) TimerEvent: {}
+[129.704437] (-) TimerEvent: {}
+[129.805484] (-) TimerEvent: {}
+[129.906489] (-) TimerEvent: {}
+[130.007649] (-) TimerEvent: {}
+[130.109396] (-) TimerEvent: {}
+[130.210611] (-) TimerEvent: {}
+[130.311722] (-) TimerEvent: {}
+[130.412754] (-) TimerEvent: {}
+[130.513774] (-) TimerEvent: {}
+[130.614858] (-) TimerEvent: {}
+[130.715912] (-) TimerEvent: {}
+[130.816959] (-) TimerEvent: {}
+[130.918074] (-) TimerEvent: {}
+[131.019178] (-) TimerEvent: {}
+[131.120266] (-) TimerEvent: {}
+[131.261083] (-) TimerEvent: {}
+[131.362158] (-) TimerEvent: {}
+[131.463309] (-) TimerEvent: {}
+[131.564340] (-) TimerEvent: {}
+[131.665376] (-) TimerEvent: {}
+[131.766440] (-) TimerEvent: {}
+[131.867511] (-) TimerEvent: {}
+[131.968555] (-) TimerEvent: {}
+[132.070053] (-) TimerEvent: {}
+[132.171189] (-) TimerEvent: {}
+[132.272216] (-) TimerEvent: {}
+[132.373295] (-) TimerEvent: {}
+[132.474498] (-) TimerEvent: {}
+[132.575863] (-) TimerEvent: {}
+[132.676939] (-) TimerEvent: {}
+[132.778240] (-) TimerEvent: {}
+[132.879398] (-) TimerEvent: {}
+[132.980350] (-) TimerEvent: {}
+[133.082241] (-) TimerEvent: {}
+[133.183510] (-) TimerEvent: {}
+[133.284614] (-) TimerEvent: {}
+[133.385641] (-) TimerEvent: {}
+[133.486691] (-) TimerEvent: {}
+[133.587734] (-) TimerEvent: {}
+[133.689587] (-) TimerEvent: {}
+[133.790671] (-) TimerEvent: {}
+[133.891791] (-) TimerEvent: {}
+[133.992902] (-) TimerEvent: {}
+[134.094024] (-) TimerEvent: {}
+[134.195271] (-) TimerEvent: {}
+[134.296585] (-) TimerEvent: {}
+[134.397711] (-) TimerEvent: {}
+[134.498780] (-) TimerEvent: {}
+[134.599894] (-) TimerEvent: {}
+[134.701023] (-) TimerEvent: {}
+[134.802096] (-) TimerEvent: {}
+[134.903244] (-) TimerEvent: {}
+[135.005518] (-) TimerEvent: {}
+[135.106549] (-) TimerEvent: {}
+[135.207678] (-) TimerEvent: {}
+[135.309812] (-) TimerEvent: {}
+[135.410770] (-) TimerEvent: {}
+[135.512674] (-) TimerEvent: {}
+[135.613693] (-) TimerEvent: {}
+[135.714720] (-) TimerEvent: {}
+[135.815877] (-) TimerEvent: {}
+[135.916890] (-) TimerEvent: {}
+[136.017855] (-) TimerEvent: {}
+[136.120765] (-) TimerEvent: {}
+[136.221898] (-) TimerEvent: {}
+[136.364300] (-) TimerEvent: {}
+[136.465367] (-) TimerEvent: {}
+[136.566435] (-) TimerEvent: {}
+[136.667576] (-) TimerEvent: {}
+[136.769178] (-) TimerEvent: {}
+[136.870349] (-) TimerEvent: {}
+[136.971643] (-) TimerEvent: {}
+[137.072700] (-) TimerEvent: {}
+[137.173695] (-) TimerEvent: {}
+[137.274829] (-) TimerEvent: {}
+[137.375979] (-) TimerEvent: {}
+[137.477005] (-) TimerEvent: {}
+[137.578403] (-) TimerEvent: {}
+[137.679553] (-) TimerEvent: {}
+[137.780803] (-) TimerEvent: {}
+[137.881913] (-) TimerEvent: {}
+[137.982902] (-) TimerEvent: {}
+[138.084012] (-) TimerEvent: {}
+[138.185161] (-) TimerEvent: {}
+[138.286262] (-) TimerEvent: {}
+[138.387362] (-) TimerEvent: {}
+[138.488433] (-) TimerEvent: {}
+[138.589542] (-) TimerEvent: {}
+[138.690622] (-) TimerEvent: {}
+[138.791745] (-) TimerEvent: {}
+[138.892864] (-) TimerEvent: {}
+[138.994026] (-) TimerEvent: {}
+[139.095184] (-) TimerEvent: {}
+[139.196296] (-) TimerEvent: {}
+[139.297364] (-) TimerEvent: {}
+[139.398400] (-) TimerEvent: {}
+[139.499605] (-) TimerEvent: {}
+[139.600567] (-) TimerEvent: {}
+[139.701704] (-) TimerEvent: {}
+[139.802802] (-) TimerEvent: {}
+[139.903902] (-) TimerEvent: {}
+[140.005033] (-) TimerEvent: {}
+[140.106150] (-) TimerEvent: {}
+[140.207308] (-) TimerEvent: {}
+[140.308419] (-) TimerEvent: {}
+[140.409512] (-) TimerEvent: {}
+[140.510617] (-) TimerEvent: {}
+[140.611892] (-) TimerEvent: {}
+[140.712923] (-) TimerEvent: {}
+[140.813972] (-) TimerEvent: {}
+[140.915059] (-) TimerEvent: {}
+[141.016058] (-) TimerEvent: {}
+[141.117410] (-) TimerEvent: {}
+[141.219735] (-) TimerEvent: {}
+[141.321097] (-) TimerEvent: {}
+[141.467388] (-) TimerEvent: {}
+[141.568732] (-) TimerEvent: {}
+[141.670124] (-) TimerEvent: {}
+[141.771537] (-) TimerEvent: {}
+[141.872864] (-) TimerEvent: {}
+[141.974291] (-) TimerEvent: {}
+[142.075750] (-) TimerEvent: {}
+[142.177224] (-) TimerEvent: {}
+[142.278552] (-) TimerEvent: {}
+[142.380608] (-) TimerEvent: {}
+[142.481938] (-) TimerEvent: {}
+[142.583221] (-) TimerEvent: {}
+[142.684555] (-) TimerEvent: {}
+[142.785746] (-) TimerEvent: {}
+[142.886847] (-) TimerEvent: {}
+[142.988000] (-) TimerEvent: {}
+[143.089179] (-) TimerEvent: {}
+[143.190569] (-) TimerEvent: {}
+[143.291978] (-) TimerEvent: {}
+[143.393331] (-) TimerEvent: {}
+[143.494455] (-) TimerEvent: {}
+[143.595777] (-) TimerEvent: {}
+[143.697077] (-) TimerEvent: {}
+[143.798343] (-) TimerEvent: {}
+[143.899831] (-) TimerEvent: {}
+[144.001037] (-) TimerEvent: {}
+[144.102433] (-) TimerEvent: {}
+[144.203687] (-) TimerEvent: {}
+[144.304896] (-) TimerEvent: {}
+[144.406164] (-) TimerEvent: {}
+[144.507440] (-) TimerEvent: {}
+[144.608761] (-) TimerEvent: {}
+[144.710174] (-) TimerEvent: {}
+[144.811457] (-) TimerEvent: {}
+[144.912790] (-) TimerEvent: {}
+[145.013780] (-) TimerEvent: {}
+[145.114910] (-) TimerEvent: {}
+[145.216056] (-) TimerEvent: {}
+[145.317076] (-) TimerEvent: {}
+[145.418057] (-) TimerEvent: {}
+[145.519235] (-) TimerEvent: {}
+[145.620377] (-) TimerEvent: {}
+[145.721578] (-) TimerEvent: {}
+[145.822659] (-) TimerEvent: {}
+[145.923856] (-) TimerEvent: {}
+[146.024862] (-) TimerEvent: {}
+[146.126028] (-) TimerEvent: {}
+[146.227265] (-) TimerEvent: {}
+[146.328340] (-) TimerEvent: {}
+[146.571571] (-) TimerEvent: {}
+[146.672869] (-) TimerEvent: {}
+[146.773951] (-) TimerEvent: {}
+[146.875153] (-) TimerEvent: {}
+[146.976251] (-) TimerEvent: {}
+[147.077484] (-) TimerEvent: {}
+[147.179471] (-) TimerEvent: {}
+[147.280513] (-) TimerEvent: {}
+[147.381780] (-) TimerEvent: {}
+[147.482898] (-) TimerEvent: {}
+[147.584138] (-) TimerEvent: {}
+[147.685364] (-) TimerEvent: {}
+[147.786574] (-) TimerEvent: {}
+[147.887905] (-) TimerEvent: {}
+[147.989086] (-) TimerEvent: {}
+[148.090184] (-) TimerEvent: {}
+[148.191245] (-) TimerEvent: {}
+[148.292346] (-) TimerEvent: {}
+[148.393540] (-) TimerEvent: {}
+[148.494869] (-) TimerEvent: {}
+[148.596048] (-) TimerEvent: {}
+[148.697105] (-) TimerEvent: {}
+[148.798086] (-) TimerEvent: {}
+[148.899393] (-) TimerEvent: {}
+[149.000308] (-) TimerEvent: {}
+[149.101314] (-) TimerEvent: {}
+[149.202292] (-) TimerEvent: {}
+[149.303393] (-) TimerEvent: {}
+[149.404454] (-) TimerEvent: {}
+[149.505482] (-) TimerEvent: {}
+[149.606482] (-) TimerEvent: {}
+[149.707607] (-) TimerEvent: {}
+[149.808710] (-) TimerEvent: {}
+[149.909814] (-) TimerEvent: {}
+[150.011415] (-) TimerEvent: {}
+[150.112492] (-) TimerEvent: {}
+[150.213504] (-) TimerEvent: {}
+[150.314500] (-) TimerEvent: {}
+[150.415570] (-) TimerEvent: {}
+[150.516616] (-) TimerEvent: {}
+[150.617726] (-) TimerEvent: {}
+[150.719030] (-) TimerEvent: {}
+[150.820308] (-) TimerEvent: {}
+[150.921559] (-) TimerEvent: {}
+[151.022756] (-) TimerEvent: {}
+[151.124044] (-) TimerEvent: {}
+[151.225216] (-) TimerEvent: {}
+[151.326445] (-) TimerEvent: {}
+[151.429357] (-) TimerEvent: {}
+[151.656221] (-) TimerEvent: {}
+[151.757330] (-) TimerEvent: {}
+[151.858480] (-) TimerEvent: {}
+[151.960688] (-) TimerEvent: {}
+[152.061738] (-) TimerEvent: {}
+[152.162795] (-) TimerEvent: {}
+[152.263896] (-) TimerEvent: {}
+[152.364983] (-) TimerEvent: {}
+[152.466002] (-) TimerEvent: {}
+[152.567181] (-) TimerEvent: {}
+[152.668170] (-) TimerEvent: {}
+[152.769829] (-) TimerEvent: {}
+[152.870844] (-) TimerEvent: {}
+[152.971992] (-) TimerEvent: {}
+[153.073096] (-) TimerEvent: {}
+[153.174108] (-) TimerEvent: {}
+[153.275154] (-) TimerEvent: {}
+[153.376247] (-) TimerEvent: {}
+[153.477301] (-) TimerEvent: {}
+[153.578366] (-) TimerEvent: {}
+[153.679663] (-) TimerEvent: {}
+[153.780655] (-) TimerEvent: {}
+[153.881668] (-) TimerEvent: {}
+[153.982796] (-) TimerEvent: {}
+[154.084389] (-) TimerEvent: {}
+[154.185461] (-) TimerEvent: {}
+[154.286561] (-) TimerEvent: {}
+[154.387625] (-) TimerEvent: {}
+[154.488579] (-) TimerEvent: {}
+[154.589677] (-) TimerEvent: {}
+[154.690787] (-) TimerEvent: {}
+[154.791904] (-) TimerEvent: {}
+[154.892981] (-) TimerEvent: {}
+[154.994106] (-) TimerEvent: {}
+[155.095266] (-) TimerEvent: {}
+[155.196597] (-) TimerEvent: {}
+[155.297636] (-) TimerEvent: {}
+[155.398737] (-) TimerEvent: {}
+[155.499958] (-) TimerEvent: {}
+[155.601040] (-) TimerEvent: {}
+[155.702020] (-) TimerEvent: {}
+[155.803158] (-) TimerEvent: {}
+[155.904211] (-) TimerEvent: {}
+[156.005288] (-) TimerEvent: {}
+[156.106330] (-) TimerEvent: {}
+[156.207476] (-) TimerEvent: {}
+[156.308509] (-) TimerEvent: {}
+[156.409944] (-) TimerEvent: {}
+[156.511196] (-) TimerEvent: {}
+[156.612319] (-) TimerEvent: {}
+[156.713434] (-) TimerEvent: {}
+[156.814491] (-) TimerEvent: {}
+[156.915673] (-) TimerEvent: {}
+[157.016634] (-) TimerEvent: {}
+[157.117760] (-) TimerEvent: {}
+[157.219274] (-) TimerEvent: {}
+[157.320348] (-) TimerEvent: {}
+[157.421341] (-) TimerEvent: {}
+[157.522337] (-) TimerEvent: {}
+[157.623417] (-) TimerEvent: {}
+[157.724401] (-) TimerEvent: {}
+[157.825451] (-) TimerEvent: {}
+[157.926544] (-) TimerEvent: {}
+[158.027605] (-) TimerEvent: {}
+[158.129299] (-) TimerEvent: {}
+[158.230462] (-) TimerEvent: {}
+[158.331575] (-) TimerEvent: {}
+[158.432672] (-) TimerEvent: {}
+[158.533736] (-) TimerEvent: {}
+[158.634819] (-) TimerEvent: {}
+[158.735953] (-) TimerEvent: {}
+[158.837035] (-) TimerEvent: {}
+[158.938123] (-) TimerEvent: {}
+[159.040443] (-) TimerEvent: {}
+[159.141569] (-) TimerEvent: {}
+[159.242694] (-) TimerEvent: {}
+[159.343927] (-) TimerEvent: {}
+[159.445023] (-) TimerEvent: {}
+[159.546110] (-) TimerEvent: {}
+[159.647213] (-) TimerEvent: {}
+[159.748300] (-) TimerEvent: {}
+[159.849816] (-) TimerEvent: {}
+[159.950829] (-) TimerEvent: {}
+[160.052017] (-) TimerEvent: {}
+[160.153070] (-) TimerEvent: {}
+[160.254170] (-) TimerEvent: {}
+[160.355390] (-) TimerEvent: {}
+[160.600492] (-) TimerEvent: {}
+[160.701684] (-) TimerEvent: {}
+[160.802862] (-) TimerEvent: {}
+[160.904145] (-) TimerEvent: {}
+[161.005344] (-) TimerEvent: {}
+[161.106669] (-) TimerEvent: {}
+[161.207900] (-) TimerEvent: {}
+[161.309303] (-) TimerEvent: {}
+[161.410405] (-) TimerEvent: {}
+[161.511606] (-) TimerEvent: {}
+[161.612650] (-) TimerEvent: {}
+[161.713692] (-) TimerEvent: {}
+[161.814809] (-) TimerEvent: {}
+[161.915887] (-) TimerEvent: {}
+[162.016819] (-) TimerEvent: {}
+[162.117835] (-) TimerEvent: {}
+[162.219597] (-) TimerEvent: {}
+[162.320690] (-) TimerEvent: {}
+[162.421749] (-) TimerEvent: {}
+[162.523077] (-) TimerEvent: {}
+[162.624343] (-) TimerEvent: {}
+[162.725725] (-) TimerEvent: {}
+[162.827050] (-) TimerEvent: {}
+[162.928675] (-) TimerEvent: {}
+[163.030521] (-) TimerEvent: {}
+[163.131731] (-) TimerEvent: {}
+[163.232927] (-) TimerEvent: {}
+[163.334092] (-) TimerEvent: {}
+[163.435204] (-) TimerEvent: {}
+[163.536455] (-) TimerEvent: {}
+[163.637626] (-) TimerEvent: {}
+[163.739289] (-) TimerEvent: {}
+[163.840565] (-) TimerEvent: {}
+[163.941743] (-) TimerEvent: {}
+[164.042920] (-) TimerEvent: {}
+[164.144278] (-) TimerEvent: {}
+[164.245745] (-) TimerEvent: {}
+[164.347082] (-) TimerEvent: {}
+[164.448295] (-) TimerEvent: {}
+[164.549426] (-) TimerEvent: {}
+[164.650685] (-) TimerEvent: {}
+[164.751878] (-) TimerEvent: {}
+[164.853003] (-) TimerEvent: {}
+[164.954170] (-) TimerEvent: {}
+[165.055510] (-) TimerEvent: {}
+[165.156727] (-) TimerEvent: {}
+[165.258011] (-) TimerEvent: {}
+[165.359372] (-) TimerEvent: {}
+[165.461087] (-) TimerEvent: {}
+[165.527613] (hdl_localization) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:326: CMakeFiles/hdl_localization_composition.dir/all] Error 2\n'}
+[165.529290] (hdl_localization) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[165.562648] (hdl_localization) CommandEnded: {'returncode': 2}
+[165.565764] (-) TimerEvent: {}
+[165.668004] (-) TimerEvent: {}
+[165.770106] (-) TimerEvent: {}
+[165.871789] (-) TimerEvent: {}
+[165.972710] (-) TimerEvent: {}
+[166.070114] (hdl_localization) JobEnded: {'identifier': 'hdl_localization', 'rc': 2}
+[166.073426] (-) TimerEvent: {}
+[166.083475] (-) EventReactorShutdown: {}

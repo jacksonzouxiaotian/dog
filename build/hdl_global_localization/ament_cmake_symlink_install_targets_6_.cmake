@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization/libhdl_global_localization_engines.so" "TARGETS" "hdl_global_localization_engines" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

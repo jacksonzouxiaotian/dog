@@ -1,0 +1,18 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/query_global_localization__type_support_c.cpp.o"
+  "CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_localization_engine__type_support_c.cpp.o"
+  "CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_map__type_support_c.cpp.o"
+  "libhdl_global_localization__rosidl_typesupport_fastrtps_c.pdb"
+  "libhdl_global_localization__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/query_global_localization__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_localization_engine__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_map__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

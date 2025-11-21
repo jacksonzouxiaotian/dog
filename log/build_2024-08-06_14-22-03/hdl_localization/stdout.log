@@ -1,0 +1,15 @@
+[  2%] Built target hdl_localization__cpp
+[ 11%] Built target hdl_localization__rosidl_generator_c
+[ 20%] Built target hdl_localization__rosidl_typesupport_cpp
+[ 29%] Built target hdl_localization__rosidl_typesupport_introspection_cpp
+[ 38%] Built target hdl_localization__rosidl_typesupport_fastrtps_cpp
+[ 47%] Built target hdl_localization__rosidl_typesupport_introspection_c
+[ 55%] Built target hdl_localization__rosidl_typesupport_c
+[ 64%] Built target hdl_localization__rosidl_typesupport_fastrtps_c
+[ 64%] Built target hdl_localization
+[ 67%] Built target hdl_localization__py
+[ 70%] [32mBuilding CXX object CMakeFiles/hdl_localization_composition.dir/apps/hdl_localization_composition.cpp.o[0m
+[ 76%] Built target hdl_localization__python
+[ 82%] Built target hdl_localization__rosidl_typesupport_c__pyext
+[ 88%] Built target hdl_localization__rosidl_typesupport_fastrtps_c__pyext
+[ 94%] Built target hdl_localization__rosidl_typesupport_introspection_c__pyext
