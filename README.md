@@ -10,3 +10,5 @@
 匹配逻辑与之前方案一致：mask/bbox IoU + centroid 距离加权 → 双向 mutual → uncertainty（unmatched）
 
 输出通过 /late_fusion/matches（String JSON）发布，方便上层消费。也可以改为自定义消息。
+
+LiDAR→camera 的平移，后续将传给函数作为 lidar_t_override（米）
