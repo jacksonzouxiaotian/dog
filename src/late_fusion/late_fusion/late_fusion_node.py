@@ -130,9 +130,24 @@ class LateFusionNode(Node):
         self.score_thresh = 0.25
 
         # example LiDAR->cam transform (should be replaced by real calib)
-        self.T_l2c = np.eye(4)
-
-        self.get_logger().info('LateFusionNode started, subscribing pc: %s img: %s' % (self.pc_topic, self.img_topic))
+        R = np.array([
+            [0.999991,    -0.000327249,  0.00429821],
+            [0.000324735,  1.0,          0.000585413],
+            [-0.0042984,  -0.000584012,  0.999991]
+        ], dtype=np.float32)
+        baseline_mm = -49.8619
+        tx = baseline_mm / 1000.0 if abs(baseline_mm) > 1.0 else baseline_mm
+        t = np.array([tx, 0.0, 0.0], dtype=np.float32)
+        self.T_l2c = np.eye(4, dtype=np.float32)
+        self.T_l2c[:3, :3] = R
+        self.T_l2c[:3, 3] = t
+        self.T_l2c = np.array([
+            [ 0.999991   , -0.000327249,  0.00429821 , -0.0498619 ],
+            [ 0.000324735,  1.0        ,  0.000585413,  0.0       ],
+            [-0.0042984  , -0.000584012,  0.999991   ,  0.0       ],
+            [ 0.0        ,  0.0        ,  0.0        ,  1.0       ]
+        ], dtype=np.float32)
+        self.get_logger().info(f"Using default T_l2c (inferred):\\n{self.T_l2c}")
         self.timer = self.create_timer(0.5, self.run_matching)  # run at 2 Hz
 
     def pc_cb(self, msg):
