@@ -23,7 +23,7 @@ bt_navigator:
     - nav2_recovery_node_bt_node
     - nav2_pipeline_sequence_bt_node
     - nav2_round_robin_node_bt_node
-    - nav2_transform_available_condition_bt_node
+    - nav2_transform_available_condition_bt_nodenomachine
     - nav2_time_expired_condition_bt_node
     - nav2_distance_traveled_condition_bt_node
 
@@ -34,7 +34,7 @@ local_costmap:
       always_send_full_costmap: True
       footprint_padding: 0.10
       footprint: "[[0.3, 0.2], [0.3, -0.2], [-0.3, -0.2], [-0.3, 0.2]]"
-      global_frame: odom
+      global_frame: map
       width: 8
       height: 8
       origin_x: 0.0
@@ -248,7 +248,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         inflation_radius: 0.3
-        cost_scaling_factor: 10.0
+        cost_scaling_factor: 6.0
         inflate_unknown: False
         inflate_around_unknown: False
 
