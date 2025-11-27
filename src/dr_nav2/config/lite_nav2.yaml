@@ -23,7 +23,7 @@ bt_navigator:
     - nav2_recovery_node_bt_node
     - nav2_pipeline_sequence_bt_node
     - nav2_round_robin_node_bt_node
-    - nav2_transform_available_condition_bt_nodenomachine
+    - nav2_transform_available_condition_bt_node
     - nav2_time_expired_condition_bt_node
     - nav2_distance_traveled_condition_bt_node
 
@@ -94,7 +94,7 @@ local_costmap:
 
       stvl_obstacle_layer:
         plugin: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"
-        observation_sources:   rslidar_points depth_points
+        observation_sources:   rslidar_points
         transform_tolerance:   0.3    # seconds  
         enabled:               true
         publish_voxel_map:     true   # default off  
@@ -118,7 +118,7 @@ local_costmap:
           max_obstacle_height: 1.20      #defaule 3, meters
           inf_is_valid: false           #default false, for laser scans    
           marking: true
-          clearing: true
+          clearing: false
           min_z: 0.2
           max_z: 3.0
           vertical_fov_angle: 0.56
@@ -131,30 +131,10 @@ local_costmap:
           enabled: true
           model_type: 1
           obstacle_range: 4.0           #meters
-          
-          #add new depth_point          
-        depth_points:
-          topic: /camera/depth/color/points     #new
-          sensor_frame: camera_link      # 要和 TF 里的名字一致
-          observation_persistence: 0.3
-          expected_update_rate: 0.1
-          data_type: PointCloud2
-          min_obstacle_height: 0.05
-          max_obstacle_height: 1.5
-          marking: true
-          clearing: true
-          min_z: 0.0
-          max_z: 3.0
-          filter: voxel
-          voxel_min_points: 1
-          clear_after_reading: false
-          enabled: true
-          model_type: 1
-          obstacle_range: 3.0
 
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        inflation_radius: 0.2
+        inflation_radius: 0.3
         cost_scaling_factor: 10.0
         inflate_unknown: False
         inflate_around_unknown: False
@@ -227,7 +207,7 @@ global_costmap:
       stvl_obstacle_layer:
         plugin: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"
         enabled: true
-        observation_sources:   rslidar_points depth_points
+        observation_sources:   rslidar_points
         transform_tolerance:   0.3    # seconds  
         enabled:               true
         publish_voxel_map:     true   # default off  
@@ -243,7 +223,7 @@ global_costmap:
 
         rslidar_points:
           topic: /rslidar_points
-          sensor_frame: rslidar 
+          sensor_frame: rslidar
           observation_persistence: 0.5  #default 0, use all measurements taken during now-value, 0=latest 
           expected_update_rate: 0.1     #default 0, if not updating at this rate at least, remove from buffer
           data_type: PointCloud2
@@ -251,7 +231,7 @@ global_costmap:
           max_obstacle_height: 1.20      #defaule 3, meters
           inf_is_valid: false           #default false, for laser scans    
           marking: true
-          clearing: true
+          clearing: false
           min_z: 0.2
           max_z: 3.0
           vertical_fov_angle: 0.56
@@ -264,32 +244,11 @@ global_costmap:
           enabled: true
           model_type: 1
           obstacle_range: 4.0           #meters
-          
-        #add new depth_point          
-        depth_points:
-          topic: /camera/depth/color/points     #new
-          sensor_frame: camera_link      # 要和 TF 里的名字一致
-          observation_persistence: 0.3
-          expected_update_rate: 0.1
-          data_type: PointCloud2
-          min_obstacle_height: 0.05
-          max_obstacle_height: 1.5
-          marking: true
-          clearing: true
-          min_z: 0.0
-          max_z: 3.0
-          filter: voxel
-          voxel_min_points: 1
-          clear_after_reading: false
-          enabled: true
-          model_type: 1
-          obstacle_range: 3.0
-   
 
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         inflation_radius: 0.3
-        cost_scaling_factor: 6.0
+        cost_scaling_factor: 10.0
         inflate_unknown: False
         inflate_around_unknown: False
 
