@@ -42,7 +42,7 @@ local_costmap:
       # plugins: ["voxel_layer", "inflation_layer"]
       plugins: ["stvl_obstacle_layer", "inflation_layer"]
       publish_frequency: 1.0
-      resolution: 0.10
+      resolution: 0.05
       robot_base_frame: base_link
       rolling_window: True
       track_unknown_space: False
@@ -173,7 +173,7 @@ global_costmap:
       # plugins: ["static_layer", "voxel_layer", "inflation_layer"]
       plugins: ["static_layer", "stvl_obstacle_layer", "inflation_layer"]
       publish_frequency: 2.0
-      resolution: 0.10
+      resolution: 0.05
       robot_base_frame: base_link
       rolling_window: True
       track_unknown_space: False
