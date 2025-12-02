@@ -277,10 +277,12 @@ planner_server:
     expected_planner_frequency: 5.0
     planner_plugins: ["GridBased"]
     GridBased:
-      plugin: "nav2_navfn_planner/NavfnPlanner"
+      plugin: "smac_planner/SmacPlanner"
       tolerance: 0.5
       use_astar: true #false
       allow_unknown: true
+      max_iterations: 1000000 
+      max_on_approach_iterations: 100000
       smooth_path: true
 
 # controller_server:
