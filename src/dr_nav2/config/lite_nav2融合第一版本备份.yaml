@@ -278,8 +278,8 @@ planner_server:
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
-      tolerance: 0.5
-      use_astar: true #false
+      tolerance: 1.0
+      use_astar: false
       allow_unknown: true
 
 # controller_server:
@@ -510,10 +510,6 @@ controller_server:
       # include_last_point:
 
       # sim_period:
-      
-      #new add
-      enable_orientation_filter: true
-      desired_orientation: 0.0
 
       # critics: ["PreferForward", "GoalDist", "PathAlign", "GoalAlign", "PathDist", "Oscillation", "RotateToGoal", "BaseObstacle", "ObstacleFootprint", "Twirling"]
       critics: ["PreferForward", "GoalDist", "PathDist", "RotateToGoal", "BaseObstacle"]
