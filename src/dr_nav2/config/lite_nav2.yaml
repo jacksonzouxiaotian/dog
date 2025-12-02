@@ -281,6 +281,7 @@ planner_server:
       tolerance: 0.5
       use_astar: true #false
       allow_unknown: true
+      smooth_path: true
 
 # controller_server:
 #   ros__parameters:
