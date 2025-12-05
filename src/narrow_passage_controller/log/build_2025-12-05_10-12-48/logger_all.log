@@ -1,0 +1,92 @@
+[4.461s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[4.462s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8fac7850>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8fac7850>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8fac7dc0>)[0m
+[6.180s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[6.181s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[6.181s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[6.181s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[6.181s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[6.182s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[6.182s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller'
+[6.183s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[6.183s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[6.184s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[6.184s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[6.185s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[6.185s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[6.185s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[6.185s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[6.185s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[6.559s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage '.' with type 'ros.ament_python' and name 'narrow_passage_controller'[0m
+[6.559s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[6.560s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[6.560s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[6.560s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[6.560s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[7.108s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[7.108s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[7.132s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 1 installed packages in /home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install[0m
+[7.136s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 4 installed packages in /home/ysc/lite_cog_ros2/nav/install[0m
+[7.141s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 11 installed packages in /home/ysc/lite_cog_ros2/navigation2-foxy/install[0m
+[7.153s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 324 installed packages in /opt/ros/foxy[0m
+[7.171s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[8.045s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'cmake_args' from command line to 'None'
+[8.046s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'cmake_target' from command line to 'None'
+[8.046s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[8.046s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[8.046s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'cmake_clean_first' from command line to 'False'
+[8.046s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'cmake_force_configure' from command line to 'False'
+[8.047s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'ament_cmake_args' from command line to 'None'
+[8.047s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[8.047s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'narrow_passage_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[8.047s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'narrow_passage_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller', 'merge_install': False, 'path': '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller', 'symlink_install': False, 'test_result_base': None}[0m
+[8.048s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[8.055s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[8.056s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller' with build type 'ament_python'
+[8.057s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('narrow_passage_controller', 'ament_prefix_path')
+[8.230s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[8.231s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/hook/ament_prefix_path.ps1'
+[8.236s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/hook/ament_prefix_path.dsv'
+[8.240s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/hook/ament_prefix_path.sh'
+[8.246s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.246s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[10.287s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller'
+[10.296s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.297s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[16.032s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller': PYTHONPATH=/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller/prefix_override:/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/narrow_passage_controller build --build-base /home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller/build install --record /home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller/install.log --install-scripts $base/lib/narrow_passage_controller --single-version-externally-managed install_data[0m
+[18.573s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller' returned '0': PYTHONPATH=/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller/prefix_override:/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/narrow_passage_controller build --build-base /home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller/build install --record /home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/build/narrow_passage_controller/install.log --install-scripts $base/lib/narrow_passage_controller --single-version-externally-managed install_data[0m
+[18.617s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller' for CMake module files
+[18.620s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller' for CMake config files
+[18.626s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/lib'
+[18.628s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/bin'
+[18.628s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/lib/pkgconfig/narrow_passage_controller.pc'
+[18.631s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/lib/python3.8/site-packages'
+[18.631s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('narrow_passage_controller', 'pythonpath')
+[18.633s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/hook/pythonpath.ps1'
+[18.636s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/hook/pythonpath.dsv'
+[18.640s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/hook/pythonpath.sh'
+[18.644s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/bin'
+[18.644s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(narrow_passage_controller)
+[18.646s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/package.ps1'
+[18.782s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/package.dsv'
+[18.787s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/package.sh'
+[18.794s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/package.bash'
+[18.807s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/narrow_passage_controller/package.zsh'
+[18.813s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/narrow_passage_controller/share/colcon-core/packages/narrow_passage_controller)
+[18.816s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[18.818s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[18.820s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[18.821s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[18.866s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[18.867s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[18.868s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[18.994s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[18.997s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/local_setup.ps1'
+[19.123s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/_local_setup_util_ps1.py'
+[19.133s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/setup.ps1'
+[19.148s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/local_setup.sh'
+[19.153s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/_local_setup_util_sh.py'
+[19.157s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/setup.sh'
+[19.173s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/local_setup.bash'
+[19.179s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/setup.bash'
+[19.337s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/local_setup.zsh'
+[19.341s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller/install/setup.zsh'
