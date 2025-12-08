@@ -36,6 +36,13 @@ class DepthDecision:
     cx: float                # 图像中心的 x 像素坐标
     norm_e: float            # gap_x 与 cx 的归一化偏差 (约 [-1,1])，>0: 通道在右边
     has_valid_gap: bool      # 是否找到了合理的通道方向
+    # 新增一些 summary，便于以后控制或 RL
+    left_near: float = 0.0
+    center_near: float = 0.0
+    right_near: float = 0.0
+    left_far: float = 0.0
+    center_far: float = 0.0
+    right_far: float = 0.0
 
 
 # ===================== 二、主节点 =====================
@@ -222,34 +229,77 @@ class DepthNarrowPassageNode(Node):
         center_bins = profile[N // 3 : 2 * N // 3]
         right_bins  = profile[2 * N // 3 :]
 
-        left   = float(np.nanmean(left_bins))
-        center = float(np.nanmean(center_bins))
-        right  = float(np.nanmean(right_bins))
-        # ===== DEBUG: 打印一行深度信息 =====
-        d_min  = float(np.percentile(valid_roi_depths, 20))
+        def near_min(arr):
+            mask = (arr > 0.3) & (arr < 1.5)
+            if np.any(mask):
+                return float(np.min(arr[mask]))
+            else:
+                return float('inf')
+
+        # 远距：1.5 ~ max_depth，用最小值（远处障碍提前出现）
+        def far_min(arr):
+            mask = (arr >= 1.5) & (arr < max_depth)
+            if np.any(mask):
+                return float(np.min(arr[mask]))
+            else:
+                return float('inf')
+
+        left_near   = near_min(left_bins)
+        center_near = near_min(center_bins)
+        right_near  = near_min(right_bins)
+
+        left_far    = far_min(left_bins)
+        center_far  = far_min(center_bins)
+        right_far   = far_min(right_bins)
+
+        # 原始平均值（保留一份）
+        left_raw   = float(np.nanmean(left_bins))
+        center_raw = float(np.nanmean(center_bins))
+        right_raw  = float(np.nanmean(right_bins))
+
+        # 对远处更敏感：用 1/depth 作为附加特征（避免除 0）
+        eps = 1e-6
+        left_inv   = 1.0 / max(left_raw,   eps)
+        center_inv = 1.0 / max(center_raw, eps)
+        right_inv  = 1.0 / max(right_raw,  eps)
+
+        # DEBUG 打印更丰富
         self.get_logger().info(
-            f"[DEBUG] left={left:.2f}, center={center:.2f}, right={right:.2f}, d_min={d_min:.2f}"
+            "[DEBUG] near L/C/R = "
+            f"{left_near:.2f}/{center_near:.2f}/{right_near:.2f}, "
+            f"far L/C/R = {left_far:.2f}/{center_far:.2f}/{right_far:.2f}, "
+            f"raw L/C/R = {left_raw:.2f}/{center_raw:.2f}/{right_raw:.2f}, "
+            f"d_min={d_min:.2f}"
         )
         
         
 
         # 最小安全距离（靠箱子太近就认为不安全）
-        min_obs = 0.35   # 可以调
-        # 中间比左右至少远一点才认为是通道
-        gap_margin = 0.15
+        min_obs_near = 0.35   # 最近安全距离
+        warn_far     = 2.0    # 提前发现远处障碍的范围
 
-        can_pass = (
-            left   > min_obs and
-            right  > min_obs and
-            center > min_obs and
-            center > left  + gap_margin and
-            center > right + gap_margin and
-            d_min  > depth_threshold   # 整体上最近距离也不能太小
+        # 判定是否被两侧“夹住”（窄通道模式）
+        is_corridor = (
+            left_near   < warn_far and
+            right_near  < warn_far
         )
+
+        if is_corridor:
+            # 被夹住时需谨慎：左右近距都不能太小，且 center_near 要比左右远一点
+            can_pass = (
+                left_near   > min_obs_near and
+                right_near  > min_obs_near and
+                center_near > min_obs_near and
+                center_near > left_near  + 0.10 and
+                center_near > right_near + 0.10
+            )
+        else:
+            # 否则就是开放模式：只要最近障碍不太近即可
+            can_pass = (d_min > min_obs_near)
 
         # -------- 4. 在 profile 上找“最长连续可通行区间”做为 gap --------
         # 判定某个 bin 是否“可通行”：深度 > min_obs
-        free_mask = profile > min_obs
+        free_mask = profile > min_obs_near
 
         best_len = 0
         best_start = None
@@ -295,7 +345,13 @@ class DepthNarrowPassageNode(Node):
             gap_x=float(gap_x),
             cx=float(cx),
             norm_e=float(norm_e),
-            has_valid_gap=has_valid_gap
+            has_valid_gap=has_valid_gap,
+            left_near=left_near,
+            center_near=center_near,
+            right_near=right_near,
+            left_far=left_far,
+            center_far=center_far,
+            right_far=right_far,
         )
 
 
