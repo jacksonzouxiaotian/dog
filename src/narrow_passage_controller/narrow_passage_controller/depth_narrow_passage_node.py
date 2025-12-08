@@ -225,6 +225,13 @@ class DepthNarrowPassageNode(Node):
         left   = float(np.nanmean(left_bins))
         center = float(np.nanmean(center_bins))
         right  = float(np.nanmean(right_bins))
+        # ===== DEBUG: 打印一行深度信息 =====
+        d_min  = float(np.percentile(valid_roi_depths, 20))
+        self.get_logger().info(
+            f"[DEBUG] left={left:.2f}, center={center:.2f}, right={right:.2f}, d_min={d_min:.2f}"
+        )
+        
+        
 
         # 最小安全距离（靠箱子太近就认为不安全）
         min_obs = 0.35   # 可以调

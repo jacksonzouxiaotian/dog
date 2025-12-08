@@ -140,13 +140,14 @@ class DepthNarrowPassageNode(Node):
         输入: depth (h x w, 单位 m)
         输出: DepthDecision 结构体
 
-        只负责“看图做判断”，不负责如何给速度。
+        升级版:
+        - 用 20% 分位代替纯最小值，减少地板/噪声影响
+        - 通过“中间 vs 左右”的相对关系判断 can_pass
+        - 横向做一维 depth profile 再找最长可通行区间作为 gap
         """
         h, w = depth.shape
 
         max_depth = self.get_parameter('max_depth').get_parameter_value().double_value
-        depth_threshold = self.get_parameter('depth_threshold').get_parameter_value().double_value
-
         roi_y_start_ratio = self.get_parameter('roi_y_start_ratio').get_parameter_value().double_value
         roi_height_ratio  = self.get_parameter('roi_height_ratio').get_parameter_value().double_value
 
@@ -154,18 +155,18 @@ class DepthNarrowPassageNode(Node):
         y1 = int(h * roi_y_start_ratio)
         roi_height = int(h * roi_height_ratio)
         y2 = min(h, y1 + roi_height)
-        if y2 <= y1:  # 防止配置出错
+        if y2 <= y1:
             y1 = int(h * 0.5)
             y2 = h
 
         roi = depth[y1:y2, :]
 
-        # -------- 2. 整体 ROI 深度统计（能否通过、前方距离） --------
-        valid_roi_mask   = np.isfinite(roi) & (roi > 0.1) & (roi < max_depth)
+        # 去掉无效点
+        valid_roi_mask = np.isfinite(roi) & (roi > 0.05) & (roi < max_depth)
         valid_roi_depths = roi[valid_roi_mask]
 
         if valid_roi_depths.size == 0:
-            # 无任何有效深度，保守起见: 不可通过、距前方0
+            # 无任何有效深度，保守起见: 不可通过
             return DepthDecision(
                 can_pass=False,
                 d_min=0.0,
@@ -176,66 +177,127 @@ class DepthNarrowPassageNode(Node):
                 has_valid_gap=False
             )
 
-        d_min    = float(np.min(valid_roi_depths))
+        # 用 20% 分位估计“最近一批点”的深度，避免单点噪声
+        d_min = float(np.percentile(valid_roi_depths, 20))
         d_center = float(np.median(valid_roi_depths))
-        can_pass = d_min > depth_threshold
 
-        # -------- 3. 寻找狭缝方向（gap_x） --------
+        # -------- 2. 构造一维 depth profile --------
         num_bins = self.get_parameter('num_bins').get_parameter_value().integer_value
-        bin_min_valid_ratio = self.get_parameter('bin_min_valid_ratio').get_parameter_value().double_value
-        min_bin_depth = self.get_parameter('min_bin_depth').get_parameter_value().double_value
+        if num_bins < 5:
+            num_bins = 5
 
-        # 只用 ROI 的下半部分进行狭缝检测
         h_roi, w_roi = roi.shape
+        bin_width = w_roi // num_bins if num_bins > 0 else w_roi
+
+        # 只用 ROI 的下半部分做 profile（避开远处噪声）
         yb1 = int(h_roi * 0.5)
         yb2 = h_roi
         roi_bottom = roi[yb1:yb2, :]
 
-        if num_bins < 5:
-            num_bins = 5
-        bin_width = w_roi // num_bins if num_bins > 0 else w_roi
-
-        scores = np.full(num_bins, -np.inf, dtype=np.float32)
+        profile = np.zeros(num_bins, dtype=np.float32)
+        has_valid = np.zeros(num_bins, dtype=bool)
 
         for i in range(num_bins):
             x1 = i * bin_width
             x2 = (i + 1) * bin_width if i < num_bins - 1 else w_roi
             strip = roi_bottom[:, x1:x2]
 
-            valid = np.isfinite(strip) & (strip > 0.1) & (strip < max_depth)
-            valid_count = int(np.count_nonzero(valid))
-            if valid_count < bin_min_valid_ratio * strip.size:
-                continue
+            valid = np.isfinite(strip) & (strip > 0.05) & (strip < max_depth)
+            vals = strip[valid]
+            if vals.size == 0:
+                # 用 max_depth 代表“没测到/很远”，留给后面处理
+                profile[i] = max_depth
+                has_valid[i] = False
+            else:
+                # 取 20% 分位：数值越小越近，越危险
+                profile[i] = np.percentile(vals, 20)
+                has_valid[i] = True
 
-            depths = strip[valid]
-            score = np.percentile(depths, 80)  # 开阔度评分
+        # -------- 3. 基于左右/中间做 can_pass 判断 --------
+        depth_threshold = self.get_parameter('depth_threshold').get_parameter_value().double_value
 
-            if score < min_bin_depth:
-                continue
+        # 拿左右三分之一做统计
+        N = num_bins
+        left_bins   = profile[: N // 3]
+        center_bins = profile[N // 3 : 2 * N // 3]
+        right_bins  = profile[2 * N // 3 :]
 
-            scores[i] = score
+        left   = float(np.nanmean(left_bins))
+        center = float(np.nanmean(center_bins))
+        right  = float(np.nanmean(right_bins))
+        # ===== DEBUG: 打印一行深度信息 =====
+        d_min  = float(np.percentile(valid_roi_depths, 20))
+        self.get_logger().info(
+            f"[DEBUG] left={left:.2f}, center={center:.2f}, right={right:.2f}, d_min={d_min:.2f}"
+        )
+        
+        
 
-        has_valid_gap = not np.all(scores == -np.inf)
-        cx = w / 2.0  # 图像中心 x
-        gap_x = cx    # 默认先给中心
+        # 最小安全距离（靠箱子太近就认为不安全）
+        min_obs = 0.35   # 可以调
+        # 中间比左右至少远一点才认为是通道
+        gap_margin = 0.15
+
+        can_pass = (
+            left   > min_obs and
+            right  > min_obs and
+            center > min_obs and
+            center > left  + gap_margin and
+            center > right + gap_margin and
+            d_min  > depth_threshold   # 整体上最近距离也不能太小
+        )
+
+        # -------- 4. 在 profile 上找“最长连续可通行区间”做为 gap --------
+        # 判定某个 bin 是否“可通行”：深度 > min_obs
+        free_mask = profile > min_obs
+
+        best_len = 0
+        best_start = None
+        cur_start = None
+        cur_len = 0
+
+        for i in range(N):
+            if free_mask[i]:
+                if cur_start is None:
+                    cur_start = i
+                    cur_len = 1
+                else:
+                    cur_len += 1
+            else:
+                if cur_start is not None and cur_len > best_len:
+                    best_len = cur_len
+                    best_start = cur_start
+                cur_start = None
+                cur_len = 0
+
+        # 尾段连续区间的处理
+        if cur_start is not None and cur_len > best_len:
+            best_len = cur_len
+            best_start = cur_start
+
+        has_valid_gap = best_len > 0
+
+        cx = w / 2.0
+        gap_x = cx
 
         if has_valid_gap:
-            best_idx = int(np.argmax(scores))
-            gap_x = (best_idx + 0.5) * bin_width  # 在整幅图像中的 x（因为宽度相同）
+            # 取这段连续 free 区间的中心 bin
+            best_center_bin = best_start + best_len / 2.0
+            gap_x = (best_center_bin + 0.5) * bin_width  # 转成像素坐标
 
-        # gap_x 与 cx 的归一化偏差
         e = gap_x - cx
-        norm_e = e / (w / 2.0)   # 约在 [-1,1]，>0: 通道在右边
+        norm_e = e / (w / 2.0)
 
         return DepthDecision(
             can_pass=can_pass,
             d_min=d_min,
             d_center=d_center,
-            gap_x=gap_x,
-            cx=cx,
+            gap_x=float(gap_x),
+            cx=float(cx),
             norm_e=float(norm_e),
             has_valid_gap=has_valid_gap
         )
+
 
     # ===================== 四、部分 2：控制 / 下命令 =====================
 
