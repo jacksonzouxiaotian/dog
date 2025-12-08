@@ -236,9 +236,9 @@ class DepthNarrowPassageNode(Node):
             else:
                 return float('inf')
 
-        # 远距：1.5 ~ max_depth，用最小值（远处障碍提前出现）
+        # 远距：0.X ~ max_depth，用最小值（远处障碍提前出现）
         def far_min(arr):
-            mask = (arr >= 1.5) & (arr < max_depth)
+            mask = (arr >= 0.8) & (arr < max_depth)
             if np.any(mask):
                 return float(np.min(arr[mask]))
             else:
