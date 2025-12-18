@@ -455,137 +455,33 @@ controller_server:
       yaw_goal_tolerance: 0.4
       stateful: True
 
-    # FollowPath:
-    #   plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
-    #   desired_linear_vel: 0.6
-    #   lookahead_dist: 0.8
-
-    #   min_lookahead_dist: 0.3
-    #   max_lookahead_dist: 1.5
-    #   lookahead_time: 1.5
-    #   use_velocity_scaled_lookahead_dist: True
-
-    #   rotate_to_heading_angular_vel: 0.6
-    #   transform_tolerance: 0.3
-    #   min_approach_linear_velocity: 0.05
-    #   use_approach_linear_velocity_scaling: True
-    #   # max_allowed_time_to_collision:    
-    #   use_regulated_linear_velocity_scaling: True
-    #   use_cost_regulated_linear_velocity_scaling: true
-    #   cost_scaling_dist: 0.6
-    #   # cost_scaling_gain: 
-    #   # inflation_cost_scaling_factor: 
-    #   regulated_linear_scaling_min_radius: 0.9
-    #   regulated_linear_scaling_min_speed: 0.05
-    #   use_rotate_to_heading: True
-    #   rotate_to_heading_min_angle: 0.5
-    #   max_angular_accel: 0.6
-    #   goal_dist_tol: 0.20
-
     FollowPath:
-      plugin: "dwb_core::DWBLocalPlanner"
-      min_vel_x: -0.02
-      min_vel_y: -0.02
-      max_vel_x: 1.0
-      max_vel_y: 0.1
-      max_vel_theta: 0.8
-      min_speed_xy: 0.01
-      max_speed_xy: 1.0
-      min_speed_theta: 0.01
-      acc_lim_x: 1.0
-      acc_lim_y: 0.2
-      acc_lim_theta: 0.8
-      decel_lim_x: -1.0
-      decel_lim_y: -0.2
-      decel_lim_theta: -0.8
+      plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
+      desired_linear_vel: 0.6
+      lookahead_dist: 0.8
 
-      vx_samples: 20
-      vy_samples: 6
-      vtheta_samples: 40
+      min_lookahead_dist: 0.3
+      max_lookahead_dist: 1.5
+      lookahead_time: 1.5
+      use_velocity_scaled_lookahead_dist: True
 
-      sim_time: 3.0
-      discretize_by_time: False 
-      # time_granularity: 
-      linear_granularity: 0.1
-      angular_granularity: 0.1
-      # include_last_point:
+      rotate_to_heading_angular_vel: 0.6
+      transform_tolerance: 0.3
+      min_approach_linear_velocity: 0.05
+      use_approach_linear_velocity_scaling: True
+      # max_allowed_time_to_collision:    
+      use_regulated_linear_velocity_scaling: True
+      use_cost_regulated_linear_velocity_scaling: true
+      cost_scaling_dist: 0.6
+      # cost_scaling_gain: 
+      # inflation_cost_scaling_factor: 
+      regulated_linear_scaling_min_radius: 0.9
+      regulated_linear_scaling_min_speed: 0.05
+      use_rotate_to_heading: True
+      rotate_to_heading_min_angle: 0.5
+      max_angular_accel: 0.6
+      goal_dist_tol: 0.20
 
-      # sim_period:
-      
-      #new add
-      enable_orientation_filter: true
-      desired_orientation: 0.0
-
-      # critics: ["PreferForward", "GoalDist", "PathAlign", "GoalAlign", "PathDist", "Oscillation", "RotateToGoal", "BaseObstacle", "ObstacleFootprint", "Twirling"]
-      critics: ["PreferForward", "GoalDist", "PathDist", "RotateToGoal", "BaseObstacle"]
-      # default_critic_namespaces:
-
-      # PreferForward.class:
-      PreferForward.scale: 40.0
-      # PreferForward.penalty: 
-      PreferForward.strafe_x: 0.3
-      PreferForward.strafe_theta: 0.3
-      PreferForward.theta_scale: 1.0
-
-      # GoalDist.class:
-      GoalDist.scale: 60.0
-      GoalDist.aggregation_type: "last"
-
-      # PathAlign.class:
-      PathAlign.scale: 40.0
-      PathAlign.aggregation_type: "sum"
-      PathAlign.forward_point_distance: 0.1
-
-      # GoalAlign.class:
-      GoalAlign.scale: 48.0
-      GoalAlign.aggregation_type: "last"
-      GoalAlign.forward_point_distance: 0.1
-
-      # PathDist.class:
-      PathDist.scale: 20.0
-      PathDist.aggregation_type: "sum"
-
-      # Oscillation.class:
-      # Oscillation.scale:
-      # Oscillation.oscillation_reset_dist:
-      # Oscillation.oscillation_reset_angle:
-      # Oscillation.oscillation_reset_time:
-      # Oscillation.x_only_threshold:
-
-      # RotateToGoal.class:
-      RotateToGoal.scale: 32.0
-      xy_goal_tolerance: 0.4
-      trans_stopped_velocity: 0.05
-      RotateToGoal.slowing_factor: 5.0
-      RotateToGoal.lookahead_time: -1.0
-
-      # BaseObstacle.class:
-      BaseObstacle.scale: 0.02
-      # BaseObstacle.sum_scores:
-
-      # ObstacleFootprint.class:
-      # ObstacleFootprint.scale:
-      # ObstacleFootprint.max_scaling_factor:
-      # ObstacleFootprint.scaling_speed:
-
-      # Twirling.class:
-      # Twirling.scale:
-
-      # prune_plan:
-      # prune_distance:
-      # debug_trajectory_details:
-      # trajectory_generator_name:
-      transform_tolerance: 0.2
-      # shorten_transformed_plan:
-      short_circuit_trajectory_evaluation: True
-
-      publish_evaluation: True
-      publish_global_plan: True
-      publish_transformed_plan: True
-      publish_local_plan: True
-      publish_trajectories: True
-      publish_cost_grid_pc: True
-      # marker_lifetime:
 
 map_server:
   ros__parameters:
