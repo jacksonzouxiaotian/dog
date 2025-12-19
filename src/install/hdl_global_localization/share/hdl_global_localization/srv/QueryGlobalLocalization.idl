@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from hdl_global_localization/srv/QueryGlobalLocalization.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+#include "std_msgs/msg/Header.idl"
+
+module hdl_global_localization {
+  module srv {
+    struct QueryGlobalLocalization_Request {
+      @verbatim (language="comment", text=
+        " Maximum number of output poses (Results may contain a fewer number of poses than the requested number)")
+      int64 max_num_candidates;
+
+      @verbatim (language="comment", text=
+        " Some engines (e.g., BBS) assume that the cloud is gravity-aligned")
+      sensor_msgs::msg::PointCloud2 cloud;
+    };
+    struct QueryGlobalLocalization_Response {
+      std_msgs::msg::Header header;
+
+      std_msgs::msg::Header globalmap_header;
+
+      sequence<double> inlier_fractions;
+
+      sequence<double> errors;
+
+      sequence<geometry_msgs::msg::Pose> poses;
+    };
+  };
+};

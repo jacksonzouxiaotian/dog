@@ -1,0 +1,428 @@
+[0.596s] Invoking command in '/home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization': CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy /usr/bin/cmake /home/ysc/lite_cog_ros2/nav/src/hdl_global_localization -DCMAKE_INSTALL_PREFIX=/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization
+[4.955s] -- The C compiler identification is GNU 9.4.0
+[4.956s] -- The CXX compiler identification is GNU 9.4.0
+[4.957s] -- Check for working C compiler: /usr/bin/cc
+[5.487s] -- Check for working C compiler: /usr/bin/cc -- works
+[5.656s] -- Detecting C compiler ABI info
+[7.002s] -- Detecting C compiler ABI info - done
+[7.248s] -- Detecting C compile features
+[7.249s] -- Detecting C compile features - done
+[7.429s] -- Check for working CXX compiler: /usr/bin/c++
+[8.640s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[8.659s] -- Detecting CXX compiler ABI info
+[9.742s] -- Detecting CXX compiler ABI info - done
+[9.854s] -- Detecting CXX compile features
+[9.859s] -- Detecting CXX compile features - done
+[10.545s] -- Looking for pthread.h
+[11.804s] -- Looking for pthread.h - found
+[11.805s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[12.952s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[12.953s] -- Looking for pthread_create in pthreads
+[13.825s] -- Looking for pthread_create in pthreads - not found
+[13.826s] -- Looking for pthread_create in pthread
+[14.523s] -- Looking for pthread_create in pthread - found
+[14.536s] -- Found Threads: TRUE  
+[15.098s] -- Found CUDA: /usr/local/cuda-11.4 (found suitable exact version "11.4") 
+[15.698s] -- Found OpenCV: /usr/local (found version "4.2.0") 
+[18.409s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[19.435s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[19.441s] -- Found OpenMP: TRUE (found version "4.5")  
+[19.454s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[19.647s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[19.650s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[21.831s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[21.881s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[22.631s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[22.826s] -- Found FastRTPS: /opt/ros/foxy/include  
+[23.417s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[23.822s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[23.830s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[29.483s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[29.512s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[32.334s] -- Checking for module 'eigen3'
+[32.622s] --   Found eigen3, version 3.3.7
+[33.183s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[33.184s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+[34.487s] -- Checking for module 'flann'
+[34.794s] --   Found flann, version 1.9.1
+[35.402s] -- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+[36.425s] -- The imported target "vtkParseOGLExt" references the file
+[36.426s]    "/usr/bin/vtkParseOGLExt-7.1"
+[36.426s] but this file does not exist.  Possible reasons include:
+[36.427s] * The file was deleted, renamed, or moved to another location.
+[36.427s] * An install or uninstall procedure did not complete successfully.
+[36.427s] * The installation package was faulty and contained
+[36.428s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[36.429s] but not all the files it references.
+[36.430s] 
+[36.436s] -- The imported target "vtkRenderingPythonTkWidgets" references the file
+[36.436s]    "/usr/lib/aarch64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+[36.437s] but this file does not exist.  Possible reasons include:
+[36.437s] * The file was deleted, renamed, or moved to another location.
+[36.438s] * An install or uninstall procedure did not complete successfully.
+[36.439s] * The installation package was faulty and contained
+[36.440s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[36.441s] but not all the files it references.
+[36.441s] 
+[36.442s] -- The imported target "vtk" references the file
+[36.442s]    "/usr/bin/vtk"
+[36.443s] but this file does not exist.  Possible reasons include:
+[36.443s] * The file was deleted, renamed, or moved to another location.
+[36.444s] * An install or uninstall procedure did not complete successfully.
+[36.444s] * The installation package was faulty and contained
+[36.445s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[36.445s] but not all the files it references.
+[36.445s] 
+[36.446s] -- The imported target "pvtk" references the file
+[36.446s]    "/usr/bin/pvtk"
+[36.447s] but this file does not exist.  Possible reasons include:
+[36.447s] * The file was deleted, renamed, or moved to another location.
+[36.447s] * An install or uninstall procedure did not complete successfully.
+[36.448s] * The installation package was faulty and contained
+[36.448s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[36.451s] but not all the files it references.
+[36.452s] 
+[36.797s] -- Checking for module 'libusb-1.0'
+[37.105s] --   Found libusb-1.0, version 1.0.23
+[37.672s] -- Found USB_10: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  
+[38.562s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[39.646s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[39.751s] -- Found libusb-1.0: /usr/include  
+[39.806s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[39.859s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[40.241s] -- Found Qhull: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so  
+[40.242s] -- QHULL found (include: /usr/include, lib: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so)
+[40.298s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[40.409s] -- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  
+[40.421s] -- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+[40.431s] -- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+[40.445s] -- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so  
+[40.463s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+[40.477s] -- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+[40.486s] -- Found PCL_2D: /usr/include/pcl-1.10  
+[40.492s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.10  
+[40.504s] -- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  
+[40.514s] -- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so  
+[40.525s] -- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so  
+[40.534s] -- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  
+[40.544s] -- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so  
+[40.558s] -- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so  
+[40.565s] -- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so  
+[40.579s] -- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so  
+[40.599s] -- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so  
+[40.614s] -- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so  
+[40.628s] -- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so  
+[40.641s] -- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so  
+[40.658s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.10  
+[40.803s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.10  
+[40.813s] -- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so  
+[40.825s] -- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so  
+[42.810s] -- Using the multi-header code from /home/ysc/lite_cog_ros2/nav/src/hdl_global_localization/thirdparty/json/include/
+[43.151s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[45.462s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[49.226s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[51.266s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[51.602s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[51.759s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[52.254s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[52.255s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[52.255s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[52.256s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[52.420s] -- Found PythonExtra: .so  
+[54.405s] -- Configuring done
+[57.596s] -- Generating done
+[57.641s] -- Build files have been written to: /home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization
+[57.786s] Invoked command in '/home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization' returned '0': CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy /usr/bin/cmake /home/ysc/lite_cog_ros2/nav/src/hdl_global_localization -DCMAKE_INSTALL_PREFIX=/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization
+[57.812s] Invoking command in '/home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization': CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization -- -j6 -l6
+[58.171s] [35m[1mScanning dependencies of target hdl_global_localization_engines[0m
+[58.176s] [35m[1mScanning dependencies of target hdl_global_localization__cpp[0m
+[58.182s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[58.320s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[62.138s] [  3%] Built target hdl_global_localization__cpp
+[62.277s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[62.305s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_generator_c[0m
+[62.332s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[62.337s] [  8%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[62.600s] [ 10%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_generator_c.dir/rosidl_generator_c/hdl_global_localization/srv/detail/query_global_localization__functions.c.o[0m
+[62.623s] [ 12%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_generator_c.dir/rosidl_generator_c/hdl_global_localization/srv/detail/set_global_localization_engine__functions.c.o[0m
+[63.589s] [ 13%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_generator_c.dir/rosidl_generator_c/hdl_global_localization/srv/detail/set_global_map__functions.c.o[0m
+[63.685s] [ 15%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_engines.dir/src/hdl_global_localization/util/config.cpp.o[0m
+[64.096s] [ 17%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_engines.dir/src/hdl_global_localization/bbs/bbs_localization.cpp.o[0m
+[64.721s] [ 18%] [32m[1mLinking C shared library libhdl_global_localization__rosidl_generator_c.so[0m
+[65.430s] [ 18%] Built target hdl_global_localization__rosidl_generator_c
+[65.639s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[66.579s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_cpp[0m
+[66.961s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_introspection_cpp[0m
+[67.056s] [ 22%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hdl_global_localization/srv/query_global_localization__type_support.cpp.o[0m
+[67.145s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_fastrtps_cpp[0m
+[67.372s] [ 24%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hdl_global_localization/srv/detail/query_global_localization__type_support.cpp.o[0m
+[68.127s] [ 25%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hdl_global_localization/srv/detail/dds_fastrtps/query_global_localization__type_support.cpp.o[0m
+[70.005s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_introspection_c[0m
+[70.729s] [ 27%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hdl_global_localization/srv/detail/query_global_localization__type_support.c.o[0m
+[70.919s] [ 29%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hdl_global_localization/srv/set_global_localization_engine__type_support.cpp.o[0m
+[71.684s] [ 31%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.c.o[0m
+[72.826s] [ 32%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hdl_global_localization/srv/detail/set_global_map__type_support.c.o[0m
+[73.830s] [ 34%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.cpp.o[0m
+[73.847s] [ 36%] [32m[1mLinking C shared library libhdl_global_localization__rosidl_typesupport_introspection_c.so[0m
+[74.599s] [ 36%] Built target hdl_global_localization__rosidl_typesupport_introspection_c
+[75.650s] [ 37%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hdl_global_localization/srv/set_global_map__type_support.cpp.o[0m
+[75.943s] [ 39%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hdl_global_localization/srv/detail/dds_fastrtps/set_global_localization_engine__type_support.cpp.o[0m
+[78.377s] [ 41%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hdl_global_localization/srv/detail/set_global_map__type_support.cpp.o[0m
+[78.914s] [ 43%] [32m[1mLinking CXX shared library libhdl_global_localization__rosidl_typesupport_cpp.so[0m
+[80.122s] [ 43%] Built target hdl_global_localization__rosidl_typesupport_cpp
+[82.197s] [ 44%] [32m[1mLinking CXX shared library libhdl_global_localization__rosidl_typesupport_introspection_cpp.so[0m
+[82.227s] [ 46%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hdl_global_localization/srv/detail/dds_fastrtps/set_global_map__type_support.cpp.o[0m
+[83.492s] [ 46%] Built target hdl_global_localization__rosidl_typesupport_introspection_cpp
+[87.194s] [ 48%] [32m[1mLinking CXX shared library libhdl_global_localization__rosidl_typesupport_fastrtps_cpp.so[0m
+[88.909s] [ 48%] Built target hdl_global_localization__rosidl_typesupport_fastrtps_cpp
+[121.745s] [ 50%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_engines.dir/src/hdl_global_localization/engines/global_localization_bbs.cpp.o[0m
+[192.713s] [ 51%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_engines.dir/src/hdl_global_localization/engines/global_localization_fpfh_ransac.cpp.o[0m
+[192.714s] [ 53%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_engines.dir/src/hdl_global_localization/ransac/voxelset.cpp.o[0m
+[192.728s] [ 55%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_engines.dir/src/hdl_global_localization/ransac/ransac_pose_estimation.cpp.o[0m
+[265.440s] [ 56%] [32m[1mLinking CXX shared library libhdl_global_localization_engines.so[0m
+[293.267s] [ 56%] Built target hdl_global_localization_engines
+[293.484s] [ 58%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[293.491s] [ 60%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[296.944s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_c[0m
+[297.093s] [ 62%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/hdl_global_localization/srv/query_global_localization__type_support.cpp.o[0m
+[297.094s] [ 63%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/hdl_global_localization/srv/set_global_map__type_support.cpp.o[0m
+[297.117s] [ 65%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/hdl_global_localization/srv/set_global_localization_engine__type_support.cpp.o[0m
+[297.521s] [ 67%] [32m[1mLinking CXX shared library libhdl_global_localization__rosidl_typesupport_c.so[0m
+[297.667s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_fastrtps_c[0m
+[297.920s] [ 67%] Built target hdl_global_localization__rosidl_typesupport_c
+[298.369s] [ 68%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_map__type_support_c.cpp.o[0m
+[298.375s] [ 70%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/query_global_localization__type_support_c.cpp.o[0m
+[298.392s] [ 72%] [32mBuilding CXX object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hdl_global_localization/srv/detail/set_global_localization_engine__type_support_c.cpp.o[0m
+[301.341s] [ 74%] [32m[1mLinking CXX shared library libhdl_global_localization__rosidl_typesupport_fastrtps_c.so[0m
+[302.285s] [ 74%] Built target hdl_global_localization__rosidl_typesupport_fastrtps_c
+[302.634s] [35m[1mScanning dependencies of target hdl_global_localization[0m
+[302.719s] [ 74%] Built target hdl_global_localization
+[303.088s] [35m[1mScanning dependencies of target hdl_global_localization_test[0m
+[303.088s] [35m[1mScanning dependencies of target hdl_global_localization_node[0m
+[303.089s] [35m[1mScanning dependencies of target hdl_global_localization__py[0m
+[303.179s] [ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[304.966s] [ 77%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_node.dir/src/hdl_global_localization_node_ros2.cpp.o[0m
+[305.006s] [ 79%] [32mBuilding CXX object CMakeFiles/hdl_global_localization_test.dir/src/hdl_global_localization_test_ros2.cpp.o[0m
+[310.471s] [ 79%] Built target hdl_global_localization__py
+[310.742s] [35m[1mScanning dependencies of target hdl_global_localization__python[0m
+[311.287s] [ 81%] [32mBuilding C object CMakeFiles/hdl_global_localization__python.dir/rosidl_generator_py/hdl_global_localization/srv/_set_global_localization_engine_s.c.o[0m
+[311.337s] [ 82%] [32mBuilding C object CMakeFiles/hdl_global_localization__python.dir/rosidl_generator_py/hdl_global_localization/srv/_query_global_localization_s.c.o[0m
+[312.730s] [ 84%] [32mBuilding C object CMakeFiles/hdl_global_localization__python.dir/rosidl_generator_py/hdl_global_localization/srv/_set_global_map_s.c.o[0m
+[313.889s] [ 86%] [32m[1mLinking C shared library rosidl_generator_py/hdl_global_localization/libhdl_global_localization__python.so[0m
+[314.417s] [ 86%] Built target hdl_global_localization__python
+[314.781s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_c__pyext[0m
+[315.202s] [ 87%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hdl_global_localization/_hdl_global_localization_s.ep.rosidl_typesupport_c.c.o[0m
+[316.091s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[316.587s] [ 89%] Built target hdl_global_localization__rosidl_typesupport_c__pyext
+[316.981s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_fastrtps_c__pyext[0m
+[317.258s] [ 91%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hdl_global_localization/_hdl_global_localization_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[318.285s] [ 93%] [32m[1mLinking CXX shared library rosidl_generator_py/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[318.988s] [ 93%] Built target hdl_global_localization__rosidl_typesupport_fastrtps_c__pyext
+[319.370s] [35m[1mScanning dependencies of target hdl_global_localization__rosidl_typesupport_introspection_c__pyext[0m
+[319.619s] [ 94%] [32mBuilding C object CMakeFiles/hdl_global_localization__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hdl_global_localization/_hdl_global_localization_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[320.561s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[321.144s] [ 96%] Built target hdl_global_localization__rosidl_typesupport_introspection_c__pyext
+[348.517s] [ 98%] [32m[1mLinking CXX executable hdl_global_localization_test[0m
+[352.869s] [ 98%] Built target hdl_global_localization_test
+[359.058s] [100%] [32m[1mLinking CXX executable hdl_global_localization_node[0m
+[366.093s] [100%] Built target hdl_global_localization_node
+[366.274s] Invoked command in '/home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization' returned '0': CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization -- -j6 -l6
+[367.149s] Invoking command in '/home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization': CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization
+[367.338s] -- Install configuration: ""
+[367.343s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/ament_index/resource_index/rosidl_interfaces/hdl_global_localization
+[367.347s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[367.348s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg
+[367.348s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_generator_c__visibility_control.h
+[367.350s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv
+[367.351s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/query_global_localization.h
+[367.352s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail
+[367.353s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__type_support.h
+[367.354s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__struct.h
+[367.355s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__struct.h
+[367.356s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__functions.h
+[367.357s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__functions.c
+[367.358s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__functions.c
+[367.358s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.h
+[367.359s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__struct.h
+[367.361s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__functions.h
+[367.361s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__type_support.h
+[367.362s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__functions.c
+[367.362s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__functions.h
+[367.364s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_map.h
+[367.365s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_localization_engine.h
+[367.365s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/library_path.sh
+[367.506s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/library_path.dsv
+[367.508s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_generator_c.so
+[367.521s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_generator_c.so" to ""
+[367.524s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[367.527s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg
+[367.527s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[367.528s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv
+[367.529s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail
+[367.529s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_fastrtps_c.h
+[367.531s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_fastrtps_c.h
+[367.531s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_fastrtps_c.h
+[367.532s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_fastrtps_c.so
+[367.533s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_fastrtps_c.so" to ""
+[367.534s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[367.535s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg
+[367.536s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[367.537s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv
+[367.538s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail
+[367.538s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_fastrtps_cpp.hpp
+[367.539s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/dds_fastrtps
+[367.540s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_fastrtps_cpp.hpp
+[367.543s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_fastrtps_cpp.hpp
+[367.543s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_fastrtps_cpp.so
+[367.545s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_fastrtps_cpp.so" to ""
+[367.546s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[367.547s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg
+[367.547s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[367.548s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv
+[367.549s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail
+[367.549s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.c
+[367.550s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_introspection_c.h
+[367.551s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_introspection_c.h
+[367.553s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__type_support.c
+[367.553s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_introspection_c.h
+[367.554s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__type_support.c
+[367.556s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_introspection_c.so
+[367.562s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_introspection_c.so" to ""
+[367.562s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_c.so
+[367.564s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_c.so" to ""
+[367.565s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[367.566s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg
+[367.567s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/msg/rosidl_generator_cpp__visibility_control.hpp
+[367.567s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv
+[367.568s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/query_global_localization.hpp
+[367.569s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_map.hpp
+[367.569s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail
+[367.570s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__builder.hpp
+[367.570s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__builder.hpp
+[367.571s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__builder.hpp
+[367.571s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__traits.hpp
+[367.573s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__type_support.hpp
+[367.573s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__struct.hpp
+[367.574s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__struct.hpp
+[367.575s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__struct.hpp
+[367.576s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__traits.hpp
+[367.577s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__type_support.hpp
+[367.577s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.hpp
+[367.578s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__traits.hpp
+[367.579s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/set_global_localization_engine.hpp
+[367.581s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[367.581s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv
+[367.582s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail
+[367.583s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__type_support.cpp
+[367.583s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__rosidl_typesupport_introspection_cpp.hpp
+[367.725s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/query_global_localization__type_support.cpp
+[367.727s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_map__rosidl_typesupport_introspection_cpp.hpp
+[367.729s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__rosidl_typesupport_introspection_cpp.hpp
+[367.732s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/srv/detail/set_global_localization_engine__type_support.cpp
+[367.733s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_introspection_cpp.so
+[367.738s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_introspection_cpp.so" to ""
+[367.739s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_cpp.so
+[367.742s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__rosidl_typesupport_cpp.so" to ""
+[367.743s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/pythonpath.sh
+[367.885s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/pythonpath.dsv
+[367.888s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/__init__.py
+[368.252s] Compiling '/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/__init__.py'...
+[368.275s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv
+[368.277s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_set_global_localization_engine.py
+[368.278s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/__init__.py
+[368.279s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_query_global_localization_s.c
+[368.281s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_set_global_map_s.c
+[368.282s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_set_global_localization_engine_s.c
+[368.282s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_set_global_map.py
+[368.284s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/srv/_query_global_localization.py
+[368.432s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[368.437s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[368.438s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[368.443s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[368.445s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[368.450s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages/hdl_global_localization/hdl_global_localization_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[368.451s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__python.so
+[368.456s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization__python.so" to ""
+[368.457s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization.idl
+[368.459s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine.idl
+[368.460s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap.idl
+[368.463s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization.srv
+[368.465s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization_Request.msg
+[368.609s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/QueryGlobalLocalization_Response.msg
+[368.613s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine.srv
+[368.614s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine_Request.msg
+[368.623s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalLocalizationEngine_Response.msg
+[368.623s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap.srv
+[368.624s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap_Request.msg
+[368.628s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/srv/SetGlobalMap_Response.msg
+[368.631s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config
+[368.632s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/ros1
+[368.632s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/ros1/bbs_config.yaml
+[368.637s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/ros1/teaser_config.yaml
+[368.639s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/ros1/general_config.yaml
+[368.640s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/ros1/fpfh_config.yaml
+[368.643s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/ros1/ransac_config.yaml
+[368.644s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/config_base.json
+[368.646s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/config.json
+[368.649s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/test.rviz
+[368.650s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/config/config_bbs.json
+[368.652s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include
+[368.652s] -- Up-to-date: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization
+[368.653s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/global_localization_results.hpp
+[368.654s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/ransac
+[368.654s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/ransac/voxelset.hpp
+[368.655s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater_flann.hpp
+[368.655s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/ransac/ransac_pose_estimation.hpp
+[368.656s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater.hpp
+[368.657s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater_voxels.hpp
+[368.658s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/bbs
+[368.659s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/bbs/occupancy_gridmap.hpp
+[368.659s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/bbs/bbs_localization.hpp
+[368.661s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/util
+[368.662s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/util/convert_to_string.hpp
+[368.662s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/util/config.hpp
+[368.664s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/engines
+[368.664s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_fpfh_teaser.hpp
+[368.812s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_engine.hpp
+[368.813s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_bbs.hpp
+[368.813s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/include/hdl_global_localization/engines/global_localization_fpfh_ransac.hpp
+[368.814s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization_engines.so
+[368.904s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/libhdl_global_localization_engines.so" to ""
+[368.906s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/hdl_global_localization/hdl_global_localization_node
+[368.922s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/hdl_global_localization/hdl_global_localization_node" to ""
+[368.924s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/hdl_global_localization/hdl_global_localization_test
+[368.932s] -- Set runtime path of "/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/hdl_global_localization/hdl_global_localization_test" to ""
+[368.932s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/ament_index/resource_index/package_run_dependencies/hdl_global_localization
+[369.076s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/ament_index/resource_index/parent_prefix_path/hdl_global_localization
+[369.078s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/ament_prefix_path.sh
+[369.079s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/ament_prefix_path.dsv
+[369.083s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/path.sh
+[369.084s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/environment/path.dsv
+[369.086s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/local_setup.bash
+[369.088s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/local_setup.sh
+[369.089s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/local_setup.zsh
+[369.094s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/local_setup.dsv
+[369.096s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/package.dsv
+[369.098s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/ament_index/resource_index/packages/hdl_global_localization
+[369.100s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_generator_cExport.cmake
+[369.103s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_generator_cExport-noconfig.cmake
+[369.106s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cExport.cmake
+[369.109s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[369.114s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cExport.cmake
+[369.116s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cExport-noconfig.cmake
+[369.125s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_generator_cppExport.cmake
+[369.128s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cppExport.cmake
+[369.132s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[369.134s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cppExport.cmake
+[369.136s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localization__rosidl_typesupport_cppExport-noconfig.cmake
+[369.138s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/rosidl_cmake-extras.cmake
+[369.140s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_dependencies-extras.cmake
+[369.142s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_libraries-extras.cmake
+[369.143s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_targets-extras.cmake
+[369.145s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/ament_cmake_export_include_directories-extras.cmake
+[369.147s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[369.150s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[369.151s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localizationConfig.cmake
+[369.153s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/cmake/hdl_global_localizationConfig-version.cmake
+[369.155s] -- Installing: /home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/share/hdl_global_localization/package.xml
+[369.174s] Invoked command in '/home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization' returned '0': CMAKE_PREFIX_PATH=/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy /usr/bin/cmake --install /home/ysc/lite_cog_ros2/nav/src/build/hdl_global_localization

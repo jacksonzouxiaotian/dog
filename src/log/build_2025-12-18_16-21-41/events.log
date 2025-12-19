@@ -1,0 +1,145 @@
+[0.000000] (-) TimerEvent: {}
+[0.000901] (-) JobUnselected: {'identifier': 'dr_nav2'}
+[0.001122] (-) JobUnselected: {'identifier': 'hdl_global_localization'}
+[0.001264] (-) JobUnselected: {'identifier': 'hdl_localization'}
+[0.001388] (-) JobUnselected: {'identifier': 'late_fusion'}
+[0.001516] (-) JobUnselected: {'identifier': 'sensor_test'}
+[0.001655] (narrow_passage_controller) JobQueued: {'identifier': 'narrow_passage_controller', 'dependencies': OrderedDict()}
+[0.001797] (narrow_passage_controller) JobStarted: {'identifier': 'narrow_passage_controller'}
+[0.089868] (-) TimerEvent: {}
+[0.191139] (-) TimerEvent: {}
+[0.294052] (-) TimerEvent: {}
+[0.398128] (-) TimerEvent: {}
+[0.499021] (-) TimerEvent: {}
+[0.599969] (-) TimerEvent: {}
+[0.700948] (-) TimerEvent: {}
+[0.803703] (-) TimerEvent: {}
+[0.905203] (-) TimerEvent: {}
+[1.009224] (-) TimerEvent: {}
+[1.113018] (-) TimerEvent: {}
+[1.214742] (-) TimerEvent: {}
+[1.319994] (-) TimerEvent: {}
+[1.421886] (-) TimerEvent: {}
+[1.523439] (-) TimerEvent: {}
+[1.624486] (-) TimerEvent: {}
+[1.725491] (-) TimerEvent: {}
+[1.828369] (-) TimerEvent: {}
+[1.929419] (-) TimerEvent: {}
+[2.031664] (-) TimerEvent: {}
+[2.136702] (-) TimerEvent: {}
+[2.238404] (-) TimerEvent: {}
+[2.344109] (-) TimerEvent: {}
+[2.448962] (-) TimerEvent: {}
+[2.552508] (-) TimerEvent: {}
+[2.659405] (-) TimerEvent: {}
+[2.764421] (-) TimerEvent: {}
+[2.924735] (-) TimerEvent: {}
+[3.027834] (-) TimerEvent: {}
+[3.130579] (-) TimerEvent: {}
+[3.232586] (-) TimerEvent: {}
+[3.339663] (-) TimerEvent: {}
+[3.440993] (-) TimerEvent: {}
+[3.542529] (-) TimerEvent: {}
+[3.644032] (-) TimerEvent: {}
+[3.745111] (-) TimerEvent: {}
+[3.845990] (-) TimerEvent: {}
+[3.948151] (-) TimerEvent: {}
+[4.049352] (-) TimerEvent: {}
+[4.150356] (-) TimerEvent: {}
+[4.252568] (-) TimerEvent: {}
+[4.353630] (-) TimerEvent: {}
+[4.454538] (-) TimerEvent: {}
+[4.555541] (-) TimerEvent: {}
+[4.656645] (-) TimerEvent: {}
+[4.757712] (-) TimerEvent: {}
+[4.859350] (-) TimerEvent: {}
+[4.960611] (-) TimerEvent: {}
+[5.062949] (-) TimerEvent: {}
+[5.164388] (-) TimerEvent: {}
+[5.265526] (-) TimerEvent: {}
+[5.367214] (-) TimerEvent: {}
+[5.468265] (-) TimerEvent: {}
+[5.569391] (-) TimerEvent: {}
+[5.670432] (-) TimerEvent: {}
+[5.771492] (-) TimerEvent: {}
+[5.872535] (-) TimerEvent: {}
+[5.973533] (-) TimerEvent: {}
+[6.074480] (-) TimerEvent: {}
+[6.175473] (-) TimerEvent: {}
+[6.276562] (-) TimerEvent: {}
+[6.378269] (-) TimerEvent: {}
+[6.480728] (-) TimerEvent: {}
+[6.581818] (-) TimerEvent: {}
+[6.683902] (-) TimerEvent: {}
+[6.786125] (-) TimerEvent: {}
+[6.887072] (-) TimerEvent: {}
+[6.988242] (-) TimerEvent: {}
+[7.089769] (-) TimerEvent: {}
+[7.191323] (-) TimerEvent: {}
+[7.293855] (-) TimerEvent: {}
+[7.394899] (-) TimerEvent: {}
+[7.495851] (-) TimerEvent: {}
+[7.596921] (-) TimerEvent: {}
+[7.698198] (-) TimerEvent: {}
+[7.799583] (-) TimerEvent: {}
+[7.900539] (-) TimerEvent: {}
+[8.001872] (-) TimerEvent: {}
+[8.103274] (-) TimerEvent: {}
+[8.205187] (-) TimerEvent: {}
+[8.306375] (-) TimerEvent: {}
+[8.409006] (-) TimerEvent: {}
+[8.509994] (-) TimerEvent: {}
+[8.613325] (-) TimerEvent: {}
+[8.636811] (narrow_passage_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/narrow_passage_controller', 'build', '--build-base', '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build', 'install', '--record', '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/install.log', '--install-scripts', '$base/lib/narrow_passage_controller', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysc', 'LC_TIME': 'zh_CN.UTF-8', 'SSH_AGENT_PID': '1969', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/ysc', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Jetson Xavier NX Developer Kit', 'LC_MONETARY': 'zh_CN.UTF-8', 'MANAGERPID': '1455', 'DBUS_STARTER_BUS_TYPE': 'session', 'ROS_LOG_DIR': '/home/ysc/lite_cog_ros2/system/log', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9490700c6fa999152488ef0b69425bff', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/foxy/', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ysc/lite_cog_ros2/nav/src/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ysc', 'JETSON_MODULE': 'NVIDIA Jetson Xavier NX', 'JETSON_SERIAL_NUMBER': '1421125032270', 'JOURNAL_STREAM': '8:50396', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Jakku', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ysc', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/ysc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/lite:@/tmp/.ICE-unix/2074,unix/lite:/tmp/.ICE-unix/2074', 'INVOCATION_ID': 'dfe74acf5258439cad30ef121e26087a', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/216edd38_1dc2_4ec0_a174_a9822a6e6163', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra194', 'GNOME_TERMINAL_SERVICE': ':1.104', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ysc/lite_cog_ros2/nav/src/install/sensor_test:/home/ysc/lite_cog_ros2/nav/src/install/late_fusion:/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization:/home/ysc/lite_cog_ros2/nav/src/install/dr_nav2:/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '7.2', 'PWD': '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9490700c6fa999152488ef0b69425bff', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/prefix_override:/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages:/home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages:/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization/lib/python3.8/site-packages:/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/ysc/lite_cog_ros2/nav/src/install/sensor_test:/home/ysc/lite_cog_ros2/nav/src/install/hdl_global_localization:/home/ysc/lite_cog_ros2/nav/src/install/dr_nav2', 'JETSON_P_NUMBER': 'p3668-0001'}, 'shell': False}
+[8.714002] (-) TimerEvent: {}
+[8.816386] (-) TimerEvent: {}
+[8.917881] (-) TimerEvent: {}
+[9.018891] (-) TimerEvent: {}
+[9.120017] (-) TimerEvent: {}
+[9.221509] (-) TimerEvent: {}
+[9.322556] (-) TimerEvent: {}
+[9.423759] (-) TimerEvent: {}
+[9.525279] (-) TimerEvent: {}
+[9.626307] (-) TimerEvent: {}
+[9.728066] (-) TimerEvent: {}
+[9.829236] (-) TimerEvent: {}
+[9.930177] (-) TimerEvent: {}
+[10.031182] (-) TimerEvent: {}
+[10.132213] (-) TimerEvent: {}
+[10.233903] (-) TimerEvent: {}
+[10.334919] (-) TimerEvent: {}
+[10.357566] (narrow_passage_controller) StdoutLine: {'line': b'running egg_info\n'}
+[10.360911] (narrow_passage_controller) StdoutLine: {'line': b'writing ../build/narrow_passage_controller/narrow_passage_controller.egg-info/PKG-INFO\n'}
+[10.366413] (narrow_passage_controller) StdoutLine: {'line': b'writing dependency_links to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/dependency_links.txt\n'}
+[10.373589] (narrow_passage_controller) StdoutLine: {'line': b'writing entry points to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/entry_points.txt\n'}
+[10.374736] (narrow_passage_controller) StdoutLine: {'line': b'writing requirements to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/requires.txt\n'}
+[10.375490] (narrow_passage_controller) StdoutLine: {'line': b'writing top-level names to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/top_level.txt\n'}
+[10.435111] (-) TimerEvent: {}
+[10.536186] (-) TimerEvent: {}
+[10.637320] (-) TimerEvent: {}
+[10.738324] (-) TimerEvent: {}
+[10.839532] (-) TimerEvent: {}
+[10.861906] (narrow_passage_controller) StdoutLine: {'line': b"reading manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'\n"}
+[10.868226] (narrow_passage_controller) StdoutLine: {'line': b"writing manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'\n"}
+[10.870758] (narrow_passage_controller) StdoutLine: {'line': b'running build\n'}
+[10.871401] (narrow_passage_controller) StdoutLine: {'line': b'running build_py\n'}
+[10.877911] (narrow_passage_controller) StdoutLine: {'line': b'running install\n'}
+[10.878658] (narrow_passage_controller) StdoutLine: {'line': b'running install_lib\n'}
+[10.887531] (narrow_passage_controller) StdoutLine: {'line': b'running install_data\n'}
+[10.888435] (narrow_passage_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.896912] (narrow_passage_controller) StdoutLine: {'line': b"removing '/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[10.898871] (narrow_passage_controller) StdoutLine: {'line': b'Copying ../build/narrow_passage_controller/narrow_passage_controller.egg-info to /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller-0.0.0-py3.8.egg-info\n'}
+[10.939766] (-) TimerEvent: {}
+[11.041020] (-) TimerEvent: {}
+[11.050201] (narrow_passage_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[11.141250] (-) TimerEvent: {}
+[11.148873] (narrow_passage_controller) StdoutLine: {'line': b'Installing depth_narrow_passage_node script to /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/narrow_passage_controller\n'}
+[11.152408] (narrow_passage_controller) StdoutLine: {'line': b"writing list of installed files to '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/install.log'\n"}
+[11.242324] (-) TimerEvent: {}
+[11.322028] (narrow_passage_controller) CommandEnded: {'returncode': 0}
+[11.342544] (-) TimerEvent: {}
+[11.444486] (-) TimerEvent: {}
+[11.550977] (-) TimerEvent: {}
+[11.653088] (-) TimerEvent: {}
+[11.666819] (narrow_passage_controller) JobEnded: {'identifier': 'narrow_passage_controller', 'rc': 0}
+[11.673242] (-) EventReactorShutdown: {}

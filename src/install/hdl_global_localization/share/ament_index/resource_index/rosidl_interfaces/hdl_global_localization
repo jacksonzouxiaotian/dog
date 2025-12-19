@@ -1,0 +1,12 @@
+srv/QueryGlobalLocalization.idl
+srv/QueryGlobalLocalization.srv
+srv/QueryGlobalLocalization_Request.msg
+srv/QueryGlobalLocalization_Response.msg
+srv/SetGlobalLocalizationEngine.idl
+srv/SetGlobalLocalizationEngine.srv
+srv/SetGlobalLocalizationEngine_Request.msg
+srv/SetGlobalLocalizationEngine_Response.msg
+srv/SetGlobalMap.idl
+srv/SetGlobalMap.srv
+srv/SetGlobalMap_Request.msg
+srv/SetGlobalMap_Response.msg

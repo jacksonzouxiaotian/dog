@@ -1,0 +1,37 @@
+[8.950s] Invoking command in '/home/ysc/lite_cog_ros2/nav/src/late_fusion': PYTHONPATH=/home/ysc/lite_cog_ros2/nav/src/build/late_fusion/prefix_override:/home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/late_fusion build --build-base /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build install --record /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/install.log --install-scripts $base/lib/late_fusion --single-version-externally-managed install_data
+[11.303s] running egg_info
+[11.303s] creating ../build/late_fusion/late_fusion.egg-info
+[11.306s] writing ../build/late_fusion/late_fusion.egg-info/PKG-INFO
+[11.306s] writing dependency_links to ../build/late_fusion/late_fusion.egg-info/dependency_links.txt
+[11.308s] writing entry points to ../build/late_fusion/late_fusion.egg-info/entry_points.txt
+[11.311s] writing requirements to ../build/late_fusion/late_fusion.egg-info/requires.txt
+[11.312s] writing top-level names to ../build/late_fusion/late_fusion.egg-info/top_level.txt
+[11.324s] writing manifest file '../build/late_fusion/late_fusion.egg-info/SOURCES.txt'
+[11.573s] reading manifest file '../build/late_fusion/late_fusion.egg-info/SOURCES.txt'
+[11.577s] writing manifest file '../build/late_fusion/late_fusion.egg-info/SOURCES.txt'
+[11.578s] running build
+[11.578s] running build_py
+[11.579s] creating /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build
+[11.580s] creating /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build/lib
+[11.591s] creating /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build/lib/late_fusion
+[11.591s] copying late_fusion/__init__.py -> /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build/lib/late_fusion
+[11.594s] copying late_fusion/late_fusion_node.py -> /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build/lib/late_fusion
+[11.730s] running install
+[11.737s] running install_lib
+[11.751s] creating /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages/late_fusion
+[11.752s] copying /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build/lib/late_fusion/__init__.py -> /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages/late_fusion
+[11.753s] copying /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build/lib/late_fusion/late_fusion_node.py -> /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages/late_fusion
+[11.757s] byte-compiling /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages/late_fusion/__init__.py to __init__.cpython-38.pyc
+[11.781s] byte-compiling /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages/late_fusion/late_fusion_node.py to late_fusion_node.cpython-38.pyc
+[11.806s] running install_data
+[12.042s] creating /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/share/ament_index
+[12.045s] creating /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/share/ament_index/resource_index
+[12.046s] creating /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/share/ament_index/resource_index/packages
+[12.046s] copying resource/late_fusion -> /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/share/ament_index/resource_index/packages
+[12.057s] copying package.xml -> /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/share/late_fusion
+[12.060s] running install_egg_info
+[12.068s] Copying ../build/late_fusion/late_fusion.egg-info to /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages/late_fusion-0.0.1-py3.8.egg-info
+[12.077s] running install_scripts
+[12.263s] Installing fusion_node script to /home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/late_fusion
+[12.267s] writing list of installed files to '/home/ysc/lite_cog_ros2/nav/src/build/late_fusion/install.log'
+[12.463s] Invoked command in '/home/ysc/lite_cog_ros2/nav/src/late_fusion' returned '0': PYTHONPATH=/home/ysc/lite_cog_ros2/nav/src/build/late_fusion/prefix_override:/home/ysc/lite_cog_ros2/nav/src/install/late_fusion/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/late_fusion build --build-base /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/build install --record /home/ysc/lite_cog_ros2/nav/src/build/late_fusion/install.log --install-scripts $base/lib/late_fusion --single-version-externally-managed install_data

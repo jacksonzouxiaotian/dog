@@ -1,0 +1,1 @@
+sensor_msgs/PointCloud2 global_map

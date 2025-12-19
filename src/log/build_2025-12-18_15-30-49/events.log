@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.002351] (-) JobUnselected: {'identifier': 'dr_nav2'}
+[0.003174] (-) JobUnselected: {'identifier': 'hdl_global_localization'}
+[0.003445] (-) JobUnselected: {'identifier': 'hdl_localization'}
+[0.004904] (-) JobUnselected: {'identifier': 'late_fusion'}
+[0.006194] (-) JobUnselected: {'identifier': 'narrow_passage_controller'}
+[0.006415] (-) JobUnselected: {'identifier': 'sensor_test'}
+[0.008424] (-) EventReactorShutdown: {}

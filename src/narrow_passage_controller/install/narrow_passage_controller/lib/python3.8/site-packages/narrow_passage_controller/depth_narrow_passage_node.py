@@ -76,6 +76,19 @@ class DepthNarrowPassageNode(Node):
 
         # 不可通过时是否强制停
         self.declare_parameter('stop_if_not_can_pass', True)
+        
+        # --- 狭窄通道判定/可通行判定参数化 ---
+        self.declare_parameter('min_obs_near', 0.35)      # 最近安全距离（小于它就危险）
+        self.declare_parameter('corridor_near', 1.2)      # 左右都 < 该阈值才认为是“被夹住”
+        self.declare_parameter('corridor_margin', 0.10)   # center 比左右远多少才算“中间更通畅”
+
+        # --- 对齐控制的稳定化 ---
+        self.declare_parameter('e_deadband', 0.05)        # 小偏差不转
+        self.declare_parameter('e_lpf_alpha', 0.30)       # 归一化偏差的一阶低通滤波系数(0~1)
+
+        # 低通滤波状态
+        self.e_filt = 0.0
+        
 
         depth_topic = self.get_parameter('depth_topic').get_parameter_value().string_value
 
@@ -275,13 +288,14 @@ class DepthNarrowPassageNode(Node):
         
 
         # 最小安全距离（靠箱子太近就认为不安全）
-        min_obs_near = 0.35   # 最近安全距离
-        warn_far     = 2.0    # 提前发现远处障碍的范围
+        min_obs_near = self.get_parameter('min_obs_near').get_parameter_value().double_value
+        corridor_near = self.get_parameter('corridor_near').get_parameter_value().double_value
+        corridor_margin = self.get_parameter('corridor_margin').get_parameter_value().double_value
 
         # 判定是否被两侧“夹住”（窄通道模式）
         is_corridor = (
-            left_near   < warn_far and
-            right_near  < warn_far
+            np.isfinite(left_near) and np.isfinite(right_near) and
+            left_near < corridor_near and right_near < corridor_near
         )
 
         if is_corridor:
@@ -290,8 +304,8 @@ class DepthNarrowPassageNode(Node):
                 left_near   > min_obs_near and
                 right_near  > min_obs_near and
                 center_near > min_obs_near and
-                center_near > left_near  + 0.10 and
-                center_near > right_near + 0.10
+                center_near > left_near  + corridor_margin and
+                center_near > right_near + corridor_margin
             )
         else:
             # 否则就是开放模式：只要最近障碍不太近即可
@@ -299,7 +313,7 @@ class DepthNarrowPassageNode(Node):
 
         # -------- 4. 在 profile 上找“最长连续可通行区间”做为 gap --------
         # 判定某个 bin 是否“可通行”：深度 > min_obs
-        free_mask = profile > min_obs_near
+        free_mask = (profile > min_obs_near) & has_valid
 
         best_len = 0
         best_start = None
@@ -386,15 +400,26 @@ class DepthNarrowPassageNode(Node):
         omega_max     = self.get_parameter('omega_max').get_parameter_value().double_value
 
         if decision.has_valid_gap:
-            omega = k_omega_align * decision.norm_e
+            # --- 1) norm_e 低通滤波，减少 bin 离散导致的抖动 ---
+            alpha = self.get_parameter('e_lpf_alpha').get_parameter_value().double_value
+            self.e_filt = (1.0 - alpha) * self.e_filt + alpha * decision.norm_e
+
+            # --- 2) 死区：小偏差不转 ---
+            deadband = self.get_parameter('e_deadband').get_parameter_value().double_value
+            e = self.e_filt
+            if abs(e) < deadband:
+                e = 0.0
+
+            omega = k_omega_align * e
             omega = float(np.clip(omega, -omega_max, omega_max))
 
-            # 如果偏差非常大，可以考虑减小线速度或停下来先转
-            if abs(decision.norm_e) > 0.25:
+            # 偏差大：先慢走（必要时你也可以改成直接停转）
+            if abs(e) > 0.25:
                 cmd.linear.x = min(cmd.linear.x, 0.05)
         else:
-            # 没有找到合理通道方向，先不转头
             omega = 0.0
+            # 没有 gap 时把滤波状态慢慢回零，避免下一帧突然大转
+            self.e_filt *= 0.9
 
         cmd.angular.z = omega
 

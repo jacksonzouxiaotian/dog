@@ -1,0 +1,21 @@
+[8.640s] Invoking command in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller': PYTHONPATH=/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/prefix_override:/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/narrow_passage_controller build --build-base /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build install --record /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/install.log --install-scripts $base/lib/narrow_passage_controller --single-version-externally-managed install_data
+[10.358s] running egg_info
+[10.364s] writing ../build/narrow_passage_controller/narrow_passage_controller.egg-info/PKG-INFO
+[10.365s] writing dependency_links to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/dependency_links.txt
+[10.372s] writing entry points to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/entry_points.txt
+[10.373s] writing requirements to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/requires.txt
+[10.374s] writing top-level names to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/top_level.txt
+[10.861s] reading manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'
+[10.867s] writing manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'
+[10.869s] running build
+[10.871s] running build_py
+[10.877s] running install
+[10.877s] running install_lib
+[10.886s] running install_data
+[10.887s] running install_egg_info
+[10.896s] removing '/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller-0.0.0-py3.8.egg-info' (and everything under it)
+[10.898s] Copying ../build/narrow_passage_controller/narrow_passage_controller.egg-info to /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller-0.0.0-py3.8.egg-info
+[11.049s] running install_scripts
+[11.148s] Installing depth_narrow_passage_node script to /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/narrow_passage_controller
+[11.151s] writing list of installed files to '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/install.log'
+[11.321s] Invoked command in '/home/ysc/lite_cog_ros2/nav/src/narrow_passage_controller' returned '0': PYTHONPATH=/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/prefix_override:/home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/narrow_passage_controller build --build-base /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build install --record /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/install.log --install-scripts $base/lib/narrow_passage_controller --single-version-externally-managed install_data

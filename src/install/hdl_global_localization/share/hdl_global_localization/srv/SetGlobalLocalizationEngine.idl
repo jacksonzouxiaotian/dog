@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from hdl_global_localization/srv/SetGlobalLocalizationEngine.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/String.idl"
+
+module hdl_global_localization {
+  module srv {
+    struct SetGlobalLocalizationEngine_Request {
+      std_msgs::msg::String engine_name;
+    };
+    struct SetGlobalLocalizationEngine_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

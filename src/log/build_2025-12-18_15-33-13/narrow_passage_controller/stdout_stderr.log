@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/narrow_passage_controller/narrow_passage_controller.egg-info
+writing ../build/narrow_passage_controller/narrow_passage_controller.egg-info/PKG-INFO
+writing dependency_links to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/dependency_links.txt
+writing entry points to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/entry_points.txt
+writing requirements to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/requires.txt
+writing top-level names to ../build/narrow_passage_controller/narrow_passage_controller.egg-info/top_level.txt
+writing manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'
+reading manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'
+writing manifest file '../build/narrow_passage_controller/narrow_passage_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build
+creating /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build/lib
+creating /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build/lib/narrow_passage_controller
+copying narrow_passage_controller/__init__.py -> /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build/lib/narrow_passage_controller
+copying narrow_passage_controller/depth_narrow_passage_node.py -> /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build/lib/narrow_passage_controller
+running install
+running install_lib
+creating /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller
+copying /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build/lib/narrow_passage_controller/__init__.py -> /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller
+copying /home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/build/lib/narrow_passage_controller/depth_narrow_passage_node.py -> /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller
+byte-compiling /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller/depth_narrow_passage_node.py to depth_narrow_passage_node.cpython-38.pyc
+running install_data
+creating /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/share/ament_index
+creating /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/share/ament_index/resource_index
+creating /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/share/ament_index/resource_index/packages
+copying resource/narrow_passage_controller -> /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/share/narrow_passage_controller
+running install_egg_info
+Copying ../build/narrow_passage_controller/narrow_passage_controller.egg-info to /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/python3.8/site-packages/narrow_passage_controller-0.0.0-py3.8.egg-info
+running install_scripts
+Installing depth_narrow_passage_node script to /home/ysc/lite_cog_ros2/nav/src/install/narrow_passage_controller/lib/narrow_passage_controller
+writing list of installed files to '/home/ysc/lite_cog_ros2/nav/src/build/narrow_passage_controller/install.log'
