@@ -85,6 +85,26 @@ class DepthNarrowPassageNode(Node):
         # --- 对齐控制的稳定化 ---
         self.declare_parameter('e_deadband', 0.05)        # 小偏差不转
         self.declare_parameter('e_lpf_alpha', 0.30)       # 归一化偏差的一阶低通滤波系数(0~1)
+        
+        # --- 贴墙趋势检测参数 ---
+        self.declare_parameter('near_drop_th', 0.08)   # “急剧减小”的阈值(米)，比如 0.08~0.15
+        self.declare_parameter('near_low_th', 0.35)    # 贴得太近(米)
+        self.declare_parameter('near_safe_th', 0.40)   # 另一侧相对安全(米)
+
+        # --- 小步纠偏动作参数 ---
+        self.declare_parameter('step_v_back', 0.05)    # 后退速度（m/s）
+        self.declare_parameter('step_omega', 0.6)      # 转向角速度（rad/s）
+        self.declare_parameter('step_ticks', 6)        # 持续多少帧（取决于相机帧率；6帧≈0.2~0.3s）
+
+        # 上一帧 near
+        self.prev_left_near = None
+        self.prev_center_near = None
+        self.prev_right_near = None
+
+        # 纠偏动作状态机
+        self.step_mode = None      # 'BACK_RIGHT' / 'BACK_LEFT' / 'BACK'
+        self.step_count = 0
+        
 
         # 低通滤波状态
         self.e_filt = 0.0
@@ -379,6 +399,70 @@ class DepthNarrowPassageNode(Node):
         这里面你可以随时改控制逻辑，而不用担心“看图逻辑”。
         """
         cmd = Twist()
+        
+        # ---------- 0) 贴墙趋势（near 急剧减小）优先纠偏 ----------
+        near_drop_th = self.get_parameter('near_drop_th').get_parameter_value().double_value
+        near_low_th  = self.get_parameter('near_low_th').get_parameter_value().double_value
+        near_safe_th = self.get_parameter('near_safe_th').get_parameter_value().double_value
+
+        step_v_back  = self.get_parameter('step_v_back').get_parameter_value().double_value
+        step_omega   = self.get_parameter('step_omega').get_parameter_value().double_value
+        step_ticks   = self.get_parameter('step_ticks').get_parameter_value().integer_value
+
+        L = decision.left_near
+        C = decision.center_near
+        R = decision.right_near
+
+        # 计算“急剧减小”：drop = prev - current
+        def compute_drop(prev, cur):
+            if prev is None or (not np.isfinite(cur)) or (not np.isfinite(prev)):
+                return 0.0
+            return float(prev - cur)
+
+        dL = compute_drop(self.prev_left_near, L)
+        dC = compute_drop(self.prev_center_near, C)
+        dR = compute_drop(self.prev_right_near, R)
+
+        # 更新 prev（先算 drop，再更新）
+        self.prev_left_near = L if np.isfinite(L) else self.prev_left_near
+        self.prev_center_near = C if np.isfinite(C) else self.prev_center_near
+        self.prev_right_near = R if np.isfinite(R) else self.prev_right_near
+
+        # 触发条件：你描述的三种情况
+        left_too_close_trend  = (dL > near_drop_th) and (L < near_low_th) and (R > near_safe_th)
+        right_too_close_trend = (dR > near_drop_th) and (R < near_low_th) and (L > near_safe_th)
+        all_too_close_trend   = (dL > near_drop_th) and (dC > near_drop_th) and (dR > near_drop_th) and \
+                                (L < near_safe_th) and (C < near_safe_th) and (R < near_safe_th)
+
+        # 如果当前没有在执行小步动作，则根据触发条件进入动作
+        if self.step_mode is None:
+            if all_too_close_trend:
+                self.step_mode = 'BACK'
+                self.step_count = step_ticks
+            elif left_too_close_trend:
+                self.step_mode = 'BACK_RIGHT'
+                self.step_count = step_ticks
+            elif right_too_close_trend:
+                self.step_mode = 'BACK_LEFT'
+                self.step_count = step_ticks
+
+        # 如果在执行小步动作，直接输出固定 cmd，优先级最高
+        if self.step_mode is not None and self.step_count > 0:
+            if self.step_mode == 'BACK_RIGHT':
+                cmd.linear.x = -step_v_back
+                cmd.angular.z = +step_omega
+            elif self.step_mode == 'BACK_LEFT':
+                cmd.linear.x = -step_v_back
+                cmd.angular.z = -step_omega
+            else:  # 'BACK'
+                cmd.linear.x = -step_v_back
+                cmd.angular.z = 0.0
+
+            self.step_count -= 1
+            if self.step_count <= 0:
+                self.step_mode = None
+
+            return cmd
 
         # ---- 1. 线速度控制：根据前方距离 d_center ----
         safe_distance = self.get_parameter('safe_distance').get_parameter_value().double_value
