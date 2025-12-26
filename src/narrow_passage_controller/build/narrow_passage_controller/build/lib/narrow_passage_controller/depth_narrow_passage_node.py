@@ -85,6 +85,29 @@ class DepthNarrowPassageNode(Node):
         # --- 对齐控制的稳定化 ---
         self.declare_parameter('e_deadband', 0.05)        # 小偏差不转
         self.declare_parameter('e_lpf_alpha', 0.30)       # 归一化偏差的一阶低通滤波系数(0~1)
+        
+        # --- 贴墙趋势检测参数 ---
+        self.declare_parameter('near_drop_th', 0.08)   # “急剧减小”的阈值(米)，比如 0.08~0.15
+        self.declare_parameter('near_low_th', 0.35)    # 贴得太近(米)
+        self.declare_parameter('near_safe_th', 0.40)   # 另一侧相对安全(米)
+
+        # --- 小步纠偏动作参数 ---
+        self.declare_parameter('step_v_back', 0.05)    # 后退速度（m/s）
+        self.declare_parameter('step_omega', 0.6)      # 转向角速度（rad/s）
+        self.declare_parameter('step_ticks', 6)        # 持续多少帧（取决于相机帧率；6帧≈0.2~0.3s）
+        
+        self.declare_parameter('bin_valid_ratio_th', 0.02)     # 这个 bin 至少要有这么多有效点才算“可信”
+        self.declare_parameter('unknown_free_depth', 2.0)      # unknown 时用多少米作为“可能空旷”的参考
+
+        # 上一帧 near
+        self.prev_left_near = None
+        self.prev_center_near = None
+        self.prev_right_near = None
+
+        # 纠偏动作状态机
+        self.step_mode = None      # 'BACK_RIGHT' / 'BACK_LEFT' / 'BACK'
+        self.step_count = 0
+        
 
         # 低通滤波状态
         self.e_filt = 0.0
@@ -104,7 +127,7 @@ class DepthNarrowPassageNode(Node):
         )
 
         self.pub_can_pass = self.create_publisher(Bool, '/narrow_can_pass', 10)
-        self.pub_cmd_vel = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.pub_cmd_vel = self.create_publisher(Twist, '/safety_cmd_vel', 10)
 
         self.get_logger().info(f"[depth_narrow_passage_node] Subscribing depth: {depth_topic}")
 
@@ -207,31 +230,34 @@ class DepthNarrowPassageNode(Node):
             num_bins = 5
 
         h_roi, w_roi = roi.shape
-        bin_width = w_roi // num_bins if num_bins > 0 else w_roi
-
-        # 只用 ROI 的下半部分做 profile（避开远处噪声）
         yb1 = int(h_roi * 0.5)
-        yb2 = h_roi
-        roi_bottom = roi[yb1:yb2, :]
+        roi_bottom = roi[yb1:h_roi, :]
+        # ---- 用 array_split 保障每个 bin 至少有 1 列（不会出现 bin_width=0）----
+        cols = np.array_split(np.arange(w_roi), num_bins)
 
         profile = np.zeros(num_bins, dtype=np.float32)
+        valid_ratio = np.zeros(num_bins, dtype=np.float32)   # 新增：每个 bin 的有效点比例
         has_valid = np.zeros(num_bins, dtype=bool)
 
-        for i in range(num_bins):
-            x1 = i * bin_width
-            x2 = (i + 1) * bin_width if i < num_bins - 1 else w_roi
-            strip = roi_bottom[:, x1:x2]
+        for i, col_idx in enumerate(cols):
+            strip = roi_bottom[:, col_idx]  # (h, w_bin)
 
             valid = np.isfinite(strip) & (strip > 0.05) & (strip < max_depth)
             vals = strip[valid]
+
+            vr = float(vals.size) / float(strip.size + 1e-6)
+            valid_ratio[i] = vr
+
             if vals.size == 0:
-                # 用 max_depth 代表“没测到/很远”，留给后面处理
+                # 仍然用 max_depth 表示“未知/很远”，但不要直接一票否决
                 profile[i] = max_depth
                 has_valid[i] = False
             else:
-                # 取 20% 分位：数值越小越近，越危险
-                profile[i] = np.percentile(vals, 20)
+                profile[i] = float(np.percentile(vals, 20))
                 has_valid[i] = True
+
+        # 用真实 bin 像素宽近似 gap_x
+        bin_centers_x = np.array([float(col_idx.mean()) for col_idx in cols], dtype=np.float32)
 
         # -------- 3. 基于左右/中间做 can_pass 判断 --------
         depth_threshold = self.get_parameter('depth_threshold').get_parameter_value().double_value
@@ -313,7 +339,25 @@ class DepthNarrowPassageNode(Node):
 
         # -------- 4. 在 profile 上找“最长连续可通行区间”做为 gap --------
         # 判定某个 bin 是否“可通行”：深度 > min_obs
-        free_mask = (profile > min_obs_near) & has_valid
+        bin_valid_ratio_th = self.get_parameter('bin_valid_ratio_th').get_parameter_value().double_value
+        unknown_free_depth = self.get_parameter('unknown_free_depth').get_parameter_value().double_value
+        is_unknown = ~has_valid
+        # 对 unknown：如果 profile==max_depth，我们把它当作“可能很远”，但可信度低
+        profile_eff = profile.copy()
+        profile_eff[is_unknown] = min(max_depth, unknown_free_depth)
+        # 可信 free：有足够有效点且深度安全
+        free_confident = (profile > min_obs_near) & (valid_ratio >= bin_valid_ratio_th)
+        # 宽松 free：unknown 也允许作为候选（但仍要求周围整体不要太近）
+        # unknown 只能在 valid_ratio 不是完全 0 的情况下参与（否则太冒险）
+        free_loose = (profile_eff > min_obs_near) & (valid_ratio >= (0.5 * bin_valid_ratio_th))
+        # 最终用于找 gap 的 free_mask：优先 confident，但 loose 也可连通
+        free_mask = free_confident | free_loose
+        # ---- 填小洞：free_mask 中间出现单个 False 会导致 gap 被切断 ----
+        free_mask_filled = free_mask.copy()
+        for i in range(1, N - 1):
+            if (not free_mask[i]) and free_mask[i - 1] and free_mask[i + 1]:
+                free_mask_filled[i] = True
+        free_mask = free_mask_filled
 
         best_len = 0
         best_start = None
@@ -347,15 +391,27 @@ class DepthNarrowPassageNode(Node):
         if has_valid_gap:
             # 取这段连续 free 区间的中心 bin
             best_center_bin = best_start + best_len / 2.0
-            gap_x = (best_center_bin + 0.5) * bin_width  # 转成像素坐标
+            gap_x = float(bin_centers_x[int(np.clip(round(best_center_bin), 0, num_bins - 1))])  # 转成像素坐标
 
         e = gap_x - cx
         norm_e = e / (w / 2.0)
+        
+        #forward 距离（只看中间 20% 宽度的 ROI）
+        mid_w = int(w_roi * 0.2)  # 中间带宽度比例可再参数化
+        x_mid1 = max(0, w_roi // 2 - mid_w // 2)
+        x_mid2 = min(w_roi, w_roi // 2 + mid_w // 2)
+        roi_mid = roi[:, x_mid1:x_mid2]
+        valid_mid = np.isfinite(roi_mid) & (roi_mid > 0.05) & (roi_mid < max_depth)
+        vals_mid = roi_mid[valid_mid]
+        if vals_mid.size > 0:
+            d_forward = float(np.percentile(vals_mid, 30))  # 比 median 更“看前方”
+        else:
+            d_forward = d_center  # fallback
 
         return DepthDecision(
             can_pass=can_pass,
             d_min=d_min,
-            d_center=d_center,
+            d_center=d_forward,
             gap_x=float(gap_x),
             cx=float(cx),
             norm_e=float(norm_e),
@@ -379,6 +435,70 @@ class DepthNarrowPassageNode(Node):
         这里面你可以随时改控制逻辑，而不用担心“看图逻辑”。
         """
         cmd = Twist()
+        
+        # ---------- 0) 贴墙趋势（near 急剧减小）优先纠偏 ----------
+        near_drop_th = self.get_parameter('near_drop_th').get_parameter_value().double_value
+        near_low_th  = self.get_parameter('near_low_th').get_parameter_value().double_value
+        near_safe_th = self.get_parameter('near_safe_th').get_parameter_value().double_value
+
+        step_v_back  = self.get_parameter('step_v_back').get_parameter_value().double_value
+        step_omega   = self.get_parameter('step_omega').get_parameter_value().double_value
+        step_ticks   = self.get_parameter('step_ticks').get_parameter_value().integer_value
+
+        L = decision.left_near
+        C = decision.center_near
+        R = decision.right_near
+
+        # 计算“急剧减小”：drop = prev - current
+        def compute_drop(prev, cur):
+            if prev is None or (not np.isfinite(cur)) or (not np.isfinite(prev)):
+                return 0.0
+            return float(prev - cur)
+
+        dL = compute_drop(self.prev_left_near, L)
+        dC = compute_drop(self.prev_center_near, C)
+        dR = compute_drop(self.prev_right_near, R)
+
+        # 更新 prev（先算 drop，再更新）
+        self.prev_left_near = L if np.isfinite(L) else self.prev_left_near
+        self.prev_center_near = C if np.isfinite(C) else self.prev_center_near
+        self.prev_right_near = R if np.isfinite(R) else self.prev_right_near
+
+        # 触发条件：你描述的三种情况
+        left_too_close_trend  = (dL > near_drop_th) and (L < near_low_th) and (R > near_safe_th)
+        right_too_close_trend = (dR > near_drop_th) and (R < near_low_th) and (L > near_safe_th)
+        all_too_close_trend   = (dL > near_drop_th) and (dC > near_drop_th) and (dR > near_drop_th) and \
+                                (L < near_safe_th) and (C < near_safe_th) and (R < near_safe_th)
+
+        # 如果当前没有在执行小步动作，则根据触发条件进入动作
+        if self.step_mode is None:
+            if all_too_close_trend:
+                self.step_mode = 'BACK'
+                self.step_count = step_ticks
+            elif left_too_close_trend:
+                self.step_mode = 'BACK_RIGHT'
+                self.step_count = step_ticks
+            elif right_too_close_trend:
+                self.step_mode = 'BACK_LEFT'
+                self.step_count = step_ticks
+
+        # 如果在执行小步动作，直接输出固定 cmd，优先级最高
+        if self.step_mode is not None and self.step_count > 0:
+            if self.step_mode == 'BACK_RIGHT':
+                cmd.linear.x = -step_v_back
+                cmd.angular.z = +step_omega
+            elif self.step_mode == 'BACK_LEFT':
+                cmd.linear.x = -step_v_back
+                cmd.angular.z = -step_omega
+            else:  # 'BACK'
+                cmd.linear.x = -step_v_back
+                cmd.angular.z = 0.0
+
+            self.step_count -= 1
+            if self.step_count <= 0:
+                self.step_mode = None
+
+            return cmd
 
         # ---- 1. 线速度控制：根据前方距离 d_center ----
         safe_distance = self.get_parameter('safe_distance').get_parameter_value().double_value
@@ -410,7 +530,7 @@ class DepthNarrowPassageNode(Node):
             if abs(e) < deadband:
                 e = 0.0
 
-            omega = k_omega_align * e
+            omega = -k_omega_align * e
             omega = float(np.clip(omega, -omega_max, omega_max))
 
             # 偏差大：先慢走（必要时你也可以改成直接停转）

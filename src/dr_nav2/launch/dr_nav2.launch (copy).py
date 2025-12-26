@@ -2,10 +2,10 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, GroupAction
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node, SetRemap
+from launch_ros.actions import Node
 
 def launch_static_tf_broadcaster():
     base2lidar_tf_broadcaster = Node(
@@ -38,14 +38,7 @@ def launch_dr_nav2():
             ('map_subscribe_transient_local', 'True')  # 'True' should be a string
         ]
     )
-    # 把 bringup 内所有节点的 /cmd_vel remap 到 /nav2_cmd_vel
-    navigation_launch_remapped = GroupAction([
-        SetRemap(src='/cmd_vel', dst='/nav2_cmd_vel'),
-        navigation_launch
-    ])
-
-    return declare_map_file_cmd, declare_dr_nav2_config_file, navigation_launch_remapped
-    # return declare_map_file_cmd, declare_dr_nav2_config_file, navigation_launch
+    return declare_map_file_cmd, declare_dr_nav2_config_file, navigation_launch
 
 def launch_rviz2():
     rviz2 = Node(
