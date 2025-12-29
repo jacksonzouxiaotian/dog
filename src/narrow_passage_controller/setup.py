@@ -6,6 +6,10 @@ setup(
     name=package_name,
     version='0.0.0',
     packages=[package_name],
+    py_modules=[
+        'cmd_vel_safety_arbiter',
+        'cmd_vel_safety_fusion',
+    ],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -20,7 +24,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            # 原来的节点
             'depth_narrow_passage_node = narrow_passage_controller.depth_narrow_passage_node:main',
+
+            # 新增的两个节点
+            'cmd_vel_safety_arbiter = cmd_vel_safety_arbiter:main',
+            'cmd_vel_safety_fusion = cmd_vel_safety_fusion:main',
         ],
     },
 )

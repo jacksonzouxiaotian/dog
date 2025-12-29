@@ -1,1 +1,3 @@
+cmd_vel_safety_arbiter
+cmd_vel_safety_fusion
 narrow_passage_controller
