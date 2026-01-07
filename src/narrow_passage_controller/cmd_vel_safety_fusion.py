@@ -29,13 +29,15 @@ class CmdVelSafetyFusion(Node):
         # 状态
         self.nav2_cmd = Twist()
         self.safety_cmd = Twist()
-        self.can_pass = True
+        self.pass_conf = 1.0
 
-        self.prev_cmd = Twist()  # 用于滤波
+        # ===== Tunable Parameters =====
+        self.conf_up_rate = 0.15     # True → 上升慢
+        self.conf_down_rate = 0.40   # False → 下降快
 
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.timer = self.create_timer(0.02, self.fusion_step)  # 50 Hz
 
-        self.get_logger().info('CmdVelSafetyFusion (stable) started')
+        self.get_logger().info("CmdVelSafetyFusion (stable version) started")
 
     def nav2_cmd_callback(self, msg):
         self.nav2_cmd = msg
@@ -43,42 +45,62 @@ class CmdVelSafetyFusion(Node):
     def safety_cmd_callback(self, msg):
         self.safety_cmd = msg
 
-    def narrow_can_pass_callback(self, msg):
-        self.can_pass = msg.data
+    def can_pass_callback(self, msg: Bool):
+        """
+        bool → 连续置信度（EMA + 非对称更新）
+        """
+        target = 1.0 if msg.data else 0.0
 
-    def clip_with_limit(self, value, limit):
-        if limit <= 0.0:
-            return 0.0
-        return math.copysign(min(abs(value), abs(limit)), value)
+        if target > self.pass_conf:
+            rate = self.conf_up_rate
+        else:
+            rate = self.conf_down_rate
 
-    def timer_callback(self):
+        self.pass_conf += rate * (target - self.pass_conf)
+        self.pass_conf = max(0.0, min(1.0, self.pass_conf))
+
+    # Fusion
+    def fusion_step(self):
         raw_cmd = Twist()
 
-        #  速度约束
-        if self.can_pass:
-            raw_cmd.linear.x = self.nav2_cmd.linear.x
-            raw_cmd.angular.z = self.nav2_cmd.angular.z
+        nav_v = self.nav2_cmd.linear.x
+        safe_v = self.safety_cmd.linear.x
+
+        conf = self.pass_conf
+
+        # --- Linear velocity fusion ---
+        if abs(nav_v) < 1e-3:
+            raw_cmd.linear.x = safe_v
         else:
-            raw_cmd.linear.x = min(self.nav2_cmd.linear.x,
-                                    max(0.0, self.safety_cmd.linear.x))
-            raw_cmd.angular.z = self.clip_with_limit(
-                self.nav2_cmd.angular.z,
-                self.safety_cmd.angular.z
-            )
+            safety_scale = min(1.0, safe_v / max(abs(nav_v), 1e-3))
+            scale = conf + (1.0 - conf) * safety_scale
+            raw_cmd.linear.x = nav_v * scale
 
-        # 一阶低通滤波
-        cmd = Twist()
-        cmd.linear.x = (
-            self.alpha * self.prev_cmd.linear.x +
-            (1.0 - self.alpha) * raw_cmd.linear.x
-        )
-        cmd.angular.z = (
-            self.alpha * self.prev_cmd.angular.z +
-            (1.0 - self.alpha) * raw_cmd.angular.z
+        # --- Angular velocity fusion ---
+        raw_cmd.angular.z = self.clip_with_safety(
+            self.nav2_cmd.angular.z,
+            self.safety_cmd.angular.z
         )
 
-        self.prev_cmd = cmd
-        self.cmd_vel_pub.publish(cmd)
+        self.cmd_pub.publish(raw_cmd)
+
+        # --- Debug (optional) ---
+        self.get_logger().debug(
+            f"[Fusion] conf={conf:.2f}, "
+            f"nav_v={nav_v:.2f}, safe_v={safe_v:.2f}, "
+            f"out_v={raw_cmd.linear.x:.2f}"
+        )
+
+
+    @staticmethod
+    def clip_with_safety(nav, safe):
+        """
+        Safety 限制 angular.z
+        """
+        if abs(safe) < abs(nav):
+            return safe
+        return nav
+
 
 def main(args=None):
     rclpy.init(args=args)
