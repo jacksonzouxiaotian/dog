@@ -1,6 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.001839] (-) JobUnselected: {'identifier': 'dr_nav2'}
-[0.003026] (-) JobUnselected: {'identifier': 'hdl_global_localization'}
-[0.003229] (-) JobUnselected: {'identifier': 'hdl_localization'}
-[0.003983] (-) JobUnselected: {'identifier': 'sensor_test'}
-[0.004515] (-) EventReactorShutdown: {}

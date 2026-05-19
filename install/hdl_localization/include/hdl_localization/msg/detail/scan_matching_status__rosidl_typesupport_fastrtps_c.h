@@ -1,1 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/build/hdl_localization/rosidl_typesupport_fastrtps_c/hdl_localization/msg/detail/scan_matching_status__rosidl_typesupport_fastrtps_c.h

@@ -1,1 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/src/hdl_global_localization/include/hdl_global_localization/ransac/matching_cost_evaluater.hpp

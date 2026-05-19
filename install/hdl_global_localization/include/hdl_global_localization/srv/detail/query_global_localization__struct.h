@@ -1,1 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization/rosidl_generator_c/hdl_global_localization/srv/detail/query_global_localization__struct.h

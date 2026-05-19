@@ -1,9 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/install/strip.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/install.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/list_install_components.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/rebuild_cache.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/edit_cache.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/test.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/install/local.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/dr_nav2_uninstall.dir
-/home/ysc/lite_cog_ros2/nav/src/build/dr_nav2/CMakeFiles/uninstall.dir

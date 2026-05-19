@@ -1,1 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization/rosidl_cmake/rosidl_cmake-extras.cmake

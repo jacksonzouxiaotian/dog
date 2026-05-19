@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ysc/lite_cog_ros2/nav/build/hdl_global_localization/rosidl_generator_py/hdl_global_localization/libhdl_global_localization__python.so" "TARGETS" "hdl_global_localization__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

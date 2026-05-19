@@ -1,12 +1,52 @@
-# ROS2 / colcon
+# ROS2 build outputs
 build/
 install/
 log/
+logs/
 
-# Python
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.ipynb_checkpoints/
 
-# backup
-beifen/
+# ROS bag files
+*.bag
+*.db3
+*.mcap
+metadata.yaml
+rosbag2_*/
+
+# Data / results
+data/
+raw_data/
+bags/
+rosbags/
+csv/
+*_csv/
+analysis_results/
+analysis_results_compare/
+
+# Models / checkpoints
+*.pt
+*.pth
+*.onnx
+*.engine
+*.bin
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.log

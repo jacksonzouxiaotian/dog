@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ysc/lite_cog_ros2/nav/build/hdl_localization/hdl_localization_composition" "TARGETS" "hdl_localization_composition" "DESTINATION" "lib/hdl_localization")

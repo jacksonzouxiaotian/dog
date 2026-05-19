@@ -1,14 +1,15 @@
-关于机器狗的定位导航算法
+# Dog Navigation Code
 
+This repository contains ROS2 navigation code for narrow-passage robot navigation experiments.
 
-点云使用 sensor_msgs/PointCloud2 → 转 NumPy → DBSCAN 聚类生成 3D boxes（简单轴对齐包围盒）
+## Structure
 
-2D 检测临时用深度图做阈值分割 + connected components 生成 masks & bboxes（如果已有 Detectron2 输出，只需把其 detections 转成 det2_list）
-
-投影使用 camera_info 的 K + T_l2c（当前节点里 T_l2c 用单位矩阵占位，真实工程应用真实标定外参替换）
-
-匹配逻辑与之前方案一致：mask/bbox IoU + centroid 距离加权 → 双向 mutual → uncertainty（unmatched）
-
-输出通过 /late_fusion/matches（String JSON）发布，方便上层消费。也可以改为自定义消息。
-
-LiDAR→camera 的平移，后续将传给函数作为 lidar_t_override（米）
+```text
+ros2/nav/src/
+├── dr_nav2
+├── hdl_global_localization
+├── hdl_localization
+├── narrow_passage_controller
+├── narrow_passage_msgs
+├── narrow_passage_nav
+└── sensor_test

@@ -1,1 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/src/hdl_localization/msg/ScanMatchingStatus.msg

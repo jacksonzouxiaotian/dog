@@ -1,6 +1,0 @@
-{
-  "package_name": "hdl_localization",
-  "non_idl_tuples": [
-    "/home/ysc/lite_cog_ros2/nav/src/hdl_localization:msg/ScanMatchingStatus.msg"
-  ]
-}

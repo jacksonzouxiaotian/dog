@@ -1,3 +1,0 @@
-[console_scripts]
-depth_narrow_passage_node = narrow_passage_controller.depth_narrow_passage_node:main
-

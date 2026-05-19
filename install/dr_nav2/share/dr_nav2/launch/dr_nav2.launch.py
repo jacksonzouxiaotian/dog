@@ -1,1 +1,0 @@
-/home/ysc/lite_cog_ros2/nav/src/dr_nav2/launch/dr_nav2.launch.py
