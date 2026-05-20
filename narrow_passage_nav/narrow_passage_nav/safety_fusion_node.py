@@ -3,6 +3,7 @@
 
 import rclpy
 from rclpy.node import Node
+
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Bool
 from narrow_passage_msgs.msg import NarrowDecision
@@ -18,20 +19,27 @@ class SafetyFusionNode(Node):
         self.declare_parameter('decision_topic', '/narrow_decision')
         self.declare_parameter('output_topic', '/cmd_vel')
 
-        self.declare_parameter('conf_up_rate', 0.08)      # 上升更慢一点
-        self.declare_parameter('conf_down_rate', 0.35)    # 下降更快一点
+        # ==============================
+        # Ablation switch
+        # ==============================
+        self.declare_parameter('ablation_mode', 'ours')
+        self.declare_parameter('use_safety_filter', True)
+
+        self.declare_parameter('conf_up_rate', 0.08)
+        self.declare_parameter('conf_down_rate', 0.35)
         self.declare_parameter('cmd_timeout', 0.3)
 
-        # can_pass=False 时，对连续置信度再加一个硬限制
         self.declare_parameter('false_conf_cap', 0.15)
 
-        # 风险加权参数
         self.declare_parameter('risk_weight', 0.5)
         self.declare_parameter('side_bias_weight', 0.2)
         self.declare_parameter('align_weight', 0.2)
         self.declare_parameter('max_out_vx', 0.35)
         self.declare_parameter('max_out_wz', 0.6)
         self.declare_parameter('allow_nominal_when_nav_stopped', True)
+
+        self.ablation_mode = str(self.get_parameter('ablation_mode').value)
+        self.use_safety_filter = bool(self.get_parameter('use_safety_filter').value)
 
         self.conf_up_rate = float(self.get_parameter('conf_up_rate').value)
         self.conf_down_rate = float(self.get_parameter('conf_down_rate').value)
@@ -43,6 +51,7 @@ class SafetyFusionNode(Node):
         self.align_weight = float(self.get_parameter('align_weight').value)
         self.max_out_vx = float(self.get_parameter('max_out_vx').value)
         self.max_out_wz = float(self.get_parameter('max_out_wz').value)
+
         self.allow_nominal_when_nav_stopped = bool(
             self.get_parameter('allow_nominal_when_nav_stopped').value
         )
@@ -81,6 +90,10 @@ class SafetyFusionNode(Node):
         self.timer = self.create_timer(0.02, self.fusion_step)
 
         self.get_logger().info(f"[SafetyFusionNode] output={output_topic}")
+        self.get_logger().info("========== Ablation Config ==========")
+        self.get_logger().info(f"ablation_mode: {self.ablation_mode}")
+        self.get_logger().info(f"use_safety_filter: {self.use_safety_filter}")
+        self.get_logger().info("=====================================")
 
     def nav2_callback(self, msg: Twist):
         self.nav2_cmd = msg
@@ -91,11 +104,15 @@ class SafetyFusionNode(Node):
         self.last_nominal_time = self.get_clock().now()
 
     def can_pass_callback(self, msg: Bool):
-        # 只保留为硬门控，不直接更新 pass_conf
         self.can_pass_bool = bool(msg.data)
 
     def decision_callback(self, msg: NarrowDecision):
         self.last_decision_time = self.get_clock().now()
+
+        # 如果关闭 safety filter，这里仍然更新时间戳，
+        # 但不再使用 pass_conf 影响输出。
+        if not self.use_safety_filter:
+            return
 
         # 1) 以 passability 为基线
         target = float(msg.passability)
@@ -123,14 +140,30 @@ class SafetyFusionNode(Node):
         return dt < self.cmd_timeout
 
     def fusion_step(self):
-        out = Twist()
-
         nav_fresh = self.is_fresh(self.last_nav2_time)
         nominal_fresh = self.is_fresh(self.last_nominal_time)
         decision_fresh = self.is_fresh(self.last_decision_time)
 
         nav = self.nav2_cmd if nav_fresh else Twist()
         nominal = self.nominal_cmd if nominal_fresh else Twist()
+
+        # ==============================
+        # w/o Safety Filter
+        # ==============================
+        if not self.use_safety_filter:
+            # 直接输出 nominal，不做 pass_conf、不做风险融合、不做速度裁剪。
+            # 这样对应论文里的：
+            # "directly executes the nominal policy/controller output
+            # without safety-constrained velocity projection."
+            if nominal_fresh:
+                self.pub_cmd.publish(nominal)
+            elif nav_fresh:
+                self.pub_cmd.publish(nav)
+            else:
+                self.pub_cmd.publish(Twist())
+            return
+
+        out = Twist()
 
         conf = self.pass_conf
 
@@ -147,7 +180,7 @@ class SafetyFusionNode(Node):
 
         # -------- Linear fusion --------
         if abs(nav_v) < 1e-3:
-            out.linear.x = nom_v if self.allow_nominal_when_nav_stopped else 0.0  # 调试初期设为 True，在 Nav2 犹豫时让窄通道模块接管。正式做安全对比时，设为 False。
+            out.linear.x = nom_v if self.allow_nominal_when_nav_stopped else 0.0
         else:
             if nav_v > 0.0:
                 if nom_v < 0.0:
@@ -162,6 +195,8 @@ class SafetyFusionNode(Node):
 
         # -------- Angular fusion --------
         out.angular.z = self.fuse_angular(nav.angular.z, nominal.angular.z, conf)
+
+        # Safety clipping
         out.linear.x = max(-self.max_out_vx, min(self.max_out_vx, out.linear.x))
         out.angular.z = max(-self.max_out_wz, min(self.max_out_wz, out.angular.z))
 
@@ -169,14 +204,16 @@ class SafetyFusionNode(Node):
 
     @staticmethod
     def fuse_angular(nav_w: float, nominal_w: float, conf: float) -> float:
-        # 如果两个方向相反，优先 nominal（更安全）
+        # 如果两个方向相反，优先 nominal
         if nav_w * nominal_w < 0.0:
             return nominal_w
 
         if abs(nominal_w) < 1e-3:
             conservative = nav_w
         else:
-            conservative = (1.0 if nominal_w >= 0.0 else -1.0) * min(abs(nav_w), abs(nominal_w))
+            conservative = (1.0 if nominal_w >= 0.0 else -1.0) * min(
+                abs(nav_w), abs(nominal_w)
+            )
 
         return conf * nav_w + (1.0 - conf) * conservative
 

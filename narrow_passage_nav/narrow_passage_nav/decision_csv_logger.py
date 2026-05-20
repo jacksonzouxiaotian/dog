@@ -23,24 +23,50 @@ class DecisionCsvLogger(Node):
         self.declare_parameter('param_version', 'v1')
         self.declare_parameter('note', '')
 
+        # ==============================
+        # Ablation metadata
+        # ==============================
+        self.declare_parameter('ablation_mode', 'ours')
+        self.declare_parameter('use_memory', True)
+        self.declare_parameter('use_posture_control', True)
+        self.declare_parameter('use_failure_recovery', True)
+        self.declare_parameter('use_safety_filter', True)
+
         topic = self.get_parameter('decision_topic').value
         output_dir = self.get_parameter('output_dir').value
+
         self.scene_name = self.get_parameter('scene_name').value
         self.trial_id = self.get_parameter('trial_id').value
         self.robot_id = self.get_parameter('robot_id').value
         self.param_version = self.get_parameter('param_version').value
         self.note = self.get_parameter('note').value
 
+        self.ablation_mode = str(self.get_parameter('ablation_mode').value)
+        self.use_memory = bool(self.get_parameter('use_memory').value)
+        self.use_posture_control = bool(self.get_parameter('use_posture_control').value)
+        self.use_failure_recovery = bool(self.get_parameter('use_failure_recovery').value)
+        self.use_safety_filter = bool(self.get_parameter('use_safety_filter').value)
+
         os.makedirs(output_dir, exist_ok=True)
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.csv_path = os.path.join(
             output_dir,
-            f"decision_log_{self.scene_name}_{self.trial_id}_{timestamp}.csv"
+            f"decision_log_{self.scene_name}_{self.trial_id}_{self.ablation_mode}_{timestamp}.csv"
         )
 
         self.fieldnames = [
             'stamp_sec', 'stamp_nanosec', 'frame_id',
+
             'scene_name', 'trial_id', 'robot_id', 'param_version', 'note',
+
+            # Ablation fields
+            'ablation_mode',
+            'use_memory',
+            'use_posture_control',
+            'use_failure_recovery',
+            'use_safety_filter',
+
+            # Decision fields
             'can_pass', 'passability', 'risk',
             'd_min', 'd_center', 'gap_x', 'cx', 'norm_e', 'has_valid_gap',
             'left_near', 'center_near', 'right_near',
@@ -61,7 +87,14 @@ class DecisionCsvLogger(Node):
             10
         )
 
-        self.get_logger().info(f'Logging to: {self.csv_path}')
+        self.get_logger().info("========== Decision CSV Logger ==========")
+        self.get_logger().info(f"Logging to: {self.csv_path}")
+        self.get_logger().info(f"ablation_mode: {self.ablation_mode}")
+        self.get_logger().info(f"use_memory: {self.use_memory}")
+        self.get_logger().info(f"use_posture_control: {self.use_posture_control}")
+        self.get_logger().info(f"use_failure_recovery: {self.use_failure_recovery}")
+        self.get_logger().info(f"use_safety_filter: {self.use_safety_filter}")
+        self.get_logger().info("=========================================")
 
     def decision_callback(self, msg: NarrowDecision):
         row = {
@@ -74,6 +107,12 @@ class DecisionCsvLogger(Node):
             'robot_id': self.robot_id,
             'param_version': self.param_version,
             'note': self.note,
+
+            'ablation_mode': self.ablation_mode,
+            'use_memory': self.use_memory,
+            'use_posture_control': self.use_posture_control,
+            'use_failure_recovery': self.use_failure_recovery,
+            'use_safety_filter': self.use_safety_filter,
 
             'can_pass': msg.can_pass,
             'passability': msg.passability,

@@ -1,0 +1,19 @@
+mode_decision_node:
+  ros__parameters:
+    ablation_mode: "wo_safety"
+    use_memory: true
+    use_posture_control: true
+    use_failure_recovery: true
+
+safety_fusion_node:
+  ros__parameters:
+    ablation_mode: "wo_safety"
+    use_safety_filter: false
+
+decision_csv_logger:
+  ros__parameters:
+    ablation_mode: "wo_safety"
+    use_memory: true
+    use_posture_control: true
+    use_failure_recovery: true
+    use_safety_filter: false

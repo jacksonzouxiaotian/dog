@@ -3,6 +3,7 @@
 
 from collections import deque
 from dataclasses import dataclass
+
 import numpy as np
 
 import rclpy
@@ -31,13 +32,21 @@ class ModeDecisionNode(Node):
         self.declare_parameter('nominal_cmd_topic', '/nominal_cmd_vel')
         self.declare_parameter('memory_size', 50)
 
-        # ---------- 高层 mode 参数 ----------
+        # ==============================
+        # Ablation switches
+        # ==============================
+        self.declare_parameter('ablation_mode', 'ours')
+        self.declare_parameter('use_memory', True)
+        self.declare_parameter('use_posture_control', True)
+        self.declare_parameter('use_failure_recovery', True)
+
+        # ---------- High-level mode params ----------
         self.declare_parameter('reject_margin_th', -0.20)
         self.declare_parameter('recover_risk_th', 0.75)
         self.declare_parameter('explore_passability_th', 0.45)
         self.declare_parameter('align_explore_th', 0.25)
 
-        # ---------- 原先低层控制逻辑参数 ----------
+        # ---------- Low-level control params ----------
         self.declare_parameter('safe_distance', 0.7)
         self.declare_parameter('k_v', 0.5)
         self.declare_parameter('v_max', 0.3)
@@ -52,6 +61,7 @@ class ModeDecisionNode(Node):
         self.declare_parameter('explore_speed', 0.05)
         self.declare_parameter('reject_stop', True)
 
+        # ---------- Recovery params ----------
         self.declare_parameter('near_drop_th', 0.08)
         self.declare_parameter('near_low_th', 0.35)
         self.declare_parameter('near_safe_th', 0.40)
@@ -60,7 +70,13 @@ class ModeDecisionNode(Node):
         self.declare_parameter('step_omega', 0.6)
         self.declare_parameter('step_ticks', 6)
 
-        # ---------- 状态 ----------
+        # ---------- Read ablation params ----------
+        self.ablation_mode = str(self.get_parameter('ablation_mode').value)
+        self.use_memory = bool(self.get_parameter('use_memory').value)
+        self.use_posture_control = bool(self.get_parameter('use_posture_control').value)
+        self.use_failure_recovery = bool(self.get_parameter('use_failure_recovery').value)
+
+        # ---------- State ----------
         self.memory = deque(maxlen=int(self.get_parameter('memory_size').value))
         self.current_mode = "EXPLORE"
 
@@ -84,13 +100,27 @@ class ModeDecisionNode(Node):
         self.get_logger().info(
             f"[ModeDecisionNode] sub={decision_topic}, pub={nominal_cmd_topic}"
         )
+        self.get_logger().info("========== Ablation Config ==========")
+        self.get_logger().info(f"ablation_mode: {self.ablation_mode}")
+        self.get_logger().info(f"use_memory: {self.use_memory}")
+        self.get_logger().info(f"use_posture_control: {self.use_posture_control}")
+        self.get_logger().info(f"use_failure_recovery: {self.use_failure_recovery}")
+        self.get_logger().info("=====================================")
 
     def decision_callback(self, msg: NarrowDecision):
-        memory_risk = self.retrieve_memory_risk(msg)
-        fused_risk = float(np.clip(0.7 * msg.risk + 0.3 * memory_risk, 0.0, 1.0))
-        fused_passability = float(
-            np.clip(0.7 * msg.passability + 0.3 * (1.0 - memory_risk), 0.0, 1.0)
-        )
+        # ==============================
+        # Memory ablation
+        # ==============================
+        if self.use_memory:
+            memory_risk = self.retrieve_memory_risk(msg)
+            fused_risk = float(np.clip(0.7 * msg.risk + 0.3 * memory_risk, 0.0, 1.0))
+            fused_passability = float(
+                np.clip(0.7 * msg.passability + 0.3 * (1.0 - memory_risk), 0.0, 1.0)
+            )
+        else:
+            memory_risk = float(msg.risk)
+            fused_risk = float(msg.risk)
+            fused_passability = float(msg.passability)
 
         mode = self.select_mode(msg, fused_passability, fused_risk)
         self.current_mode = mode
@@ -98,8 +128,8 @@ class ModeDecisionNode(Node):
         cmd = self.compute_nominal_action(msg, mode)
         self.pub_nominal_cmd.publish(cmd)
 
-        self.update_memory(msg, mode, fused_passability, fused_risk)
-       
+        if self.use_memory:
+            self.update_memory(msg, mode, fused_passability, fused_risk)
 
     # =========================
     # Memory
@@ -129,13 +159,13 @@ class ModeDecisionNode(Node):
     def update_memory(self, msg: NarrowDecision, mode: str, passability: float, risk: float):
         success_like = float(passability * (1.0 - risk))
         item = MemoryItem(
-            geom_margin=msg.geom_margin,
-            norm_e=msg.norm_e,
-            left_near=msg.left_near,
-            right_near=msg.right_near,
-            risk=risk,
-            mode=mode,
-            success_like=success_like,
+            geom_margin=float(msg.geom_margin),
+            norm_e=float(msg.norm_e),
+            left_near=float(msg.left_near),
+            right_near=float(msg.right_near),
+            risk=float(risk),
+            mode=str(mode),
+            success_like=float(success_like),
         )
         self.memory.append(item)
 
@@ -151,7 +181,9 @@ class ModeDecisionNode(Node):
         if msg.geom_margin < reject_margin_th:
             return "REJECT"
 
-        if risk > recover_risk_th:
+        # Recovery ablation:
+        # w/o Failure Recovery 时，不允许进入 RECOVER mode
+        if self.use_failure_recovery and risk > recover_risk_th:
             return "RECOVER"
 
         if (not msg.has_valid_gap) or (passability < explore_passability_th):
@@ -167,22 +199,34 @@ class ModeDecisionNode(Node):
 
     # =========================
     # Low-level controller
-    # Borrowed from your old logic
     # =========================
     def compute_nominal_action(self, msg: NarrowDecision, mode: str) -> Twist:
-        # 1) 先尝试原先的“小步恢复状态机”
-        recovery_cmd = self.try_recovery_from_near_trend(msg)
-        if recovery_cmd is not None:
-            return recovery_cmd
+        # ==============================
+        # Failure recovery ablation
+        # ==============================
+        if self.use_failure_recovery:
+            recovery_cmd = self.try_recovery_from_near_trend(msg)
+            if recovery_cmd is not None:
+                return recovery_cmd
 
-        # 2) 再根据 high-level mode 走 nominal action
         if mode == "REJECT":
             return self.zero_cmd()
 
         if mode == "RECOVER":
-            return self.force_backoff_cmd(msg)
+            if self.use_failure_recovery:
+                return self.force_backoff_cmd(msg)
+            else:
+                mode = "EXPLORE"
 
-        omega = self.compute_alignment_omega(msg)
+        # ==============================
+        # Posture control ablation
+        # ==============================
+        if self.use_posture_control:
+            omega = self.compute_alignment_omega(msg)
+        else:
+            omega = 0.0
+            self.e_filt *= 0.9
+
         v_commit = self.compute_forward_speed(msg)
 
         cmd = Twist()
@@ -224,8 +268,16 @@ class ModeDecisionNode(Node):
         self.prev_center_near = C if np.isfinite(C) else self.prev_center_near
         self.prev_right_near = R if np.isfinite(R) else self.prev_right_near
 
-        left_too_close_trend = (dL > near_drop_th) and (L < near_low_th) and (R > near_safe_th)
-        right_too_close_trend = (dR > near_drop_th) and (R < near_low_th) and (L > near_safe_th)
+        left_too_close_trend = (
+            (dL > near_drop_th) and
+            (L < near_low_th) and
+            (R > near_safe_th)
+        )
+        right_too_close_trend = (
+            (dR > near_drop_th) and
+            (R < near_low_th) and
+            (L > near_safe_th)
+        )
         all_too_close_trend = (
             (dL > near_drop_th) and
             (dC > near_drop_th) and
@@ -248,13 +300,14 @@ class ModeDecisionNode(Node):
 
         if self.step_mode is not None and self.step_count > 0:
             cmd = Twist()
+
             if self.step_mode == 'BACK_RIGHT':
                 cmd.linear.x = -step_v_back
                 cmd.angular.z = +step_omega
             elif self.step_mode == 'BACK_LEFT':
                 cmd.linear.x = -step_v_back
                 cmd.angular.z = -step_omega
-            else:  # BACK
+            else:
                 cmd.linear.x = -step_v_back
                 cmd.angular.z = 0.0
 
@@ -275,13 +328,12 @@ class ModeDecisionNode(Node):
         v = k_v * error_d
         v = float(np.clip(v, 0.0, v_max))
 
-        # 原始逻辑：误差很大时主动降速
+        # 对齐误差较大时降速
         if abs(float(msg.norm_e)) > 0.25:
             v = min(v, 0.05)
 
         return v
 
-        
     def compute_alignment_omega(self, msg: NarrowDecision) -> float:
         k_omega_align = float(self.get_parameter('k_omega_align').value)
         omega_max = float(self.get_parameter('omega_max').value)
@@ -296,7 +348,6 @@ class ModeDecisionNode(Node):
                 float(msg.right_near + msg.left_near), eps
             )
 
-            # gap中心偏差 + 左右空间不平衡偏差
             e_total = float(msg.norm_e) + k_side_bias * side_bias
 
             self.e_filt = (1.0 - alpha) * self.e_filt + alpha * e_total
@@ -311,8 +362,7 @@ class ModeDecisionNode(Node):
             omega = 0.0
             self.e_filt *= 0.9
 
-        return omega        
-    
+        return omega
 
     def force_backoff_cmd(self, msg: NarrowDecision) -> Twist:
         step_v_back = float(self.get_parameter('step_v_back').value)
@@ -321,11 +371,12 @@ class ModeDecisionNode(Node):
         cmd = Twist()
         cmd.linear.x = -step_v_back
 
-        # 根据 gap 在左右的位置选一个恢复方向
+        # 根据 gap 偏移方向选择恢复方向
         if float(msg.norm_e) > 0.0:
             cmd.angular.z = -step_omega
         else:
             cmd.angular.z = +step_omega
+
         return cmd
 
     @staticmethod
